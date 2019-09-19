@@ -2,6 +2,7 @@ package Thread2;
 
 /**
  * yield礼让线程，暂停线程，直接进入就绪状态，不是阻塞状态
+ * yield()方法：暂停当前正在执行的线程对象，并执行其他线程。
  */
 public class Yield01 {
     public static void main(String[] args) {
