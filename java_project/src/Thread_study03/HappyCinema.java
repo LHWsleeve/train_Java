@@ -1,5 +1,6 @@
 package Thread_study03;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,6 +8,7 @@ import java.util.List;
  */
 public class HappyCinema {
     public static void main(String[] args) {
+        //可用位置
         Cinema c = new Cinema(2,"happy cinema");
         new Thread(new Customer(c,2),"一号").start();
         new Thread(new Customer(c,1),"二号").start();
@@ -14,10 +16,10 @@ public class HappyCinema {
 }
 
 class Customer implements Runnable{
-    Cinema cinema;
-    List<Integer> seats;
+    private final Cinema cinema;
+    private int seats;
 
-    public Customer(Cinema cinema, List<Integer> seats) {
+    Customer(Cinema cinema, int seats) {
         this.cinema = cinema;
         this.seats = seats;
     }
@@ -39,17 +41,21 @@ class Customer implements Runnable{
 
 //影院
 class Cinema {
-    List<Integer> available;
+    int available;
     String name;
-    public Cinema(List<Integer> available, String name) {
+    public Cinema(int available, String name) {
         this.available = available;
         this.name = name;
     }
 
-    public boolean BookTikcets(List<Integer> seats){
+    public boolean BookTikcets(int seats){
         System.out.println("可用位置:"+available);
-
-
-
+        if (seats>available){
+            return false;
+        }else {
+            available-=seats;
+        }
+            return true;
+        }
 }
 
