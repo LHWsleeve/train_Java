@@ -12,7 +12,7 @@ public class TimerTest01
         //执行
 //        timer.schedule(new Mytest(),1000);//执行一次
 //        timer.schedule(new Mytest(),1000,200);//执行多次
-        Calendar cal = new GregorianCalendar(2019,9,29,22,,59);//定义一个时间
+        Calendar cal = new GregorianCalendar(2019,9,29,22,1,59);//定义一个时间
         timer.schedule(new Mytest(),cal.getTime(),200);//到这个时间后开始执行，每隔200ms多次执行
     }
 }
