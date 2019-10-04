@@ -1,4 +1,4 @@
-package Net_study04.Net_study03;
+package Net_study04;
 
 import java.io.*;
 import java.net.Socket;
