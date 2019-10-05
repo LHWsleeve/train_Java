@@ -10,6 +10,9 @@ import java.net.Socket;
  * 在线聊天室：服务器
  * 目标：使用多线程实现多客户可以多条消息信息
 // * 解决问题:其他客户必须等待之前的客户推出，才能继续排队
+ 目前问题：
+ 1.代码不好维护
+ 2.客户端读写没分开：必须先写后读
  */
 public class DuoMultiChat {
     public static void main(String[] args) throws IOException {
