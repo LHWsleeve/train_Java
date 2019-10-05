@@ -1,19 +1,15 @@
-package Net_Chat02;
-
-import Net_Chat02.Utils;
+package Net_Chat04;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * 在线聊天室：服务器
- * 目标：加入容器实现群聊
+ * 目标：实现私聊
  */
 public class Chat {
     //使用并发环境下用copyxxxx操作容器保证并发安全
@@ -77,17 +73,35 @@ public class Chat {
                 release();
             }
 }
+
+         /**
+          * 私聊约定数据格式：@xxx：msg
+          * @param msg
+          * @param isSys
+          */
 //获取消息发给其他人
-        private void sendOthers(String msg,boolean isSys){
-            for (Channel others:all) {
-                if (others == this) {
-                    continue;
+        private void sendOthers(String msg,boolean isSys) {
+            boolean isPrivate = msg.startsWith("@");
+            if (isPrivate) {
+                int idx = msg.indexOf(":");
+                //获取目标和数据
+                String targetName = msg.substring(1, idx);
+                msg = msg.substring(idx + 1);
+                for (Channel other : all) {
+                    if (other.name.equals(targetName)) {
+                        other.send(this.name + "悄悄的对你说" + msg);
+                    }
                 }
-                if (!isSys) {
-                    others.send(this.name + "对所有人说" + msg);
-                }
-                else{
-                    others.send(msg);//系统消息
+            } else {
+                for (Channel others : all) {
+                    if (others == this) {
+                        continue;
+                    }
+                    if (!isSys) {
+                        others.send(this.name + "对所有人说" + msg);
+                    } else {
+                        others.send(msg);//系统消息
+                    }
                 }
             }
         }
