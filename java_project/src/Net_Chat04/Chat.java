@@ -90,6 +90,7 @@ public class Chat {
                 for (Channel other : all) {
                     if (other.name.equals(targetName)) {
                         other.send(this.name + "悄悄的对你说" + msg);
+                        break;
                     }
                 }
             } else {
