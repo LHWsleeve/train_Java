@@ -9,6 +9,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,7 @@ import java.util.List;
  * 熟悉Sax解析流程
  */
 public class XmlTest03 {
-    public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+    public static void main(String[] args) throws Exception {
         //1.获取获取工厂
         SAXParserFactory factory = SAXParserFactory.newInstance();
         //2/从解析工厂获取解析器
@@ -29,10 +30,12 @@ public class XmlTest03 {
         parse.parse(Thread.currentThread().getContextClassLoader().getResourceAsStream(
                 "Server_study02/web.xml"),webHandler);//注意文件路径。从源目录开始写
         //6.获取数据
-        List<Entity> entities = webHandler.getEntitys();
-        List<Mapping> mappings = webHandler.getMappings();
-        System.out.println(entities.size());
-        System.out.println(mappings.size());
+        WebContext context = new WebContext(webHandler.getEntitys(),webHandler.getMappings());
+        //假设输入了/login
+        String classNmae = context.getClz("/reg");
+        Class clz = Class.forName(classNmae);
+        Servlet servlet = (Servlet)clz.getConstructor().newInstance();
+        servlet.service();
 
     }
     }
