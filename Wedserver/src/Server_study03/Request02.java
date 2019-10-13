@@ -105,6 +105,7 @@ public class Request02 {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+        return value;
     }
 
     /**
