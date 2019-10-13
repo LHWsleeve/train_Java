@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Wedserver.iml" filepath="$PROJECT_DIR$/Wedserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Webserver.iml" filepath="$PROJECT_DIR$/Webserver.iml" />
     </modules>
   </component>
 </project>
