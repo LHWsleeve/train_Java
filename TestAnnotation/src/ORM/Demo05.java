@@ -9,7 +9,8 @@ import java.lang.reflect.Method;
 
 /**
  * 通过反射API，动态操作构造器，方法，属性
- * 注意：反射会影响程序性能（安全检查），若不得不用反射可以使用setAccessible(true)绕过安全检测，提高效率
+ * 注意：反射会严重影响程序性能（安全检查），若不得不用反射可以使用setAccessible(true)绕过安全检测，提高效率
+ * 反射运行效率，但是开发效提高。在各类框架中会用到大量反射
  */
 public class Demo05 {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InstantiationException, InvocationTargetException, NoSuchFieldException {
