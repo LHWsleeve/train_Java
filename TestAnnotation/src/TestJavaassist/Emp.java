@@ -27,4 +27,7 @@ public class Emp {
     public void setName(String name) {
         this.name = name;
     }
+    public void sayHello(int a ){
+        System.out.println("HEllo");
+    }
 }
