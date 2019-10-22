@@ -54,6 +54,7 @@ public class DecrptClass extends ClassLoader {
         //IOUtils,可以使用它将流中数据转成字节数组
         InputStream is = new FileInputStream(path);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        //下面两条相当于取反解密过程
         int temp = -1;
         while((temp=is.read())!=-1){
             baos.write(temp^0xff);//取反操作
