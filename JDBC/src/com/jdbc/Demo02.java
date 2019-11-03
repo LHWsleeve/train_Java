@@ -1,5 +1,5 @@
-/**
- * 测试执行sql，以及sql注入
+package com.jdbc; /**
+ * 测试Statement执行sql，以及sql注入
  */
 import java.io.StringReader;
 import java.sql.Connection;
