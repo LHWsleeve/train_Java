@@ -10,7 +10,7 @@ public class JDBCUtil {
         ResultSet rs = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         conn = DriverManager.getConnection
-                ("jdbc:mysql://localhost:3306/user?serverTimezone=UTC","root", "123456");
+                ("jdbc:mysql://localhost:3306/myemployees?serverTimezone=UTC","root", "123456");
         return conn;
     }
 }
