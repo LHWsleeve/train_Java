@@ -1,5 +1,6 @@
 package Big_SORM;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -19,13 +20,27 @@ public class TableInfo {
      */
     private ColumnInfo onlyPriKey;
 
+    /**
+     * 联合主键
+     */
+    private List<ColumnInfo> priKeys;
+
     public TableInfo() {
     }
 
-    public TableInfo(String tname, Map<String, ColumnInfo> columns, ColumnInfo onlyPriKey) {
+    public TableInfo(String tname, Map<String, ColumnInfo> columns, List<ColumnInfo> priKeys) {
         this.tname = tname;
         this.columns = columns;
         this.onlyPriKey = onlyPriKey;
+        this.priKeys = priKeys;
+    }
+
+    public List<ColumnInfo> getPriKeys() {
+        return priKeys;
+    }
+
+    public void setPriKeys(List<ColumnInfo> priKeys) {
+        this.priKeys = priKeys;
     }
 
     public String getTname() {
