@@ -4,6 +4,7 @@ import com.mysql.cj.conf.ConnectionPropertiesTransform;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.Objects;
 import java.util.Properties;
 
 /**
@@ -14,7 +15,8 @@ public class DBManager {
     static {
         Properties pros = new Properties();
         try {
-            pros.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("db.propertites"));
+            //得到当前的classpath的绝对路径的URI表示法。
+            pros.load(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("Big_SORM/db.properties")));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -27,13 +29,9 @@ public class DBManager {
         conf.setUser(pros.getProperty("user"));
         conf.setUsingDB(pros.getProperty("usingDB"));
     }
-    public static Connection getMySQLConn() throws ClassNotFoundException, SQLException {
-        Connection conn = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
+    public static Connection getConn() throws ClassNotFoundException, SQLException {
         Class.forName(conf.getDiver());
-        conn = DriverManager.getConnection
-                (conf.getUrl(),conf.getUser(),conf.getPwd());//目前直接建立连接，后期建立连接池提高效率
+        Connection conn = DriverManager.getConnection(conf.getUrl(),conf.getUser(),conf.getPwd());//目前直接建立连接，后期建立连接池提高效率
         return conn;
     }
 }

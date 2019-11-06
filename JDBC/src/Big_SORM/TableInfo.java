@@ -28,7 +28,7 @@ public class TableInfo {
     public TableInfo() {
     }
 
-    public TableInfo(String tname, Map<String, ColumnInfo> columns, List<ColumnInfo> priKeys) {
+    public TableInfo(String tname, List<ColumnInfo> priKeys, Map<String, ColumnInfo> columns) {
         this.tname = tname;
         this.columns = columns;
         this.onlyPriKey = onlyPriKey;
