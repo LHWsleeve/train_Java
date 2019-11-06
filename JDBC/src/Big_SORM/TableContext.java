@@ -49,7 +49,23 @@ public class TableContext {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        /**
+         * 每次启动，更新类结构
+         */
+        updateJavaPOFile();
     }
+
+    /**
+     * 根据表结构，更新配置po包下面的java类
+     * 实现从表结构到类结构
+     */
+    public static void updateJavaPOFile() {
+        Map<String, TableInfo> tables = TableContext.tables;
+        for (TableInfo t : tables.values()) {
+            JavaFileUtils.createJavaPOFile(t, new MySQLTypeConbertor());
+        }
+    }
+
             public static void main (String[]args){
                 Map<String, TableInfo> tables = TableContext.tables;
                 System.out.println(tables);
