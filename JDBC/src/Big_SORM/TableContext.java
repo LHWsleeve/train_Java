@@ -53,6 +53,10 @@ public class TableContext {
          * 每次启动，更新类结构
          */
         updateJavaPOFile();
+        /**
+         * j加载po包下面所有的类便于重用
+         */
+        loadPOtable();
     }
 
     /**
@@ -64,6 +68,22 @@ public class TableContext {
         for (TableInfo t : tables.values()) {
             JavaFileUtils.createJavaPOFile(t, new MySQLTypeConbertor());
         }
+    }
+
+    /**
+     * 加载po包的类
+     */
+    public static void loadPOtable(){
+        for (TableInfo t: tables.values()){
+            try {
+                Class c = Class.forName(DBManager.getConf().getPoPackage()+"."
+                        +StringUtils.firstChar2UpperCase(t.getTname()));
+                poclassTableMap.put(c,t);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
             public static void main (String[]args){
