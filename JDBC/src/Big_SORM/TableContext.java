@@ -14,7 +14,7 @@ public class TableContext {
     /**
      *表名为key,表信息对象为value
      */
-    private static Map<String,TableInfo> tables=new HashMap<String,TableInfo>();
+    public static Map<String,TableInfo> tables=new HashMap<String,TableInfo>();
 /**
  *将po的c1ass对象和表信息对象关联起来,便于重用！
  */

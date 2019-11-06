@@ -1,5 +1,9 @@
 package Big_SORM;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 /**
  * 封装了生成java源文件操作
  */
@@ -33,9 +37,58 @@ public class JavaFileUtils {
         return jfgs;
     }
 
+    /**
+     * 根据表信息生成jaca类的源代码
+     * @param tableInfo
+     * @param converrtor
+     * @return java类源代码
+     */
+    public static  String createJavaSrc(TableInfo tableInfo, TypeConverrtor converrtor){
+        Map<String,ColumnInfo> column = tableInfo.getColumns();
+        List<JavaFieldGetSet> javaFields = new ArrayList<>();
+        for (ColumnInfo c:column.values()){
+            javaFields.add(createFieldGetSet(c,converrtor));
+        }
+        StringBuilder src = new StringBuilder();
+        //package语句
+        src.append("package"+DBManager.getConf().getPoPackage()+";\n\n");
+        //import语句
+        src.append("import java.sql.*\n");
+        src.append("import java.util.*\n\n");
+        //生成类声明语句
+        src.append("public class "+
+                StringUtils.firstChar2UpperCase(tableInfo.getTname())+"{\n\n");
+        //属性列表
+        for (JavaFieldGetSet jf:javaFields){
+            src.append(jf.getFieldInfo());
+        }
+        src.append("\n\n");
+        //get方法
+        for (JavaFieldGetSet jf:javaFields){
+            src.append(jf.getGetdInfo());
+        }
+        src.append("\n\n");
+        //set方法
+        for (JavaFieldGetSet jf:javaFields){
+            src.append(jf.getSetInfo());
+        }
+        src.append("\n\n");
+        //类结束
+        src.append("}\n");
+        System.out.println(src);
+        return src.toString();
+    }
+
+
+
+
     public static void main(String[] args) {
-        ColumnInfo ci = new ColumnInfo("username","varchar",0);
-        JavaFieldGetSet f = createFieldGetSet(ci, new MySQLTypeConbertor());
-        System.out.println(f);
+//        ColumnInfo ci = new ColumnInfo("username","varchar",0);
+//        JavaFieldGetSet f = createFieldGetSet(ci, new MySQLTypeConbertor());
+//        System.out.println(f);
+
+        Map<String,TableInfo> tables = TableContext.tables;
+        TableInfo t = tables.get("employees");
+        createJavaSrc(t,new MySQLTypeConbertor());
     }
 }

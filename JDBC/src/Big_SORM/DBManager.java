@@ -11,7 +11,7 @@ import java.util.Properties;
  * 根据配置信息，位置链接对象的管理（增加连接池功能）
  */
 public class DBManager {
-    public static Configuration conf;
+    private static Configuration conf;
     static {
         Properties pros = new Properties();
         try {
@@ -33,5 +33,9 @@ public class DBManager {
         Class.forName(conf.getDiver());
         Connection conn = DriverManager.getConnection(conf.getUrl(),conf.getUser(),conf.getPwd());//目前直接建立连接，后期建立连接池提高效率
         return conn;
+    }
+    //返回Configuration对象
+    public static Configuration getConf(){
+        return  conf;
     }
 }
