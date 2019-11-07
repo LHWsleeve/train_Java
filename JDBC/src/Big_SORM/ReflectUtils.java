@@ -16,7 +16,7 @@ public class ReflectUtils {
     public static Object invokeGet( String filename, Object obj){
         try {
             Class c = obj.getClass();
-            Method m = c.getMethod("get"+StringUtils.firstChar2UpperCase(filename),null);
+            Method m = c.getDeclaredMethod("get"+StringUtils.firstChar2UpperCase(filename),null);
           return m.invoke(obj,null);
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
@@ -26,5 +26,15 @@ public class ReflectUtils {
             e.printStackTrace();
         }
     return null;
+}
+public static void invoSet(Object obj,String columnNmae,Object columnValue) throws InvocationTargetException, IllegalAccessException {
+    Method m = null;
+    try {
+        m = obj.getClass().getDeclaredMethod("set"+ StringUtils.firstChar2UpperCase(columnNmae),
+                columnValue.getClass());
+    } catch (NoSuchMethodException e) {
+        e.printStackTrace();
+    }
+    m.invoke(obj,columnValue);
 }
 }

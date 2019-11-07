@@ -6,26 +6,29 @@ import sorm.JDBCUtil;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.IntBinaryOperator;
 
 public class MySqlQuery implements Query {
+public static void testDML(){
+    Employees e =new Employees();
+    e.setEmployee_id(206);
+//        new MySqlQuery().delect(e);
+    e.setDepartment_id(50);
+    e.setJob_id("IT_PROG");
+    e.setLast_name("xxxxx");
+    e.setFirst_name("b");
+    e.setSalary((double) 13000);
+//        new MySqlQuery().insert(e);
+    new MySqlQuery().update(e,new String[]{"Last_name"});
+}
 
     public static void main(String[] args) {
-        Employees e =new Employees();
-        e.setEmployee_id(206);
-//        new MySqlQuery().delect(e);
-        e.setDepartment_id(50);
-        e.setJob_id("IT_PROG");
-        e.setLast_name("xxxxx");
-        e.setFirst_name("b");
-        e.setSalary((double) 13000);
-//        new MySqlQuery().insert(e);
-        new MySqlQuery().update(e,new String[]{"Last_name"});
+       List list = new MySqlQuery().queryRows("select * from employees where employee_id>? and salary>?"
+       ,Employees.class,new Object[]{150,5000});
+        System.out.println(list);
     }
 
     @Override
@@ -137,7 +140,54 @@ public class MySqlQuery implements Query {
 
     @Override
     public List queryRows(String sql, Class clazz, Object[] params) {
-        return null;
+        Connection conn = null;
+        PreparedStatement ps =null;
+        List list = null;
+        ResultSet rs = null;
+        try {
+            conn = DBManager.getConn();
+            ps = conn.prepareStatement(sql);
+            //给sql传参
+            JDBCUtils.handlePa(ps,params);
+            System.out.println(ps);
+            rs = ps.executeQuery();
+            ResultSetMetaData metaData = rs.getMetaData();
+            while (rs.next()) {
+                while (list==null){
+                    list = new ArrayList();
+                }
+            Object rowObj = clazz.getDeclaredConstructor().newInstance();
+            for (int i=0; i<metaData.getColumnCount();i++) {
+                String columnNmae = metaData.getColumnLabel(i+1);
+                Object columnValue = rs.getObject(i+1);
+                //调用rowobj对象的setUsername（String uname）方法，将columnValue的值设置进去
+                ReflectUtils.invoSet(rowObj,columnNmae,columnValue);
+            }
+            list.add(rowObj);
+            }
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                conn.close();
+                ps.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("sql语义错误");
+        return list;
     }
 
     @Override
