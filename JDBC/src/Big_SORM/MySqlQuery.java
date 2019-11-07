@@ -184,7 +184,6 @@ public static void testDML(){
        List list = queryRows(sql,clazz,params);
        //一个
        return (list==null&&list.size()!=0)?null:list.get(0);
-        return null;
     }
 
     @Override
