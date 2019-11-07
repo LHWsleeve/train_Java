@@ -21,10 +21,11 @@ public class MySqlQuery implements Query {
 //        new MySqlQuery().delect(e);
         e.setDepartment_id(50);
         e.setJob_id("IT_PROG");
-        e.setLast_name("a");
+        e.setLast_name("xxxxx");
         e.setFirst_name("b");
         e.setSalary((double) 13000);
-        new MySqlQuery().insert(e);
+//        new MySqlQuery().insert(e);
+        new MySqlQuery().update(e,new String[]{"Last_name"});
     }
 
     @Override
@@ -112,6 +113,25 @@ public class MySqlQuery implements Query {
 
     @Override
     public int update(Object obj, String[] filedName) {
+        //update table set xx=?,xx=? where id=?
+        Class c = obj.getClass();
+        List<Object> params = new ArrayList<>();//存储sql的参数
+        TableInfo tableInfo = TableContext.poclassTableMap.get(c);
+        ColumnInfo priKey = tableInfo.getOnlyPriKey();
+        StringBuilder sql = new StringBuilder("update "+tableInfo.getTname()+" set ");
+
+        for (String fname:filedName){
+            Object fvalue = ReflectUtils.invokeGet(fname,obj);
+            params.add(fvalue);
+            sql.append(fname+"=?,");
+            sql.setCharAt(sql.length()-1,' ');
+            sql.append(" where ");
+            sql.append(priKey.getName()+"=?");
+            params.add(ReflectUtils.invokeGet(priKey.getName(),obj));//最后一个是，获得主键值
+
+            return executeDML(sql.toString(),params.toArray());
+
+        }
         return 0;
     }
 
