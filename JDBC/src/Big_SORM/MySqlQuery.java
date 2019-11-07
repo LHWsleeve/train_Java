@@ -3,19 +3,28 @@ package Big_SORM;
 import po.Employees;
 import sorm.JDBCUtil;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.IntBinaryOperator;
 
 public class MySqlQuery implements Query {
 
     public static void main(String[] args) {
         Employees e =new Employees();
         e.setEmployee_id(206);
-        new MySqlQuery().delect(e);
+//        new MySqlQuery().delect(e);
+        e.setDepartment_id(50);
+        e.setJob_id("IT_PROG");
+        e.setLast_name("a");
+        e.setFirst_name("b");
+        e.setSalary((double) 13000);
+        new MySqlQuery().insert(e);
     }
 
     @Override
@@ -48,9 +57,36 @@ public class MySqlQuery implements Query {
         return count;
     }
 
+    /**
+     * 对象存储到入数据库
+     * 对象不为null
+     * @param obj
+     */
     @Override
     public void insert(Object obj) {
-
+//obj-->表中 insert into table () values(?,?);
+       Class c = obj.getClass();
+       List<Object> params = new ArrayList<>();//存储sql的参数
+       TableInfo tableInfo = TableContext.poclassTableMap.get(c);
+       StringBuilder sql = new StringBuilder("insert into "+tableInfo.getTname()+"(");
+       int countNotNull = 0;//计算不为空的属性
+       Field[] fs  =  c.getDeclaredFields();
+        for (Field f:fs) {
+            String fieldName = f.getName();
+            Object fieldValue = ReflectUtils.invokeGet(fieldName,obj);
+            if(fieldValue!=null){
+                countNotNull++;
+                sql.append(fieldName+",");
+                params.add(fieldValue);
+            }
+        }
+        sql.setCharAt(sql.length()-1, ')');
+        sql.append(" values (");
+        for (int i = 0; i <countNotNull ; i++) {
+           sql.append("?,");
+        }
+        sql.setCharAt(sql.length()-1,')');
+        executeDML(sql.toString(),params.toArray());
     }
 
     @Override
@@ -65,7 +101,7 @@ public class MySqlQuery implements Query {
 
     @Override
     public void delect(Object obj) {
-        Class c = obj.getClass();
+        Class c = obj.getClass();//获取当前对象的类
         TableInfo tableInfo = TableContext.poclassTableMap.get(c);
         ColumnInfo onlyPrikey = tableInfo.getOnlyPriKey();
 
