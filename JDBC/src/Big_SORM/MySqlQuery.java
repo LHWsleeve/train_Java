@@ -27,7 +27,7 @@ public static void testDML(){
 
     public static void main(String[] args) {
        List list = new MySqlQuery().queryRows("select * from employees where employee_id>? and salary>?"
-       ,Employees.class,new Object[]{150,5000});
+       ,Employees.class,new Object[]{200,5000});
         System.out.println(list);
     }
 
@@ -163,22 +163,12 @@ public static void testDML(){
                 //调用rowobj对象的setUsername（String uname）方法，将columnValue的值设置进去
                 ReflectUtils.invoSet(rowObj,columnNmae,columnValue);
             }
-            list.add(rowObj);
+                list.add(rowObj);
             }
 
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } finally {
+        }  finally {
             try {
                 conn.close();
                 ps.close();
@@ -186,7 +176,6 @@ public static void testDML(){
                 e.printStackTrace();
             }
         }
-        System.out.println("sql语义错误");
         return list;
     }
 

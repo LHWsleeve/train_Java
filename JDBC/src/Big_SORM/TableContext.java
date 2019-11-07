@@ -52,7 +52,7 @@ public class TableContext {
         /**
          * 每次启动，更新类结构
          */
-//        updateJavaPOFile();
+        updateJavaPOFile();
         /**
          * j加载po包下面所有的类便于重用
          */

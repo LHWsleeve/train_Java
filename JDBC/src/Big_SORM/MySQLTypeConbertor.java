@@ -24,7 +24,7 @@ public class MySQLTypeConbertor implements TypeConverrtor{
         } else if ("time".equalsIgnoreCase(columnType)){
         return "java.sql.Time";
          } else if ("timestamp".equalsIgnoreCase(columnType)){
-        return "java.sql.TiamStamp";
+        return "java.sql.Timestamp";
         }else if ("datetime".equalsIgnoreCase(columnType)){
             return "Date";
         }

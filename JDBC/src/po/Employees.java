@@ -15,7 +15,7 @@ public class Employees{
 	private String phone_number;
 	private Double salary;
 	private String first_name;
-	private Date hiredate;
+	private java.sql.Timestamp hiredate;
 	private String email;
 
 
@@ -46,7 +46,7 @@ public class Employees{
 	public String getFirst_name(){
 	return first_name;
 	}
-	public Date getHiredate(){
+	public java.sql.Timestamp getHiredate(){
 	return hiredate;
 	}
 	public String getEmail(){
@@ -81,7 +81,7 @@ public class Employees{
 	public void setFirst_name(String first_name){
 	this.first_name=first_name;
 	}
-	public void setHiredate(Date hiredate){
+	public void setHiredate(java.sql.Timestamp hiredate){
 	this.hiredate=hiredate;
 	}
 	public void setEmail(String email){
