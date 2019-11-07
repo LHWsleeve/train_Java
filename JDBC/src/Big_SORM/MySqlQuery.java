@@ -1,14 +1,51 @@
 package Big_SORM;
 
+import po.Employees;
+import sorm.JDBCUtil;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 
 public class MySqlQuery implements Query {
 
+    public static void main(String[] args) {
+        Employees e =new Employees();
+        e.setEmployee_id(206);
+        new MySqlQuery().delect(e);
+    }
+
     @Override
     public int executeDML(String sql, Object[] paramts) {
-        return 0;
+        Connection conn = null;
+        PreparedStatement ps =null;
+        int count = -1;
+        try {
+            conn = DBManager.getConn();
+            ps = conn.prepareStatement(sql);
+            //给sql传参
+            JDBCUtils.handlePa(ps,paramts);
+            System.out.println(ps);
+            count = ps.executeUpdate();
+            System.out.println(count);
+            return count;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                conn.close();
+                ps.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("sql语义错误");
+        return count;
     }
 
     @Override
@@ -22,7 +59,7 @@ public class MySqlQuery implements Query {
         TableInfo tableInfo = TableContext.poclassTableMap.get(clazz);
         //获得主键
         ColumnInfo onlyPrikey = tableInfo.getOnlyPriKey();
-        String sql = "delect from "+tableInfo.getTname()+" where "+onlyPrikey.getName()+"=?";
+        String sql = "delete from "+tableInfo.getTname()+" where "+onlyPrikey.getName()+"=?";
         executeDML(sql,new Object[]{id});
     }
 
