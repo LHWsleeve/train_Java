@@ -181,16 +181,44 @@ public static void testDML(){
 
     @Override
     public Object queryUniqueRows(String sql, Class clazz, Object[] params) {
+       List list = queryRows(sql,clazz,params);
+       //一个
+       return (list==null&&list.size()!=0)?null:list.get(0);
         return null;
     }
 
     @Override
     public Object queryValue(String sql, Class clazz, Object[] params) {
-        return null;
+        Connection conn = null;
+        PreparedStatement ps =null;
+        Object value = null;//存储查询结果对象
+        ResultSet rs = null;
+        try {
+            conn = DBManager.getConn();
+            ps = conn.prepareStatement(sql);
+            //给sql传参
+            JDBCUtils.handlePa(ps,params);
+            System.out.println(ps);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                value = rs.getObject(1);
+                }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }  finally {
+            try {
+                conn.close();
+                ps.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return value;
     }
 
     @Override
     public Number queryNumber(String sql, Class clazz, Object[] params) {
-        return null;
+        return (Number) queryValue(sql,clazz,params);
     }
 }
