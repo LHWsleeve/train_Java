@@ -1,5 +1,7 @@
 package Big_SORM;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.List;
 
 public class MySqlQuery implements Query {
@@ -15,15 +17,24 @@ public class MySqlQuery implements Query {
     }
 
     @Override
-    public int delect(Class clazz, int id) {
+    public void delect(Class clazz, Object id) {
         //通过class对象找TableInfo
-        TableContext.poclassTableMap.get(id);
-        return 0;
+        TableInfo tableInfo = TableContext.poclassTableMap.get(clazz);
+        //获得主键
+        ColumnInfo onlyPrikey = tableInfo.getOnlyPriKey();
+        String sql = "delect from "+tableInfo.getTname()+" where "+onlyPrikey.getName()+"=?";
+        executeDML(sql,new Object[]{id});
     }
 
     @Override
     public void delect(Object obj) {
+        Class c = obj.getClass();
+        TableInfo tableInfo = TableContext.poclassTableMap.get(c);
+        ColumnInfo onlyPrikey = tableInfo.getOnlyPriKey();
 
+        //通过反射，调用属性对应的get或set方法
+        Object prikeyValue =  ReflectUtils.invokeGet(onlyPrikey.getName(),obj);
+        delect(c,prikeyValue);
     }
 
     @Override

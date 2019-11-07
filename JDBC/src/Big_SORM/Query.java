@@ -22,7 +22,7 @@ public interface Query {
     /**
      * 删除clazz表示类，对应表中记录（指定Id）
      */
-    public int delect(Class clazz, int id);
+    public void delect(Class clazz, Object id);
 
     public void delect(Object obj);
 
