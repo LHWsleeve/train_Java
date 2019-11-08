@@ -36,6 +36,24 @@ public class Configuration {
      * 项目使用查询类是哪一个类
      */
     private String querClass;
+    private int poolMinsize;
+    private int poolMaxsize;
+
+    public int getPoolMinsize() {
+        return poolMinsize;
+    }
+
+    public void setPoolMinsize(int poolMinsize) {
+        this.poolMinsize = poolMinsize;
+    }
+
+    public int getPoolMaxsize() {
+        return poolMaxsize;
+    }
+
+    public void setPoolMaxsize(int poolMaxsize) {
+        this.poolMaxsize = poolMaxsize;
+    }
 
     public String getQuerClass() {
         return querClass;
@@ -48,7 +66,7 @@ public class Configuration {
     public Configuration() {
     }
 
-    public Configuration(String diver, String url, String user, String pwd, String usingDB, String srcPath, String poPackage, String querClass) {
+    public Configuration(String diver, String url, String user, String pwd, String usingDB, String srcPath, String poPackage, String querClass, int poolMinsize, int poolMaxsize) {
         this.diver = diver;
         this.url = url;
         this.user = user;
@@ -57,6 +75,8 @@ public class Configuration {
         this.srcPath = srcPath;
         this.poPackage = poPackage;
         this.querClass = querClass;
+        this.poolMinsize = poolMinsize;
+        this.poolMaxsize = poolMaxsize;
     }
 
     public java.lang.String getDiver() {

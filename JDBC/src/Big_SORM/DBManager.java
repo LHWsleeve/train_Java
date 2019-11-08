@@ -29,6 +29,9 @@ public class DBManager {
         conf.setUser(pros.getProperty("user"));
         conf.setUsingDB(pros.getProperty("usingDB"));
         conf.setQuerClass(pros.getProperty("querClass"));
+        //强制转型，string->int
+        conf.setPoolMinsize(Integer.parseInt(pros.getProperty("poolMinsize")));
+        conf.setPoolMaxsize(Integer.parseInt(pros.getProperty("poolMaxsize")));
     }
     public static Connection getConn() throws ClassNotFoundException, SQLException {
         Class.forName(conf.getDiver());
@@ -38,5 +41,17 @@ public class DBManager {
     //返回Configuration对象
     public static Configuration getConf(){
         return  conf;
+    }
+
+    /**
+     * 创建新的conection链接
+     * @return
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
+    public static Connection creatConn() throws ClassNotFoundException, SQLException {
+        Class.forName(conf.getDiver());
+        Connection conn = DriverManager.getConnection(conf.getUrl(),conf.getUser(),conf.getPwd());//目前直接建立连接，后期建立连接池提高效率
+        return conn;
     }
 }
