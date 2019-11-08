@@ -28,6 +28,7 @@ public class DBManager {
         conf.setUrl(pros.getProperty("url"));
         conf.setUser(pros.getProperty("user"));
         conf.setUsingDB(pros.getProperty("usingDB"));
+        conf.setQuerClass(pros.getProperty("querClass"));
     }
     public static Connection getConn() throws ClassNotFoundException, SQLException {
         Class.forName(conf.getDiver());

@@ -32,11 +32,23 @@ public class Configuration {
      * 扫描生成java类的包
      */
     private String poPackage;
+    /**
+     * 项目使用查询类是哪一个类
+     */
+    private String querClass;
+
+    public String getQuerClass() {
+        return querClass;
+    }
+
+    public void setQuerClass(String querClass) {
+        this.querClass = querClass;
+    }
 
     public Configuration() {
     }
 
-    public Configuration(String diver, String url, String user, String pwd, String usingDB, String srcPath, String poPackage) {
+    public Configuration(String diver, String url, String user, String pwd, String usingDB, String srcPath, String poPackage, String querClass) {
         this.diver = diver;
         this.url = url;
         this.user = user;
@@ -44,6 +56,7 @@ public class Configuration {
         this.usingDB = usingDB;
         this.srcPath = srcPath;
         this.poPackage = poPackage;
+        this.querClass = querClass;
     }
 
     public java.lang.String getDiver() {

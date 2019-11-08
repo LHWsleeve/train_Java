@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 负责查询（对外提供服务核心类）
  */
-public abstract class Query {
+public abstract class Query implements Cloneable{
     /**
      * 直接执行一个DML语句
      *
@@ -41,7 +41,6 @@ public abstract class Query {
                 e.printStackTrace();
             }
         }
-        return list;
     }
 
 
@@ -254,4 +253,9 @@ public abstract class Query {
     }
 
     public  abstract Object querypage(int pageNum, int size);
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }
