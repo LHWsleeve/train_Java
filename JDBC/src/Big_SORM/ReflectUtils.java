@@ -32,10 +32,12 @@ public class ReflectUtils {
     public static void invoSet(Object obj, String columnNmae, Object columnValue) throws InvocationTargetException, IllegalAccessException {
         Method m = null;
         try {
+            if (columnValue!=null) {
 
-            m = obj.getClass().getDeclaredMethod("set" + StringUtils.firstChar2UpperCase(columnNmae),
-                    columnValue.getClass());
-        } catch (NoSuchMethodException e) {
+                m = obj.getClass().getDeclaredMethod("set" + StringUtils.firstChar2UpperCase(columnNmae),
+                        columnValue.getClass());
+            }
+            } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
 

@@ -201,7 +201,7 @@ public abstract class Query implements Cloneable{
     public Object queryUniqueRows(String sql, Class clazz, Object[] params) {
         List list = queryRows(sql,clazz,params);
         //一个
-        return (list==null&&list.size()!=0)?null:list.get(0);
+        return (list!=null&&list.size()!=0)?list.get(0):null;
     }
 
     /**
@@ -252,6 +252,20 @@ public abstract class Query implements Cloneable{
         return (Number) queryValue(sql,clazz,params);
     }
 
+    /**
+     * 根据主键的值直接查找对象
+     * @param clazz
+     * @param id
+     * @return
+     */
+    public Object queryId(Class clazz, Object id){
+        TableInfo tableInfo = TableContext.poclassTableMap.get(clazz);
+        //获得主键
+        ColumnInfo onlyPrikey = tableInfo.getOnlyPriKey();
+        String sql = "select * from "+tableInfo.getTname()+" where "+onlyPrikey.getName()+"=?";
+        executeDML(sql,new Object[]{id});
+        return id;
+    }
     public  abstract Object querypage(int pageNum, int size);
 
     @Override

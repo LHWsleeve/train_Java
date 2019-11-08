@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class JavaFileUtils {
     /**
-     * 根据字段信息生成java属性信息。如 bar username->private String username
+     * 根据字段信息生成java属性信息。如 var username-->private String username
      *
      * @param column    字段信息
      * @param convertor 类型转化其
