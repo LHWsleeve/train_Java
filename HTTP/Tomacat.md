@@ -80,8 +80,16 @@ displayName|String|该 Servlet 的显示名，通常配合工具使用，等价�
   
   2.若servlet配置了load-on-startup，则生命周期为从服务器启动到服务器关闭
 
-注意：
+    注意：
   
-init方法是对servlet进行初始化的一个方法，会在servlet第一次加载如内存时执行
+    init方法是对servlet进行初始化的一个方法，会在servlet第一次加载如内存时执行
 
 desytroy方法是服务器关闭时执行
+
+- Service和doGet和doPost方法的区别
+
+    Service方法：不管是get方式还是post方式的请求，如果Servlet类中有service方法，则优先调用Service方法。
+
+    doGet方法：在没有service方法的情况下如果是get方式的请求所调用的处理请求的方法
+
+    doPost方法：在没有service方法的情况下如果是post方式的请求所调用的处理请求的方法
