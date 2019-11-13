@@ -44,8 +44,17 @@
 简单方便，可移植性强
 
 使用：
+
 - 创建普通的java类并继承HttpServet
-- 重写service方法
-- 在service方法中书写逻辑代码即可
-- 再WEB-INF下配置web.xml
-运行流程：浏览器发送请求到服务器，服务器根据请求URL地址中的URI信息在webapps目录下找到对应的项目文件夹，然后在web.xml中检索对应的servlet，找到后调用并执行Servlet。
+- 重写service方法（此时tomcat才能认识）
+- 在service方法中书写逻辑代码
+- 再WEB-INF的web.xml配置servlet
+  
+运行流程：
+url:http://locahost:10000/project/my2
+组成：
+
+服务器地址：端口号/虚拟项目名 *（idea中会把自定义的编译好的文件发送到webapps）*/servlet别名
+*(端口号之后的部分为uri)*
+
+浏览器发送请求到服务器，服务器根据请求URL地址中的URI信息在webapps目录下找到对应的项目文件夹，然后在web.xml中检索对应的servlet，找到后调用并执行Servlet。
