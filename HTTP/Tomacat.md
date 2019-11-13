@@ -73,3 +73,15 @@ initParams|WebInitParam[]|指定一组 Servlet 初始化参数，等价于\<init
 asyncSuppoeted|boolean|声明 Servlet 是否支持异步操作模式，等价于\<async-supported> 标签。
 description|String|该 Servlet 的描述信息，等价于 \<description>标签。
 displayName|String|该 Servlet 的显示名，通常配合工具使用，等价于 \<display-name>标签。
+
+- Servlet 生命周期
+
+  1.从第一次调用到服务器关闭
+  
+  2.若servlet配置了load-on-startup，则生命周期为从服务器启动到服务器关闭
+
+注意：
+  
+init方法是对servlet进行初始化的一个方法，会在servlet第一次加载如内存时执行
+
+desytroy方法是服务器关闭时执行
