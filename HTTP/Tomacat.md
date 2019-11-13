@@ -58,3 +58,18 @@ url:http://locahost:10000/project/my2
 *(端口号之后的部分为uri)*
 
 浏览器发送请求到服务器，服务器根据请求URL地址中的URI信息在webapps目录下找到对应的项目文件夹，然后在web.xml中检索对应的servlet，找到后调用并执行Servlet。
+
+## Servlet3.0  @WebServlet注解
+
+Servlet3.0以后，可以不用再web.xml里面配置servlet，只需要加上@WebServlet注解就可以修改该servlet的属性。
+
+属性名|类型|描述
+-|-|-
+$\color{red}{name}$|String|指定Servlet 的 name 属性，等价于 \<servlet-name>。如果没有显式指定，则该 Servlet 的取值即为类的全限定名。
+$\color{red}{value}$|String[]|该属性等价于 urlPatterns 属性。两个属性不能同时使用。
+$\color{red}{urlPattern}$|String[]|指定一组 Servlet 的 URL 匹配模式。等价于\<url-pattern>标签。
+loadOnStartup|int|指定 Servlet 的加载顺序，等价于 \<load-on-startup>标签。
+initParams|WebInitParam[]|指定一组 Servlet 初始化参数，等价于\<init-param>标签。
+asyncSuppoeted|boolean|声明 Servlet 是否支持异步操作模式，等价于\<async-supported> 标签。
+description|String|该 Servlet 的描述信息，等价于 \<description>标签。
+displayName|String|该 Servlet 的显示名，通常配合工具使用，等价于 \<display-name>标签。
