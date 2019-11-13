@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Enumeration;
 
 @WebServlet(name = "RequestServlet",urlPatterns = "/req")
 public class RequestServlet extends HttpServlet {
@@ -40,5 +41,21 @@ public class RequestServlet extends HttpServlet {
         //获取协议
         String h = req.getScheme();
         System.out.println(h);
+        //获取请求行数据
+           //获取指定请求行信息
+     String value = req.getHeader("Host");
+        System.out.println(value);
+           //获取所有请求行的键的枚举
+        Enumeration<String> e = req.getHeaderNames();
+        while (e.hasMoreElements()){
+            String name = e.nextElement();
+            String value2 = req.getHeader(name);
+            System.out.println(name+":"+value2);
+        }
+        //获取用户数据(浏览器请求服务器时会将post和get解析，实际二者一样)
+        String name2 = req.getParameter("uname");//均用getParamter方法
+        String pwd = req.getParameter("pwd");//getParamter不能获取通键不通值的多项选择，应使用getParamterValues，返回一个值数组
+        System.out.println(name2+":"+pwd);
+        //获取所有的用户请求数据的键的枚举 req.getParameterNames()
     }
 }

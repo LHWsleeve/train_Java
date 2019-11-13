@@ -11,9 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-<form action="method" method="get">
+<form action="req" method="get">
     用户名：<input type="text" name="uname"value=""/><br/>
-密码：<input type="text" name="pwd" value=""/><br/>
+    密码：<input type="text" name="pwd" value=""/><br/>
     <input type="submit"value="登录"/>
 </form>
 </body>
