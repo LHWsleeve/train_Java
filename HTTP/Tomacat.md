@@ -167,7 +167,7 @@ servlet的方法执行进行请求处理
 
 ## 请求转发
 
-作用：实现多个Servlet联动操作处理请求，避免代码冗余，明确Servlet职责。
+$\color{red}{作用}$：实现多个Servlet联动操作处理请求，避免代码冗余，明确Servlet职责。
 
 使用:req.getRequestDispatcher（"要转发的地址"）.forward（req，resp）;
 
@@ -176,3 +176,37 @@ servlet的方法执行进行请求处理
 特点：一次请求，浏览器地址栏信息不变
 
 注意：请求转发后，直接retuen
+
+## Request对象作用域
+
+- 问题：
+
+使用请求转发后，不同的 Servlet之间怎么进行数据的共享呢？或者说数据怎么从一个 servlet流转给另外一个 Servlet呢？
+
+- 解决：
+
+使用request对象的作用域
+
+- 使用：
+
+request setAttribute object name，Object value）;
+
+request getAttribute（object obj）;
+
+- $\color{red}{作用}$：
+
+解决了$\color{red}{一次请求内}$的不同 Servlet的数据共享问题。作用域：基于请求转发，一次请求中的所有 Servlet共享。
+
+- 注意
+
+使用Request对象进行数据流转，数据只在一次请求内有效。
+
+- 特点：
+
+服务器创建
+
+每次请求都会创建
+
+生命周期一次请求
+
+## 重定向
