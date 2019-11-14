@@ -20,18 +20,25 @@ public class LoginServlet extends HttpServlet {
         resp.setContentType("text/html;charset=utf-8");
         //获取请求信息
         String uname = req.getParameter("uname");
-        String pwd = req.getParameter("pwd");
+       String pwd = req.getParameter("pwd");
         System.out.println(uname+":"+pwd);
         //处理请求信息
             //获取业务层对象
         LoginService ls = new LoginSerivceImpl();
         User u = ls.checkLoginService(uname,pwd);
+
         System.out.println(u);
+
         //响应处理结果
         if (u!=null){
             resp.getWriter().write("登陆成功");
         }else {
-            resp.getWriter().write("登陆失败");
+//            resp.getWriter().write("登陆失败");
+            System.out.println("登陆失败");
+            //使用请求转发回到登陆页面
+            req.getRequestDispatcher("page").forward(req,resp);
+            return;
         }
+
     }
 }
