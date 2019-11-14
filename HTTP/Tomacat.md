@@ -1,4 +1,4 @@
-# Tomcat服务器介绍和使用：
+# Tomcat服务器介绍和使用
 
 服务器的概念和作用：
 
@@ -18,6 +18,7 @@
 ## Tomcat
 
 目录结构介绍：
+
 - \bin存放启动和关闭Tomcat的可执行文件
 - \conf存放Tomcat的配置文件
 - \lib存放库文件
@@ -27,7 +28,7 @@
 
 *校验安装*:打开bin目录，然后双击执行startup.bat文件，打开浏览器在地址栏中输入localhost：8080/如果出现tomcat广告页安装成功
 
-## Servlet介绍：
+## Servlet介绍
 
 问题：服务器在接收到浏览器的请求后，会自动调用对应的逻辑代码进行请求处理。但是逻辑代码是由程序员编写并放到服务器中，那么服务器怎么知道该怎么调用并调用哪个类和哪个方法来进行请求处理。
 
@@ -51,7 +52,7 @@
 - 再WEB-INF的web.xml配置servlet
   
 运行流程：
-url:http://locahost:10000/project/my2
+url:<http://locahost:10000/project/my2>
 组成：
 
 服务器地址：端口号/虚拟项目名 *（idea中会把自定义的编译好的文件发送到webapps）*/servlet别名
@@ -114,7 +115,7 @@ desytroy方法是服务器关闭时执行
     获取请求行数据
     获取用户数据
 
-## Response对象：
+## Response对象
 
 - 问题
 
@@ -158,8 +159,20 @@ servlet的方法执行进行请求处理
 
   3.响应处理结果
 
-  ## 数据流转流程
+## 数据流转流程
 
   浏览器--->服务器---->数据库
 
   浏览器<---服务器<----数据库
+
+## 请求转发
+
+作用：实现多个Servlet联动操作处理请求，避免代码冗余，明确Servlet职责。
+
+使用:req.getRequestDispatcher（"要转发的地址"）.forward（req，resp）;
+
+转发地址：相对路径（uriPattern）
+
+特点：一次请求，浏览器地址栏信息不变
+
+注意：请求转发后，直接retuen
