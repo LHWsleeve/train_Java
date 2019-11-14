@@ -31,7 +31,10 @@ public class LoginServlet extends HttpServlet {
 
         //响应处理结果
         if (u!=null){
-            resp.getWriter().write("登陆成功");
+//            req.getRequestDispatcher("main").forward(req,resp);
+            //重定向
+            resp.sendRedirect("/web/main");
+            return;
         }else {
 //            resp.getWriter().write("登陆失败");
             System.out.println("登陆失败");
