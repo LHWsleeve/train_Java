@@ -25,12 +25,15 @@ public class ResponseServlet extends HttpServlet {
         //处理请求
 
         //响应处理结果
-           //设置响应投
+           //设置响应头
         resp.setHeader("mouse","xxxxx");//在响应头中set会覆盖同键值，add不会
         resp.addHeader("key","bbbb");
+            //设置响应编码格式
+        //resp.setHeader("content-type","text/html;charset=utf-8");
+          resp.setContentType("text/html;charset=utf-8");
            //设置响应状态码
 //        resp.sendError(404,"sorry");
            //设置相应实体
-        resp.getWriter().write("<b>bu neng xie zhong wen</b>");
+        resp.getWriter().write("<b>天气不错</b>");
     }
 }
