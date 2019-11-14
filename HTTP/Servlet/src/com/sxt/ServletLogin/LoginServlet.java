@@ -1,5 +1,10 @@
 package com.sxt.ServletLogin;
 
+
+import com.sxt.pojo.User;
+import com.sxt.service.LoginService;
+import com.sxt.service.impl.LoginSerivceImpl;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,6 +23,15 @@ public class LoginServlet extends HttpServlet {
         String pwd = req.getParameter("pwd");
         System.out.println(uname+":"+pwd);
         //处理请求信息
+            //获取业务层对象
+        LoginService ls = new LoginSerivceImpl();
+        User u = ls.checkLoginService(uname,pwd);
+        System.out.println(u);
         //响应处理结果
+        if (u!=null){
+            resp.getWriter().write("登陆成功");
+        }else {
+            resp.getWriter().write("登陆失败");
+        }
     }
 }
