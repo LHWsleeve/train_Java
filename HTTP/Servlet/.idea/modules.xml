@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Cookie/Cookie.iml" filepath="$PROJECT_DIR$/../Cookie/Cookie.iml" />
       <module fileurl="file://$PROJECT_DIR$/Servlet.iml" filepath="$PROJECT_DIR$/Servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../session/session.iml" filepath="$PROJECT_DIR$/../session/session.iml" />
     </modules>
   </component>
 </project>
