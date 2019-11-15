@@ -17,6 +17,7 @@ import java.io.IOException;
  * 存储的数据声明在服务器端，只有访问带有Cookie的浏览器才能存储Cookie
  * 临时存储：存储在浏览器的运行内存中，浏览器关闭即失效。
  * 定时存储：存储一次Cookie后，Cookie有效期存储在客户端硬盘内。在有效期内，符合路径要求的请求都会附带该信息
+ *默认Cookie信息存储好之后，每次请求都会附带，除非设置有效路径。
  */
 @WebServlet(name = "CookieServlet",urlPatterns = "/ck")
 public class CookieServlet extends HttpServlet {
@@ -31,7 +32,9 @@ public class CookieServlet extends HttpServlet {
         Cookie c = new Cookie("mouse","errerewtg");
         Cookie c2 = new Cookie("23","er32423423432rerewtg");
         //设置Cookie+有效期
+        //设置有效路径
         c2.setMaxAge(3*24*3600);
+        c2.setPath("/Cookie/gc");
         resp.addCookie(c2);
         //响应Cookie信息
         resp.addCookie(c);
