@@ -7,6 +7,7 @@ import com.sxt.service.impl.LoginSerivceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -32,8 +33,13 @@ public class LoginServlet extends HttpServlet {
         //响应处理结果
         if (u!=null){
 //            req.getRequestDispatcher("main").forward(req,resp);
+            //创建Cookie信息实现三天免登录
+            Cookie c = new Cookie("Id",u.getId()+"");
+            c.setMaxAge(3*24*3600);
+            c.setPath("/login/ck");//路径一定要正确。
+            resp.addCookie(c);
             //重定向
-            resp.sendRedirect("/web/main");
+            resp.sendRedirect("/login/main");
             return;
         }else {
 //            resp.getWriter().write("登陆失败");

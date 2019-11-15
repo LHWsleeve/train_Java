@@ -11,4 +11,9 @@ public class LoginSerivceImpl implements LoginService {
     public User checkLoginService(String uname, String pwd) {
         return Id.checkLoginDao(uname,pwd);
     }
+
+    @Override
+    public User checkLoginService(String id) {
+        return Id.checkIdDao(id);
+    }
 }
