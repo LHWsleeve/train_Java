@@ -247,3 +247,5 @@ request getAttribute（object obj）;
 - 问题：HTTP协议是没有记忆功能的，一次请求结束后，相关数据会被销毁。如果第二次的请求需要使用相同的请求数据怎么办呢？
 难道是让用户再次请求书写吗？
 - 解决：Cookie
+  
+## Session学习
