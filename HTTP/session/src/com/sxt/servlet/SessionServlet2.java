@@ -14,5 +14,6 @@ public class SessionServlet2 extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession hs = req.getSession();
         System.out.println("SessionServlet3.service()"+hs.getId());
+        System.out.println("ss2"+hs.getAttribute("name"));
     }
 }
