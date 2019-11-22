@@ -249,3 +249,15 @@ request getAttribute（object obj）;
 - 解决：Cookie
   
 ## Session学习
+- 原理：
+
+    用户使用浏览器第一次向服务器发送请求，服务器在接受到请求后，调用对应的 Servlet进行处理。在处理过程中会给用户创建一个 session对象，用来存储用户请求处理相关的公共数据，并将此 session对象的 JSESSIONID以 Cookie的形式存储在浏览器中（临时存储，浏览器关闭即失效）。用户在发起第二次请求及后续请求时，请求信息中会附带 JSESSIONID，服务器在接收到请求后，调用对应的 Servlet进行请求处理，同时根据 JSESSIONID返回其对应的 session对象。
+- 特点：
+  
+  Session技术是依赖 Cookie技术的服务器端的数据存储技术由服务器进行创建
+
+  由服务器进行创建
+
+  每个用户独立拥有一个 session
+  
+  默认存储时间为30分钟
