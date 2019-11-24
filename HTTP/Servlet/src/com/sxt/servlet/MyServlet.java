@@ -1,5 +1,7 @@
 package com.sxt.servlet;
 
+import com.sxt.pojo.User;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,13 +17,19 @@ public class MyServlet extends HttpServlet {
         //设置响应编码格式
         resp.setContentType("text/html;charset=utf-8");
         //获取请求信息
+            //获取session中的数据
+        User u = (User) req.getSession().getAttribute("user");
         //处理请求信息
         //响应处理结果
         resp.getWriter().write("<html>");
         resp.getWriter().write("<head>");
         resp.getWriter().write("</head>");
         resp.getWriter().write("<body>");
-        resp.getWriter().write("<h3>欢迎"+req.getParameter("uname")+"访问</h3>");
+        resp.getWriter().write("<h3>欢迎"+u.getName()+"访问</h3>");
+        resp.getWriter().write("<hr>");
+        resp.getWriter().write("<form action='show' method='get'>");
+        resp.getWriter().write("<input type='submit' value='查看个人信息'>");
+        resp.getWriter().write("</form>");
         resp.getWriter().write("</body>");
         resp.getWriter().write("</html>");
     }

@@ -44,6 +44,8 @@ public class CookieServlet extends HttpServlet {
                 System.out.println(u);
                 System.out.println(Id);
                 if (u!=null){
+                    //将用户数据存储到session中
+                    req.getSession().setAttribute("user",u);
                     resp.sendRedirect("/login/main");
                     return;
                 }else {
