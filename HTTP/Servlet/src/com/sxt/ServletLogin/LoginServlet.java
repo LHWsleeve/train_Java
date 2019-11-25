@@ -1,10 +1,16 @@
 package com.sxt.ServletLogin;
 
+/**
+ * 使用ServletContext对象完成网页计数器
+ * 在用户登陆较严重创建计数器并实现自增-->存储到ServletContext中
+ * 在主页面取出计数器数据，显示给用户
+ */
 
 import com.sxt.pojo.User;
 import com.sxt.service.LoginService;
 import com.sxt.service.impl.LoginSerivceImpl;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -38,6 +44,16 @@ public class LoginServlet extends HttpServlet {
             //将数据存储到session对象中
             HttpSession hs = req.getSession();
             hs.setAttribute("user",u);
+            //获取计数器
+            ServletContext sc = this.getServletContext();
+            //判断第一次
+            if (null != sc.getAttribute("nums")){
+                String nums = String.valueOf( Integer.parseInt(String.valueOf((String)sc.getAttribute("nums")))+1);
+                sc.setAttribute("nums",nums);
+            }else{
+                sc.setAttribute("nums",1);
+            }
+
             //重定向
             resp.sendRedirect("/login/main");
             return;

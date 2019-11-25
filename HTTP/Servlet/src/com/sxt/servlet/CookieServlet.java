@@ -4,6 +4,7 @@ import com.sxt.pojo.User;
 import com.sxt.service.LoginService;
 import com.sxt.service.impl.LoginSerivceImpl;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -42,13 +43,25 @@ public class CookieServlet extends HttpServlet {
                 LoginService ls = new LoginSerivceImpl();
                 User u = ls.checkLoginService(Id);
                 System.out.println(u);
-                System.out.println(Id);
+//                System.out.println(Id);
                 if (u!=null){
                     //将用户数据存储到session中
                     req.getSession().setAttribute("user",u);
+
+                    //计数器自增（无需判断是否是第一次登录，因为使用cookie登录必定之前有登录）
+                    ServletContext sc = this.getServletContext();
+                    String c = (String)sc.getAttribute("nums"); //传入时时String类型，所以以String类取出
+                    int nums = Integer.parseInt(String.valueOf(c))+1;//转成包装类Integer+1
+                    System.out.println(nums);
+                    String nums2 = String.valueOf(nums);//转成String包装类，传入ServletContext，下一个取出时要按照上一个传入的类去除
+//
+//                    String nums = String.valueOf( Integer.parseInt(String.valueOf((String)sc.getAttribute("nums")))+1);//上面的操作等于这一条
+                    sc.setAttribute("nums",nums2);
+                    //重定向
                     resp.sendRedirect("/login/main");
                     return;
                 }else {
+                    //转发
                     req.getRequestDispatcher("page").forward(req,resp);
 
                 }
