@@ -297,3 +297,18 @@ Request解决了一次请求内的数据共享问题，session解决了用户不
 获取 webroot下资源绝对路径
 ```
 案例：网页浏览器次数统计，详见源码
+
+## Servlet Config对象：
+- 问题：
+  
+  使用 ServletContext对象可以获取 web.xm中的全局配置文件，在 web.xm中每个 Servlet也可以进行单独的配置，那么该怎么获取配置信息呢？
+- 解决
+
+    使用 ServletConfig对象
+- 作用：
+
+  ServletConfig对象是 Servlet的专属配置对象，每个 Servlet都单独拥有一个 Servletconfig对象，用来获取 web.xm中的配置信息。
+- 使用
+
+  获取 ServletConfig对象
+  获取 web.xml中 servlet的配置信息
