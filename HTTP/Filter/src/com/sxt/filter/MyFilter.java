@@ -11,10 +11,13 @@ import java.io.IOException;
  *  保护servlet
  *  使用：
  *  创建了一个实现Fliter接口的java类
- *  重写方法：init，dofFilter，destory
+ *  重写方法：init：服务器启动时执行。资源初始化
+ *  dofFilter：拦截请求的方法，在此方法中对资源实现管理
+ *  注意：需要手动对请求放行
+ *  destory：
  *  在web.xml中配置过滤器
  */
-@WebFilter(filterName = "MyFilter",urlPatterns = "/*")
+@WebFilter(filterName = "MyFilter")
 public class MyFilter implements Filter {
 
     @Override
