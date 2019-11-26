@@ -218,7 +218,7 @@ request getAttribute（object obj）;
 - 解决：使用重定向
 
 使用：
-    
+
     response.sendRedirect（“路径"）
 
     本地路径为：uri
@@ -249,6 +249,7 @@ request getAttribute（object obj）;
 - 解决：Cookie
   
 ## Session学习
+
 - 原理：
 
     用户使用浏览器第一次向服务器发送请求，服务器在接受到请求后，调用对应的 Servlet进行处理。在处理过程中会给用户创建一个 session对象，用来存储用户请求处理相关的公共数据，并将此 session对象的 JSESSIONID以 Cookie的形式存储在浏览器中（临时存储，浏览器关闭即失效）。用户在发起第二次请求及后续请求时，请求信息中会附带 JSESSIONID，服务器在接收到请求后，调用对应的 Servlet进行请求处理，同时根据 JSESSIONID返回其对应的 session对象。
@@ -289,6 +290,7 @@ Request解决了一次请求内的数据共享问题，session解决了用户不
 
 项目内
 - 使用：
+
 ```
 获取 ServletContext对象
 使用作用域进行共享数据流转
@@ -296,9 +298,11 @@ Request解决了一次请求内的数据共享问题，session解决了用户不
 获取 webroot下项目资源流对象
 获取 webroot下资源绝对路径
 ```
+
 案例：网页浏览器次数统计，详见源码
 
-## Servlet Config对象：
+## Servlet Config对象
+
 - 问题：
   
   使用 ServletContext对象可以获取 web.xm中的全局配置文件，在 web.xm中每个 Servlet也可以进行单独的配置，那么该怎么获取配置信息呢？
@@ -312,3 +316,76 @@ Request解决了一次请求内的数据共享问题，session解决了用户不
 
   获取 ServletConfig对象
   获取 web.xml中 servlet的配置信息
+
+## web.xml文件使用总结
+
+- 作用：存储项目相关的配置信息，保护 Servlet。解耦一些数据对程序的依赖。
+- 使用位置：每个Web项目中
+  
+  Tomcat服务器中（在服务器目录conf目录中）
+- 区别：
+
+    Web项目下的 web.xm文件为局部配置，针对本项目的位置。
+
+    Tomcat下的 web，xm文件为全局配置，配置公共信息
+
+- 内容（核心组件）：
+
+    全局上下文配置(全局配置参数)
+
+    Servlet配置
+
+    过滤器配置
+  
+    监听器配置
+- 加载顺序：
+
+Web容器会按 Servletcontext-> context-param-> listener→filter-> servlet这个顺序加载组件，这些元素可配置在web.xml文件中的任意位置。
+- 加载时机：
+服务器启动时。
+
+## server.xml文件：
+- 问题：
+
+浏览器发起请求后，服务器根据请求在 webapps目下调用对应的 Servlet进行请求处理。那么为什么是 webapps目录难道不能是其他目录吗？
+- 了解 server.xm文件的配置
+  
+  Servlet.xml核心组件：
+  ```
+  <Servlet>
+    < Service>
+        <Connector>
+        </Connector>
+        <Engine>
+            <Host>
+                <Context/>
+            </Host>
+        </Engine>
+    </Service>
+  </Servlet>
+  ```
+
+- 热部署
+
+```
+<Context path=/Pet"reloadable=false"docBase ="F：/PetWeb"/>
+reloadable=ture 热部署
+path:项目路径
+docBase：项目web绝对路径
+```
+$\color{red}{热部署的绝对路径在服务器启动前必须存在，若删除文件则必须删除Context}$
+
+## JSP学习：
+
+- 问题：
+
+在学习了 Servlet之后，使用 Servlet进行页面的展现，代码书写过于麻烦。极大的影响了开发的效率，那么有没有一种方式可以让我们像以前写网页一样来进行网页的编程工作？
+
+- 解决：
+
+使用JSP技术
+- 概念：
+
+JSP全名为 Java Server Pages，中文名叫java服务器页面，其根本是一个简化的 Servlet设计，它[1]是由 Sun Microsystems公司倡导、许多公司参与一起建立的一种动态网页技术标准。
+
+- 特点：本质上还是 Servlet
