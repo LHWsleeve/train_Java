@@ -263,7 +263,7 @@ request getAttribute（object obj）;
 
   默认存储时间为30分钟
 
-## servletContext对象
+## ServletContext对象
 
 - 问题：
 Request解决了一次请求内的数据共享问题，session解决了用户不同请求的数据共享问题，那么不同的用户的数据共享该怎么办呢？
@@ -373,9 +373,10 @@ reloadable=ture 热部署
 path:项目路径
 docBase：项目web绝对路径
 ```
+
 $\color{red}{热部署的绝对路径在服务器启动前必须存在，若删除文件则必须删除Context}$
 
-## JSP学习：
+## JSP学习
 
 - 问题：
 
@@ -384,8 +385,17 @@ $\color{red}{热部署的绝对路径在服务器启动前必须存在，若删�
 - 解决：
 
 使用JSP技术
+
 - 概念：
 
 JSP全名为 Java Server Pages，中文名叫java服务器页面，其根本是一个简化的 Servlet设计，它[1]是由 Sun Microsystems公司倡导、许多公司参与一起建立的一种动态网页技术标准。
 
-- 特点：本质上还是 Servlet
+- 特点：
+
+本质上还是 Servlet
+
+跨平台，一次编写处处运行
+
+组件跨平台
+
+健壮性和安全性
