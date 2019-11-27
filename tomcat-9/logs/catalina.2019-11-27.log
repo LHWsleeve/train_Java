@@ -1,0 +1,96 @@
+27-Nov-2019 11:11:19.759 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本:     Apache Tomcat/9.0.27
+27-Nov-2019 11:11:19.763 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:            Oct 7 2019 09:57:22 UTC
+27-Nov-2019 11:11:19.768 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.27.0
+27-Nov-2019 11:11:19.768 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+27-Nov-2019 11:11:19.769 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:               10.0
+27-Nov-2019 11:11:19.769 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:                  amd64
+27-Nov-2019 11:11:19.769 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:         C:\Program Files\Java\jdk-12
+27-Nov-2019 11:11:19.769 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 版本:              12+33
+27-Nov-2019 11:11:19.769 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:            Oracle Corporation
+27-Nov-2019 11:11:19.770 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\Sleeve\Documents\train_Java\tomcat-9
+27-Nov-2019 11:11:19.770 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\Sleeve\Documents\train_Java\tomcat-9
+27-Nov-2019 11:11:19.772 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Nov-2019 11:11:19.772 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Nov-2019 11:11:19.773 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Nov-2019 11:11:19.773 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\Sleeve\Documents\train_Java\tomcat-9\conf\logging.properties
+27-Nov-2019 11:11:19.773 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Nov-2019 11:11:19.773 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Nov-2019 11:11:19.774 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Nov-2019 11:11:19.774 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Nov-2019 11:11:19.774 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\Sleeve\Documents\train_Java\tomcat-9
+27-Nov-2019 11:11:19.775 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\Sleeve\Documents\train_Java\tomcat-9
+27-Nov-2019 11:11:19.775 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\Sleeve\Documents\train_Java\tomcat-9\temp
+27-Nov-2019 11:11:19.775 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+27-Nov-2019 11:11:19.776 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+27-Nov-2019 11:11:19.777 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+27-Nov-2019 11:11:19.782 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+27-Nov-2019 11:11:19.936 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-10000"]
+27-Nov-2019 11:11:20.153 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["ajp-nio-8009"]
+27-Nov-2019 11:11:20.157 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[539]毫秒内初始化
+27-Nov-2019 11:11:20.184 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Nov-2019 11:11:20.184 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.27]
+27-Nov-2019 11:11:20.193 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\docs]
+27-Nov-2019 11:11:20.526 警告 [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [185] milliseconds.
+27-Nov-2019 11:11:20.540 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\docs] has finished in [347] ms
+27-Nov-2019 11:11:20.541 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\examples]
+27-Nov-2019 11:11:20.868 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\examples] has finished in [327] ms
+27-Nov-2019 11:11:20.869 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\host-manager]
+27-Nov-2019 11:11:20.896 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\host-manager] has finished in [27] ms
+27-Nov-2019 11:11:20.897 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\manager]
+27-Nov-2019 11:11:20.919 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\manager] has finished in [22] ms
+27-Nov-2019 11:11:20.919 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\project]
+27-Nov-2019 11:11:21.325 信息 [main] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+27-Nov-2019 11:11:21.342 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\project] has finished in [422] ms
+27-Nov-2019 11:11:21.342 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\ROOT]
+27-Nov-2019 11:11:21.360 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\ROOT] has finished in [18] ms
+27-Nov-2019 11:11:21.364 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-10000"]
+27-Nov-2019 11:11:21.369 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["ajp-nio-8009"]
+27-Nov-2019 11:11:21.373 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in [1,215] milliseconds
+27-Nov-2019 11:13:57.576 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本:     Apache Tomcat/9.0.27
+27-Nov-2019 11:13:57.580 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:            Oct 7 2019 09:57:22 UTC
+27-Nov-2019 11:13:57.580 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.27.0
+27-Nov-2019 11:13:57.580 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+27-Nov-2019 11:13:57.581 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:               10.0
+27-Nov-2019 11:13:57.581 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:                  amd64
+27-Nov-2019 11:13:57.581 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:         C:\Program Files\Java\jdk-12
+27-Nov-2019 11:13:57.581 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 版本:              12+33
+27-Nov-2019 11:13:57.581 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:            Oracle Corporation
+27-Nov-2019 11:13:57.582 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\Sleeve\Documents\train_Java\tomcat-9
+27-Nov-2019 11:13:57.582 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\Sleeve\Documents\train_Java\tomcat-9
+27-Nov-2019 11:13:57.589 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Nov-2019 11:13:57.593 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+27-Nov-2019 11:13:57.593 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Nov-2019 11:13:57.593 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\Sleeve\Documents\train_Java\tomcat-9\conf\logging.properties
+27-Nov-2019 11:13:57.594 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Nov-2019 11:13:57.594 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+27-Nov-2019 11:13:57.594 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Nov-2019 11:13:57.595 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+27-Nov-2019 11:13:57.596 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\Sleeve\Documents\train_Java\tomcat-9
+27-Nov-2019 11:13:57.597 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\Sleeve\Documents\train_Java\tomcat-9
+27-Nov-2019 11:13:57.597 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\Sleeve\Documents\train_Java\tomcat-9\temp
+27-Nov-2019 11:13:57.598 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+27-Nov-2019 11:13:57.599 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+27-Nov-2019 11:13:57.599 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+27-Nov-2019 11:13:57.603 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+27-Nov-2019 11:13:57.771 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-10000"]
+27-Nov-2019 11:13:57.990 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["ajp-nio-8009"]
+27-Nov-2019 11:13:57.994 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[556]毫秒内初始化
+27-Nov-2019 11:13:58.023 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+27-Nov-2019 11:13:58.023 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.27]
+27-Nov-2019 11:13:58.030 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\docs]
+27-Nov-2019 11:13:58.360 警告 [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [184] milliseconds.
+27-Nov-2019 11:13:58.374 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\docs] has finished in [344] ms
+27-Nov-2019 11:13:58.375 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\examples]
+27-Nov-2019 11:13:58.661 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\examples] has finished in [286] ms
+27-Nov-2019 11:13:58.661 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\host-manager]
+27-Nov-2019 11:13:58.688 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\host-manager] has finished in [27] ms
+27-Nov-2019 11:13:58.689 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\manager]
+27-Nov-2019 11:13:58.711 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\manager] has finished in [23] ms
+27-Nov-2019 11:13:58.712 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\project]
+27-Nov-2019 11:13:59.142 信息 [main] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+27-Nov-2019 11:13:59.150 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\project] has finished in [438] ms
+27-Nov-2019 11:13:59.152 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\ROOT]
+27-Nov-2019 11:13:59.169 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\Sleeve\Documents\train_Java\tomcat-9\webapps\ROOT] has finished in [16] ms
+27-Nov-2019 11:13:59.172 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-10000"]
+27-Nov-2019 11:13:59.178 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["ajp-nio-8009"]
+27-Nov-2019 11:13:59.181 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in [1,188] milliseconds

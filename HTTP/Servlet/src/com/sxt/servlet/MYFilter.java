@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(filterName = "MYFilter",urlPatterns = "/*")
+@WebFilter(filterName = "MYFilter",urlPatterns = "/ck")
 public class MYFilter implements Filter {
     public void destroy() {
     }
@@ -21,7 +21,7 @@ public class MYFilter implements Filter {
       if (hs.getAttribute("user")!=null){
           chain.doFilter(req, resp);
       }else {
-          ((HttpServletResponse)resp).sendRedirect("/page");
+          ((HttpServletResponse)resp).sendRedirect("/login/page");
       }
 
     }

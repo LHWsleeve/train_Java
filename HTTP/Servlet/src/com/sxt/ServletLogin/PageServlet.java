@@ -17,7 +17,7 @@ public class PageServlet extends HttpServlet {
         //处理请求
         //相应处理结果
         //获取request作用域数据
-        String str = (String) req.getAttribute("str")==null?"":(String) req.getAttribute("str");
+            String str = (String) req.getAttribute("str")==null?"":(String) req.getAttribute("str");
             resp.getWriter().write("<html>");
             resp.getWriter().write("<head>");
             resp.getWriter().write("</head>");

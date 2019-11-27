@@ -22,7 +22,7 @@ public class MyServlet extends HttpServlet {
         User u = (User) req.getSession().getAttribute("user");
         ServletContext sc= this.getServletContext();
         String b = (String) sc.getAttribute("nums");
-
+        int count = (int) sc.getAttribute("count");
         //处理请求信息
         //响应处理结果
         resp.getWriter().write("<html>");
@@ -31,6 +31,8 @@ public class MyServlet extends HttpServlet {
         resp.getWriter().write("<body>");
         resp.getWriter().write("<h3>欢迎"+u.getName()+"访问</h3>");
         resp.getWriter().write("当前网页浏览次数为:"+b);
+        resp.getWriter().write("当前在线人数为:"+count);
+
         resp.getWriter().write("<hr>");
         resp.getWriter().write("<form action='show' method='get'>");
         resp.getWriter().write("<input type='submit' value='查看个人信息'>");
