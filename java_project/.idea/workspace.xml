@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3fdefbd5-fb1f-4003-8d7a-c3fee9908adc" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="java_project" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\liuha\Documents\GitHub\train_Java\java_project\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1QQCuTWmjm4HVsC5lvs8osXSI8j" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567692648413" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Net_Chat04" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\liuha\Documents\GitHub\train_Java\java_project\src" />
+      <recent name="F:\java_project\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\liuha\Documents\GitHub\train_Java\java_project\src\Net_Chat04" />
+      <recent name="C:\Users\liuha\Documents\GitHub\train_Java\java_project\src\Net_Chat02" />
+      <recent name="C:\Users\liuha\Documents\GitHub\train_Java\java_project\src\Net_study04" />
+      <recent name="C:\Users\liuha\Documents\GitHub\train_Java\java_project\src\Net_study03" />
+      <recent name="C:\Users\liuha\Documents\GitHub\train_Java\java_project\src\Net_study02" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Net_Chat02" />
+      <recent name="Net_chat01" />
+      <recent name="Net_study04.Net_study03" />
+      <recent name="Net_study02" />
+      <recent name="Net_study01" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Thread" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Client (1)">
+    <configuration name="Chat (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Net_Chat04.Chat" />
+      <module name="java_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Net_Chat04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Chat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Net_Chat02.Chat" />
+      <module name="java_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Net_Chat02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client (1)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Net_Chat04.Client" />
+      <module name="java_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Net_Chat04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Net_Chat02.Client" />
+      <module name="java_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Net_Chat02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DuoMultiClient02" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Net_chat01.DuoMultiClient02" />
+      <module name="java_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Net_chat01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.DuoMultiClient02" />
+      <item itemvalue="Application.Chat" />
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.Chat (1)" />
+      <item itemvalue="Application.Client (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Client (1)" />
+        <item itemvalue="Application.Chat (1)" />
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Chat" />
+        <item itemvalue="Application.DuoMultiClient02" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3fdefbd5-fb1f-4003-8d7a-c3fee9908adc" name="Default Changelist" comment="" />
+      <created>1552446126498</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552446126498</updated>
+      <workItem from="1552446131127" duration="1294000" />
+      <workItem from="1552457714086" duration="600000" />
+      <workItem from="1554472080837" duration="6788000" />
+      <workItem from="1555853353802" duration="3118000" />
+      <workItem from="1565104465761" duration="719000" />
+      <workItem from="1567432525818" duration="42979000" />
+      <workItem from="1567693663361" duration="7222000" />
+      <workItem from="1568451295838" duration="228000" />
+      <workItem from="1568451531049" duration="43380000" />
+      <workItem from="1569508837857" duration="87000" />
+      <workItem from="1569509062596" duration="1020000" />
+      <workItem from="1569593531584" duration="2957000" />
+      <workItem from="1569596550828" duration="53466000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Thread_study03/CoTest01.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+</project>
