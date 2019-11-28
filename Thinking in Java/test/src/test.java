@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
+/**
+ * 吸血鬼数
+ */
 public class test {
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
