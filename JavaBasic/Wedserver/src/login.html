@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>登录</title>
+</head>
+<body>
+<h1>
+    基于http协议不同
+    post:提交。量大。url请求参数不可见（安全）
+    get:默认,获取。量小，url请求参数可见（不安全）
+    action:请求web服务器的资源
+    name:后端使用。只要请求服务器，则必须存在，否则数据不能提交
+    id：作为前端使用
+</h1>
+<form method="post" action="http://localhost:8888/index.html">
+    用户名：<input type="text"name="uname"id="uname"/>
+    密码:<input type="password"name="pwd"id="pwd"/>
+    <input type="submit"value="登录"/>
+</form>
+</body>
+</html>
