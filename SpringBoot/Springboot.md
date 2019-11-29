@@ -1,4 +1,5 @@
 # Spring Boot入门
+
 ## 1.Spring Boot简介
 简化Spring应用开发的一个框架
 
@@ -16,5 +17,4 @@ Martin fowler
 
 [详细参照微服务文档](https://martinfowler.com/articles/microservices.html)/[(中文)](http://www.bdata-cap.com/newsinfo/1713874.html)
 
-**单体应用**：ALL IN ONE 
-
+**单体应用**：ALL IN ONE
