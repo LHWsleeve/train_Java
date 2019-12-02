@@ -168,4 +168,15 @@ void print(Integer...args)--->void print(Integer i,Integer...args)
 - ** 枚举类型**
 当创建枚举类型enum后，系统会自动添加一些特性，如toString()方法，方便显示实例名。ordinal()方便表示常理啊ing顺序，以及xxx.value()产生枚举值的列表，可以以xx类型遍历。
 
-  枚举类型可以直接和switch(enum)搭配使用
+  枚举类型可以直接和switch(enum)搭配使用。
+
+  # 访问控制权限
+  public
+
+  protected
+
+  默认权限(包权限)
+
+  私有权限
+
+  当编写一个Java源代码文件时，此文件通常被称为编译单元。每个编译单元都必须有一个 **.java**文件，在编译单元内可以有一个Public类，该类的**名称必须与文件的名称相同**。每一个编译单元都只能由一个public类，其他类为public类提供支持。
