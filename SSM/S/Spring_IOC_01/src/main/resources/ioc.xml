@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--注册一个Person，Spring自动创建Person对象-->
+<!--一个bean标签注册一个组件（对象，类）
+class:注册主键的全名
+id：该组件的唯一标识
+-->
+    <bean id="person01" class="com.guigu.spring.Person">
+        <!--    使用peoperty标签为Person对象的属性赋值-->        
+        <property name="lastName" value="张三"></property>
+        <property name="age" value="18"></property>
+        <property name="email" value="10086@qq.com"></property>
+        <property name="gender" value="男"></property>
+    </bean>
+<!--    有参构造器-->
+    <bean id="person03" class="com.guigu.spring.Person">
+        <constructor-arg name="age" value="10"></constructor-arg>
+        <constructor-arg name="email" value="123@qq.com"></constructor-arg>
+        <constructor-arg name="lastName" value="小明"></constructor-arg>
+        <constructor-arg name="gender" value="女"></constructor-arg>
+    </bean>
+<!--   第二种有参构造器，直接赋值，但是必须顺序和JavaBean一致-->
+    <bean id="person04" class="com.guigu.spring.Person">
+        <constructor-arg value="15"></constructor-arg>
+        <constructor-arg value="111@qq.com"></constructor-arg>
+        <constructor-arg value="男"></constructor-arg>
+        <constructor-arg value="小王"></constructor-arg>
+    </bean>
+
+</beans>
