@@ -1,8 +1,9 @@
 package com.itheima.domain;
 
+import org.apache.ibatis.type.Alias;
+
 import java.io.Serializable;
 import java.sql.Date;
-
 public class User implements Serializable {
     private Integer id;
     private String username;
