@@ -164,3 +164,25 @@
 
    ![](pic\6.png)
    ![](pic\7.png)
+
+- 自定义Mybatis的分析：
+
+  Mybatis在使用代理dao的方式实现增删改查时做什么事。
+
+  第一：创建代理对象 
+  
+  第二：在代理对象中调用 selectlist
+  
+  手撕Mybatis视频地址:[手撕Mybatis](https://www.bilibili.com/video/av69586111?p=18)
+
+  # 第二天
+- 1、回顾 batis的自定义再分析和环境搭建+完善基于注解的 abatis
+- 2、mybatis的curd（基于代理dao的方式）
+- 3、mybatis中的参数深入及结果集的深入
+- 4、mybatis中基于传统dao的方式（编写dao的实现类）-了解的内容
+- 5、mybatis中的配置（主配置文件：SqlmapConfig.xml）
+
+        properties标签
+        typeAliases标签
+        mappers标签
+        
