@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--   三个bean的创建顺序，按照配置顺序创建bean -->
+<!--    改变bean的创建顺序 ，即bean之间的依赖（只是用来改变创建顺序），depends-on= book-->
+    <bean id="person" class="com.guigu.spring.Person" ></bean>
+    <bean id="car" class="com.guigu.spring.Car" depends-on="person"></bean>
+<!--    <bean id="book" class="com.guigu.spring.Book"></bean>-->
+<!--    测试bean的作用域
+bean的作用域：指定bean是否是单实例。默认：单实例-->
+<!--
+prototype:多实例
+1。容器启动默认不会启动多实例bean
+2.获取的时候创建这个Bean
+3.每次获取都会创建一个新的实例对象
+singleton:单实例的（默认）
+1.单实例的Bean在容器启动完成之前就以已经创建好对象
+2.如果是单实例bean，任何获取都是获取之前创建好的那个
+request：再web环境下，同义词请求创建一个Bean实例（没有）
+session：再web环境下，同一次会话创建一个Bean实例（没用）
+-->
+    <bean id="book02" class="com.guigu.spring.Book" scope="prototype"></bean>
+
+<!--    工厂模式创造静态实例：有一个专门帮我们创建对象的类-->
+<!--    bean的创建默认就是框架利用反射new创建的实例-->
+<!--    AirPlaneFactory.getAirPlane（xxx）-->
+<!--    静态工厂：工厂本身不用创建对象，通过静态方法调用。 对象=工厂类.工厂方法名（）
+实例工厂：工厂本身需要创建对象
+           工厂类 工厂对象 = new 工厂类()；
+           工厂对象.getAirPlane（xxx）；-->
+<!--配置静态工厂：不需要创建工厂本身,bean中指定工厂方法
+class:指定静态工厂全类名
+factory-method：指定工厂方法
+construct-arg：给方法传参-->
+    <bean id="airPlane01" class="com.guigu.factory.AirPlaneStaticFactory" factory-method="getAirPlane">
+        <constructor-arg name="jzName" value="刘大静态"></constructor-arg>
+    </bean>
+<!--    实例工厂
+factory-method：指定这个实例工厂中那个方法是工厂方法
+1.先配置出实力工厂对象
+2.配置我们要创建的AirPlane使用那个工厂创建
+    1）factory-bean:指定使用哪个工厂实例
+    2）factory-method:指定使用那个共-->
+    <bean id="airPlaneIn" class="com.guigu.factory.AirPlaneInstanceFactory" ></bean>
+<!--   指定当前对象使用那个工厂-->
+    <bean id="airPlane02" class="com.guigu.spring.AirPlane"
+          factory-bean="airPlaneIn"
+          factory-method="getAirPlane">
+        <constructor-arg name="jzName" value="刘二实例"></constructor-arg>
+    </bean>
+<!--    Factorybean是Spring规定的一个接口：
+只要是这个接口的实现类，Spring都认为是一个工厂
+-->
+    <bean id="myFactoryBeanImple"
+          class="com.guigu.factory.MyFactoryBeanImple"></bean>
+</beans>
