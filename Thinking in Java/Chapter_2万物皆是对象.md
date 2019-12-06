@@ -199,3 +199,84 @@ void print(Integer...args)--->void print(Integer i,Integer...args)
 2.在类的构造器中
 
 3.就在正要使用这些对象之前，**惰性初始化**。
+## 7.2 继承语法
+创建一个类时一定是在继承，不是显式的继承就是隐式继承Object。
+
+可以为每个类都创建一个main（）方法。在每个类中都设置一个mian()方法的技术是每个类的单元测试变得简便。
+```
+    class jilei{
+        public void c1(){
+            System.out.println("123");
+        }
+    }
+
+public class jicheng extends jilei{
+    public void c1(){
+        System.out.println("456");
+        super.c1();
+    }
+
+    public static void main(String[] args) {
+//        jilei jl = new jilei();
+//        jl.c1();
+        jicheng jc = new jicheng();
+        jc.c1();
+
+        output：
+        456 
+        123
+```
+$\color{red}{super}$:要理解这个super表示超类的意思。在上述代码中，执行jc.c1()先输出456，后输出123，说明执行了c1内部的语句后，根据super.c1右执行了父类同名方法c1的语句。若在c1中直接调用c1，编译器会认为递归，所以使用super关键字，表示超类，即，执行继承父类的方法。
+
+$\color{red}{在构造器中super就等于该类所继承的父类本身}$：对于含餐的基类，我们使用super（i）向父类传参初始化。例如
+```
+class Game{
+    Game(int i){
+        System.out.prinln(i);
+    }
+}
+class BigGame extends Game{
+    spuer(i)// 必须先为Game基类构造器初始化，因为继承是先构造基类。不然会失败
+    System.out.println(“xxx”)
+}
+```
+## 7.2 代理
+继承与组合的中庸之道。
+
+组合：创建两个分离的类，在一个类中引用另一个类
+
+继承：在基类外部创建一个大类包裹基类。
+
+代理：在代理类中创建某功能的类，调用类的一些方法以获得该类的部分特性。
+**用处**：需要使用基类的方法，但又不想暴露所有方法。
+
+例如：飞机控制类，我不想暴露太多飞机控制的功能，只需部分前进左右转的控制（而不需要暴露发射导弹功能）。通过在代理类中new一个飞机控制对象，然后在方法中添加飞机控制类的各个需要暴露的功能。
+```
+public class PlaneDelegation{
+     private PlaneControl planeControl;    //private外部不可访问
+     /*
+      * 飞行员权限代理类，普通飞行员不可以开火
+      */
+     PlaneDelegation(){
+         planeControl=new PlaneControl();
+     }
+     public void speed(){
+         planeControl.speed();
+     }
+     public void left(){
+         planeControl.left();
+     }
+     public void right(){
+         planeControl.right();
+     }
+ }
+ 
+ final class PlaneControl {//final表示不可继承，控制器都能继承那还得了。。
+     protected void speed() {}
+     protected void fire() {}
+     protected void left() {}
+     protected void right() {}
+ }
+
+```
+
