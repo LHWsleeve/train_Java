@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--为各种属性赋值-->
+<!--    1.什么都不赋值，就是null值-->
+    <bean id="car01" class="com.guigu.spring.Car">
+        <property name="carName" value="宝鸡"></property>
+        <property name="color" value="green"></property>
+        <property name="price" value="1000"></property>
+    </bean>
+
+    <bean id="person01" class="com.guigu.spring.Person">
+<!--        进行复杂赋值必须在property中-->
+        <property name="lastName">
+            <null/>
+        </property>
+<!--&lt;!&ndash;ref直接引用外面的car值，所以person的car与外部的car是一个car&ndash;&gt;-->
+<!--        <property name="car" ref="car01">-->
+            <property name="car">
+                <!--对象我们可以使用bean创建对象，所以我们在内部创建bean-->
+                <bean id="car02" class="com.guigu.spring.Car">
+                    <property name="price" value="55555"></property>
+                    <property name="color" value="red"></property>
+                    <property name="carName" value="bensi"></property>
+                </bean>
+            </property>
+    </bean>
+
+    <bean id="book01" class="com.guigu.spring.Book">
+        <property name="bookName" value="东游记"></property>
+    </bean>
+
+<!--    测试复杂属性-->
+    <bean id="person02" class="com.guigu.spring.Person">
+<!--如何为List赋值-->
+        <property name="books">
+<!--            这就等于 books = new ArrayLiat<Books> -->
+            <list>
+<!--                list标签体中添加每一个元素-->
+<!--                注意，内部bean的id外界无法getbean，只能在内部使用-->
+                <bean id="book000x" class="com.guigu.spring.Book" p:bookName="西游记">
+                </bean>
+                <!--引用外部一个元素-->
+                <ref bean="book01"></ref>
+            </list>
+        </property>
+        <property name="maps">
+<!--            等于 maps = new LinkHashMap<>()-->
+            <map>
+<!--                一个entry代表一个键值对-->
+                <entry key="key01" value="张三"></entry>
+                <entry key="key02" value="18"></entry>
+                <entry key="key03" value-ref="book01"></entry>
+                <entry key="key04">
+                    <bean class="com.guigu.spring.Car">
+                        <property name="carName" value="玛莎拉蒂"></property>
+                    </bean>
+                </entry>
+                <entry key="key05" >
+                    <map></map>
+                </entry>
+            </map>
+        </property>
+        <property name="properties">
+<!--            properties=new properties();所有的k=v都是string,所以值直接写在标签体内-->
+            <props>
+                <prop key="username">root</prop>
+                <prop key="password">123456</prop>
+            </props>
+        </property>
+    </bean>
+
+<!--    级联属性：属性的属性-->
+    <bean id="person04" class="com.guigu.spring.Person" >
+<!--        为car赋值的时候改变car的价格-->
+        <property name="car" ref="car01"></property>
+        <property name="car.price" value="90000000"></property>
+    </bean>
+
+<!--    abstract="true":这个bean是一个抽象，不能获取他的实例，只能继承它的配置信息-->
+    <bean class="com.guigu.spring.Person" id="person05" abstract="true">
+        <property name="lastName" value="zhangsan"></property>
+        <property name="gender" value="男"></property>
+        <property name="email" value="zhangsan@qq.com"></property>
+        <property name="age" value="2000"></property>
+    </bean>
+<!--    parent:指定当前bean的**配置信息**继承于那个-->
+    <bean id="person06" class="com.guigu.spring.Person" parent="person05">
+<!--        继承配置信息，需要修改的使用下面的改-->
+        <property name="lastName" value="赵六"></property>
+    </bean>
+</beans>
