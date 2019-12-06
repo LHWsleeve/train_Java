@@ -170,7 +170,8 @@ void print(Integer...args)--->void print(Integer i,Integer...args)
 
   枚举类型可以直接和switch(enum)搭配使用。
 
-  # 访问控制权限
+# 访问控制权限
+
   public
 
   protected
@@ -178,6 +179,7 @@ void print(Integer...args)--->void print(Integer i,Integer...args)
   默认权限(包权限)
 
   私有权限
+
 ---
   当编写一个Java源代码文件时，此文件通常被称为编译单元。每个编译单元都必须有一个 **.java**文件，在编译单元内可以有一个Public类，该类的**名称必须与文件的名称相同**。每一个编译单元都只能由一个public类，其他类为public类提供支持。
 
@@ -186,6 +188,7 @@ void print(Integer...args)--->void print(Integer i,Integer...args)
   *但是有例外*：在该类的内部可以用static方法静态创建该类，然后返回该类。通过调用静态方法获得该类的实例。
 
 # 第七章：复用类
+
 1.在新的类中产生现有类的对象。由新的类是由现有类的对象所组成，所以称为**组合**。
 
 2.按照现有类的类型创建新类。**继承**
@@ -199,10 +202,17 @@ void print(Integer...args)--->void print(Integer i,Integer...args)
 2.在类的构造器中
 
 3.就在正要使用这些对象之前，**惰性初始化**。
+
 ## 7.2 继承语法
+
 创建一个类时一定是在继承，不是显式的继承就是隐式继承Object。
 
+$\color{red}{组合是has-a的关系}$，新类是现有类的一种类型，$\color{red}{子类的类型同时也是父类的类型(向上转型)}$
+
+由导出类转型成基类，是从一个较专用的类型向通用的类型转换，因此总是安全的。即，导出类是基类的一个超集。
+
 可以为每个类都创建一个main（）方法。在每个类中都设置一个mian()方法的技术是每个类的单元测试变得简便。
+
 ```
     class jilei{
         public void c1(){
@@ -223,12 +233,14 @@ public class jicheng extends jilei{
         jc.c1();
 
         output：
-        456 
+        456
         123
 ```
+
 $\color{red}{super}$:要理解这个super表示超类的意思。在上述代码中，执行jc.c1()先输出456，后输出123，说明执行了c1内部的语句后，根据super.c1右执行了父类同名方法c1的语句。若在c1中直接调用c1，编译器会认为递归，所以使用super关键字，表示超类，即，执行继承父类的方法。
 
 $\color{red}{在构造器中super就等于该类所继承的父类本身}$：对于含餐的基类，我们使用super（i）向父类传参初始化。例如
+
 ```
 class Game{
     Game(int i){
@@ -240,17 +252,20 @@ class BigGame extends Game{
     System.out.println(“xxx”)
 }
 ```
+
 ## 7.2 代理
+
 继承与组合的中庸之道。
 
 组合：创建两个分离的类，在一个类中引用另一个类
 
-继承：在基类外部创建一个大类包裹基类。
+继承：在基类外部创建一个大类包裹基类。$\color{red}{组合是is-a的关系}$
 
 代理：在代理类中创建某功能的类，调用类的一些方法以获得该类的部分特性。
 **用处**：需要使用基类的方法，但又不想暴露所有方法。
 
 例如：飞机控制类，我不想暴露太多飞机控制的功能，只需部分前进左右转的控制（而不需要暴露发射导弹功能）。通过在代理类中new一个飞机控制对象，然后在方法中添加飞机控制类的各个需要暴露的功能。
+
 ```
 public class PlaneDelegation{
      private PlaneControl planeControl;    //private外部不可访问
@@ -270,7 +285,7 @@ public class PlaneDelegation{
          planeControl.right();
      }
  }
- 
+
  final class PlaneControl {//final表示不可继承，控制器都能继承那还得了。。
      protected void speed() {}
      protected void fire() {}
@@ -280,3 +295,5 @@ public class PlaneDelegation{
 
 ```
 
+## 7.5 protected关键字
+在项目中我们想将某些事物尽可能的隐藏起来，但仍然允许子类的成员访问他们。ptotected：就类用户而言，这是private，但对于任何一个继承于此父类的类或同一个包内的类都是可见的(也提供包内访问权限)。
