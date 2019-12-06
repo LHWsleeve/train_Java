@@ -50,6 +50,8 @@ HelloWord；
 
 2.写配置
 
-spring的配置文件中，集合了Spring
+spring的配置文件中，集合了Spring的IOC容器管理的所有组件(注册清单)；
 
-3.测试
+创建一个SpringConfig.xml文件
+
+  ***一定记住IDEA必须放在resources中才会编译xml***
