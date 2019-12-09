@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-<!--引用外部属性文件-->
-<!--把数据库连接池作为一个单实例是最好的，一个项目就一个连接池：、
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+<context:property-placeholder location="classpath:dbconfig.properties"></context:property-placeholder>
+    <!--引用外部属性文件*依赖context名称空间-->
+    <!--把数据库连接池作为一个单实例是最好的，一个项目就一个连接池：、
 在内管理链接，连接在连接池中拿。使用Spring创建连接池对象(管理连接池)-->
 <bean class="com.mchange.v2.c3p0.ComboPooledDataSource" id="pooledDataSource">
-    <property name="user" value="root"></property>
-    <property name="password" value="123456"></property>
-    <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/user?serverTimezone=UTC"></property>
-    <property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>
+    <property name="user" value="${user}"></property>
+    <property name="password" value="${password}"></property>
+    <property name="jdbcUrl" value="${jdbcUrl}"></property>
+    <property name="driverClass" value="${driverClass}"></property>
 </bean>
+    <bean id="car01" class="com.guigu.spring.Car">
+        <property name="carName" value="${username}"></property>
+<!--    username是spring保留字段，输出为系统用户名-->
+    </bean>
+
 </beans>

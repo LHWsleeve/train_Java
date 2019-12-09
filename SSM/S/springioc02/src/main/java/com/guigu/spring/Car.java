@@ -7,8 +7,8 @@ public class Car {
 
     public Car() {
         System.out.println("car创建成功");
-
     }
+
 
     public String getCarName() {
         return carName;

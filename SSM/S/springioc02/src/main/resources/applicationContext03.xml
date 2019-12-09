@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.guigu.spring.Car" id="car01">
+        <property name="carName" value="baoma"></property>
+        <property name="price" value="9999"></property>
+        <property name="color" value="白色"></property>
+    </bean>
+<!--    <bean class="com.guigu.spring.Car" id="car">-->
+<!--        <property name="carName" value="摩托"></property>-->
+<!--        <property name="price" value="100000"></property>-->
+<!--        <property name="color" value="黑色"></property>-->
+<!--    </bean>-->
+<!-- 手动赋值：为person内的自定义类型属性赋值-->
+
+    <!--    <bean id="person01" class="com.guigu.spring.Person">-->
+    <!--        <property name="car" ref="car01"></property>-->
+    <!--    </bean>-->
+
+<!--自动赋值：XML自动装配
+autowire="default"=autowire="no" 不自动装配
+自动装配[仅限于对自定义类型生效，基本类型不可]
+autowire="byName" ：
+            private Car car；在容器中寻找于属性名相同id的组件，赋值，此时必须id名于属性名完全一致。
+            car = ioc.getbean(car)
+autowire="byType"
+             private Car car：以属性的类型作为查找依据，在容器中查找组件。
+             car = ioc.getbean(Car.class)
+            按照类型找组件，若存在两个同属性组件，会报错没有唯一。
+            若没有相应组件，自动赋值null
+autowire="constructor"
+    public Person(Car car)
+            按照构造器进行赋值：
+            1.先按照有参构造器的类型(Car car)进行装配，此时等同于byType。若没有该类型，直接赋值null，不调用构造器
+            2.若类型有多个，参数名作为id继续匹配，等同于byName。都找不到装null
+            3.不管啥情况都不报错，大不了做null
+
+-->
+    <bean id="person01" class="com.guigu.spring.Person" autowire="byType">
+    </bean>
+
+    <bean class="com.guigu.spring.Book" id="book01">
+        <property name="bookName" value="A"></property>
+    </bean>
+    <bean class="com.guigu.spring.Book" id="book02">
+        <property name="bookName" value="B"></property>
+    </bean>
+    <bean class="com.guigu.spring.Book" id="book03">
+        <property name="bookName" value="C"></property>
+    </bean>
+</beans>

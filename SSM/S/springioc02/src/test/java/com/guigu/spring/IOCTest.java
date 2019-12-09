@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 public class IOCTest
 {
-    ConfigurableApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext02.xml");
+    ConfigurableApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext03.xml");
 
     /**
      * 单例Bean的生命周期：(容器启动)构造器-->xml中init-method初始化方法-->容器关闭（进行销毁）
@@ -35,6 +35,15 @@ public class IOCTest
 //        DataSource conn = (DataSource) ioc.getBean("pooledDataSource");
         //xml中只有一个该类型的时候，按照类型获取组件，可以获取到这个类型下的所有实现类子类
         DataSource bean = ioc.getBean(DataSource.class);
-        System.out.println(bean.getConnection());
+        System.out.println(bean.getConnection());//拿到链接
+        Car bean2 = ioc.getBean(Car.class);
+        System.out.println(bean2);
+    }
+
+
+    @Test
+    public void test03(){
+        Person bean = (Person) ioc.getBean("person01");
+        System.out.println(bean);
     }
 }
