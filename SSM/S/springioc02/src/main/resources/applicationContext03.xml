@@ -50,4 +50,6 @@ autowire="constructor"
     <bean class="com.guigu.spring.Book" id="book03">
         <property name="bookName" value="C"></property>
     </bean>
+
+
 </beans>

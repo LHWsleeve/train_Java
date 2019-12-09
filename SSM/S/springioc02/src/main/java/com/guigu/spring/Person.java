@@ -55,13 +55,13 @@ public class Person {
         System.out.println("person创建成功");
     }
 
-//    public Person(int age, String email, String gender, String lastName) {
-//        System.out.println("有参构造器");
-//        this.age = age;
-//        this.email = email;
-//        this.gender = gender;
-//        this.lastName = lastName;
-//    }
+    public Person(int age, String email, String gender, String lastName) {
+        System.out.println("有参构造器");
+        this.age = age;
+        this.email = email;
+        this.gender = gender;
+        this.lastName = lastName;
+    }
 
     public int getAge() {
         return age;

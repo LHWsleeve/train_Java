@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5737d7a-f234-4984-8874-6e150acdee1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext03.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/dbconfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../HowTomcatWorks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../HowTomcatWorks/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springioc03/springioc03.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guigu/spring/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guigu/spring/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/guigu/spring/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guigu/spring/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext02.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext02.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/guigu/spring/IOCTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/guigu/spring/IOCTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext02.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext02.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext03.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext03.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,11 +20,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext03.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="46" selection-start-line="46" selection-end-line="51" selection-end-column="11" />
+            <state relative-caret-position="371">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+              <folding>
+                <element signature="n#bean#1;n#beans#0;n#!!top" />
+                <element signature="n#bean#3;n#beans#0;n#!!top" />
+                <element signature="n#bean#3;n#beans#0;n#!!top" />
+                <element signature="n#bean#4;n#beans#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,11 +47,26 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="43" column="17" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="43" selection-end-column="17" />
+              <folding>
+                <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="n#dependency#3;n#dependencies#0;n#project#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/spring/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="60">
+              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -81,8 +97,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext02.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/guigu/spring/IOCTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/guigu/spring/Car.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/guigu/spring/Person.java" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext03.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/guigu/spring/Person.java" />
       </list>
     </option>
   </component>
@@ -93,7 +109,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-7" />
     <option name="width" value="1082" />
     <option name="height" value="1047" />
@@ -331,7 +347,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575529109626</updated>
       <workItem from="1575529112520" duration="8402000" />
-      <workItem from="1575872129818" duration="5317000" />
+      <workItem from="1575872129818" duration="6993000" />
     </task>
     <servers />
   </component>
@@ -368,13 +384,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13719000" />
+    <option name="totallyTimeSpent" value="15395000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1082" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1082" height="1047" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.54383117" visible="true" weight="0.2407045" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.54383117" visible="true" weight="0.2407045" />
       <window_info id="Structure" order="1" sideWeight="0.45125958" side_tool="true" weight="0.2713348" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -384,7 +400,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49903476" visible="true" weight="0.32858709" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49903476" visible="true" weight="0.32858709" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -474,18 +490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" />
-            <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" />
-            <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext02.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
@@ -510,13 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/spring/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/guigu/spring/IOCTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -527,10 +524,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/spring/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext03.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="46" selection-start-line="46" selection-end-line="51" selection-end-column="11" />
+        <state relative-caret-position="371">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="n#bean#1;n#beans#0;n#!!top" />
+            <element signature="n#bean#3;n#beans#0;n#!!top" />
+            <element signature="n#bean#3;n#beans#0;n#!!top" />
+            <element signature="n#bean#4;n#beans#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="43" column="17" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="43" selection-end-column="17" />
+          <folding>
+            <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#dependency#3;n#dependencies#0;n#project#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
