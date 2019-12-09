@@ -2,7 +2,10 @@ package com.guigu.spring03;
 
 import static org.junit.Assert.assertTrue;
 
+import com.guigu.dao.BookDao;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Unit test for simple App.
@@ -10,11 +13,13 @@ import org.junit.Test;
 public class AppTest 
 {
     /**
-     * Rigorous Test :-)
+     *使用注解和使用配置方式加入容器中的组件的行为都是一样的。
      */
+    ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
     @Test
-    public void shouldAnswerWithTrue()
+    public void test01()
     {
-        assertTrue( true );
+       BookDao bean = (BookDao) ioc.getBean("bookDao");
+        System.out.println(bean);
     }
 }
