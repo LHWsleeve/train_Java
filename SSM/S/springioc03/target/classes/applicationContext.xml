@@ -24,6 +24,33 @@ base-package:指定扫描的基础包，把基础包及下面所有的包中加�
 -->
 
 
+<!--<context:component-scan base-package="com.guigu">-->
+
+    <!--    扫描时排除不要的组件
+    exclude-filter type="annotation" expression=""：注解的全类名
+    type="annotation":指定排除规则：按照注解进行排除。标注了指定注解的组件不要
+    type="assignable"：指定排除某个主题类，类的全类名
+    type="aspectj"：aspectj表达式
+    type="custom"：自定义一个Typefliter规则
+    type="regex"：可以写正则表达式
+    -->
+
+
+<!--    <context:exclude-filter type="annotation" expression=""/>-->
+<!--</context:component-scan>-->
+
+<!--    <context:component-scan base-package="com.guigu" use-default-filters="false">-->
+
+        <!--  include-filter type="annotation" expression=""指定扫描包时要包含的类
+只扫描进入那些组件：因为默认是都扫描进来，使用时要禁用默认use-default-filters="false"
+  -->
+
+<!--        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+<!--    </context:component-scan>-->
+
+<!--    DI依赖注入-->
 <context:component-scan base-package="com.guigu"></context:component-scan>
+
+<!--   注解和cml配置相结合-->
 
 </beans>

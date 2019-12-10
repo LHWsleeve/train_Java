@@ -3,6 +3,7 @@ package com.guigu.spring03;
 import static org.junit.Assert.assertTrue;
 
 import com.guigu.dao.BookDao;
+import com.guigu.servlet.BookServlet;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -20,6 +21,17 @@ public class AppTest
     public void test01()
     {
        BookDao bean = (BookDao) ioc.getBean("bookDao");
-        System.out.println(bean);
+        BookDao bean2 = (BookDao) ioc.getBean("bookDao");
+        System.out.println(bean==bean2);
+    }
+
+    /**
+     * 属性自动注入
+     */
+    @Test
+    public void test02()
+    {
+      BookServlet bookServlet = ioc.getBean(BookServlet.class);
+      bookServlet.Do();
     }
 }
