@@ -52,5 +52,28 @@ base-package:指定扫描的基础包，把基础包及下面所有的包中加�
 <context:component-scan base-package="com.guigu"></context:component-scan>
 
 <!--   注解和cml配置相结合-->
+<!--    Autowired原理：
+        1.@Autowired
+        private BookService bookService;
+        首先按照！类型！在容器中刚找到对应组件：bookService = ioc.getBean(BooksService.class)
+          ①如果找到，直接赋值
+          ②如果没找到，报错：”注入失败，没有对应Bean“
+          ③找到多个（例如某Book类的基类是BookService，其也是BS类，会找到多个）。
+            可以自动装配：
+                A：按照输入的变量名作为id继续匹配（和相同类型的不同的默认id）：BookService（bookService），BookEXT（bookEXT）。
+                   1）：匹配上。装配
+                   2）：没有匹配上。因为按照变量名作为id继续匹配，报错
+                   【方法：@Qualifier:指定一个名作为id，让Spring使用指定名.并且指定名必须是已有JavaBean的名】
+                   Autowired **默认属性**是必须装配上，否则就报错。可以注解中写属性(required=flase)，此时找不到赋值null
+-->
+<!--
+@Autowired、@Resource、@Inject；都是自动装配的意思；
+    @Autowired：最强大，是Spring标准
+    @Resource：是java的标准
+    @Inject：EJB标准
+
+@Autowired和@Resource区别：
+    Resource扩展性更强，Autowired离开Spring无法使用。
+-->
 
 </beans>
