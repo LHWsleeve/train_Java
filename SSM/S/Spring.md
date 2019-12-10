@@ -55,3 +55,28 @@ spring的配置文件中，集合了Spring的IOC容器管理的所有组件(注�
 创建一个SpringConfig.xml文件
 
   ***一定记住IDEA必须放在resources中才会编译xml***
+
+## 总结
+ioc是一个容器，帮我们管理所有的组件
+
+    1、依赖注入回 Autowired自动赋值
+
+    2、某个组件要使用 Spring提供的更多（I0C、AOP）必须加入到容器中
+
+体会
+
+    1、容器启动。创建所有单实例bean
+
+    2、autowired自动装配的时侯，是从容器中找这些符合要求的bean
+
+    3、ioc.getBean（"bookserylet"）：也是从容器中找到这个bean
+
+    4、容器中包括了所有的bean
+
+    5、调试 spring的源码，容器到底是什么？其实就是一个map
+
+    6.这个map中保存所有创建好的bean，并提供外界获取功能
+
+    7.探索，单实例的bean都保存到哪个map中了。【源码-扩展】
+
+
