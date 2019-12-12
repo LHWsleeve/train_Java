@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="831330ce-7692-40a8-8581-8279d617ca27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Thinking in Java/Chapter_2万物皆是对象.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Thinking in Java/Chapter_2万物皆是对象.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guigu/springaop/impl/MyMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guigu/springaop/impl/MyMath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guigu/springaop/utils/LogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guigu/springaop/utils/LogUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/guigu/springaop/AopTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/guigu/springaop/AopTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,16 +16,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/springaop/impl/MyMath.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            <state>
+              <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,28 +32,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="5" column="286" selection-start-line="5" selection-start-column="286" selection-end-line="5" selection-end-column="286" />
+            <state>
+              <caret column="27" selection-start-column="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/springaop/utils/LogUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+            <state relative-caret-position="986">
+              <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#340#341#0" expanded="true" />
-                <element signature="e#392#393#0" expanded="true" />
-                <element signature="e#442#443#0" expanded="true" />
-                <element signature="e#493#494#0" expanded="true" />
-                <element signature="e#533#534#0" expanded="true" />
-                <element signature="e#584#585#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/guigu/springaop/AopTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="489">
+              <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,11 +81,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/guigu/springaop/impl/MyMath.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/guigu/springaop/utils/LogUtils.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/guigu/springaop/AppTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/guigu/springaop/AopTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/guigu/springaop/impl/MyMath.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/guigu/springaop/AopTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/guigu/springaop/utils/LogUtils.java" />
       </list>
     </option>
   </component>
@@ -102,9 +96,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1057" />
+    <option name="width" value="942" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -113,7 +107,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,7 +223,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -261,7 +255,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AopTest.aoptest04">
     <configuration name="AopTest.aoptest02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springaop02" />
       <extension name="coverage">
@@ -278,8 +272,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AopTest.aoptest03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springaop02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.guigu.springaop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.guigu.springaop" />
+      <option name="MAIN_CLASS_NAME" value="com.guigu.springaop.AopTest" />
+      <option name="METHOD_NAME" value="aoptest03" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AopTest.aoptest04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springaop02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.guigu.springaop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.guigu.springaop" />
+      <option name="MAIN_CLASS_NAME" value="com.guigu.springaop.AopTest" />
+      <option name="METHOD_NAME" value="aoptest04" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AopTest.aoptest04" />
+        <item itemvalue="JUnit.AopTest.aoptest03" />
         <item itemvalue="JUnit.AopTest.aoptest02" />
       </list>
     </recent_temporary>
@@ -294,44 +322,62 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576050211667</updated>
-      <workItem from="1576050213907" duration="2963000" />
+      <workItem from="1576050213907" duration="3762000" />
+      <workItem from="1576134993589" duration="5557000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AopTest_aoptest02 - 2019.12.11 at 16h 34m 20s.xml">
-      <configuration name="AopTest.aoptest02" configurationId="JUnit" />
+    <history-entry file="AopTest_aoptest04 - 2019.12.12 at 16h 02m 06s.xml">
+      <configuration name="AopTest.aoptest04" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AopTest_aoptest02 - 2019.12.11 at 16h 34m 44s.xml">
-      <configuration name="AopTest.aoptest02" configurationId="JUnit" />
+    <history-entry file="AopTest_aoptest04 - 2019.12.12 at 16h 07m 08s.xml">
+      <configuration name="AopTest.aoptest04" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AopTest_aoptest02 - 2019.12.11 at 16h 36m 38s.xml">
-      <configuration name="AopTest.aoptest02" configurationId="JUnit" />
+    <history-entry file="AopTest_aoptest04 - 2019.12.12 at 16h 07m 29s.xml">
+      <configuration name="AopTest.aoptest04" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AopTest_aoptest02 - 2019.12.11 at 16h 37m 11s.xml">
-      <configuration name="AopTest.aoptest02" configurationId="JUnit" />
+    <history-entry file="AopTest_aoptest04 - 2019.12.12 at 16h 10m 03s.xml">
+      <configuration name="AopTest.aoptest04" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AopTest_aoptest04 - 2019.12.12 at 16h 10m 25s.xml">
+      <configuration name="AopTest.aoptest04" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AopTest_aoptest04 - 2019.12.12 at 16h 13m 53s.xml">
+      <configuration name="AopTest.aoptest04" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AopTest_aoptest04 - 2019.12.12 at 16h 15m 24s.xml">
+      <configuration name="AopTest.aoptest04" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AopTest_aoptest04 - 2019.12.12 at 16h 15m 48s.xml">
+      <configuration name="AopTest.aoptest04" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AopTest_aoptest04 - 2019.12.12 at 16h 42m 51s.xml">
+      <configuration name="AopTest.aoptest04" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AopTest_aoptest04 - 2019.12.12 at 16h 43m 01s.xml">
+      <configuration name="AopTest.aoptest04" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2963000" />
+    <option name="totallyTimeSpent" value="9319000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="942" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.54383117" visible="true" weight="0.12313433" />
-      <window_info id="Structure" order="1" sideWeight="0.45125958" side_tool="true" weight="0.2713348" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5428994" weight="0.25820568" />
+      <window_info id="Structure" order="1" sideWeight="0.4571006" side_tool="true" weight="0.25820568" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.45125958" side_tool="true" weight="0.2713348" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Web" order="6" sideWeight="0.45616883" side_tool="true" weight="0.21881838" />
       <window_info id="Image Layers" order="7" />
-      <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49903476" visible="true" weight="0.32212582" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49903476" visible="true" weight="0.2595838" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39868566" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -343,6 +389,7 @@
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32968238" />
+      <window_info anchor="bottom" id="Spring" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -379,34 +426,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/springaop/impl/MyMath.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        <state>
+          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/springaop/utils/LogUtils.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.9.4/aspectjrt-1.9.4.jar!/org/aspectj/lang/annotation/AfterThrowing.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="366">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/guigu/springaop/AopTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="489">
+          <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -415,8 +453,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="286" selection-start-line="5" selection-start-column="286" selection-end-line="5" selection-end-column="286" />
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/springaop/utils/LogUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
