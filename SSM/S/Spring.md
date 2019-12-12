@@ -151,3 +151,6 @@ AOP使用步骤;
 2. AOP做权限验证
 3. AOP做安全检查
 4. AOP做事务控制
+
+---
+## JDBCTemplate
