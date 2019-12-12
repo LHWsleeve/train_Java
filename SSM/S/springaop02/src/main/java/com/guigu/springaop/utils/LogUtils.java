@@ -60,7 +60,7 @@ public class LogUtils {
         //获取到方法签名
         Signature signature = joinPoint.getSignature();
         String name = signature.getName();
-        System.out.println("方法开始执行，用的参数列表："+Arrays.asList(args)
+        System.out.println("LogUtils:方法开始执行，用的参数列表："+Arrays.asList(args)
         +"方法名："+name);
     }
 
@@ -80,28 +80,30 @@ public class LogUtils {
 
     //目标方法正常结束之后执行
     // 告诉Spring，result用来接收返回值 returning ="result
+
     @AfterReturning(returning ="result",value = "kechongyong()")
     public static void logReturn(JoinPoint joinPoint,Object result)
             {
                 Signature signature = joinPoint.getSignature();
                 String name = signature.getName();
 
-                System.out.println(name+"方法执行完成，计算结果是："+result);
+                System.out.println(name+"LogUtils:方法执行完成，计算结果是："+result);
     }
 
 // 目标方法出现异常时候执行
     // 告诉Spring，e用来接收异常 throwing = "e"
     //接受异常，异常类型要写大了。。所有都能接收到
+
     @AfterThrowing(throwing = "e",value = "kechongyong()")
     public static void logException(JoinPoint joinPoint, Exception e){
         Signature signature = joinPoint.getSignature();
         String name = signature.getName();
-        System.out.println(name+"方法执行完成，计算结果是：");
+        System.out.println(name+"LogUtils:方法执行完成，计算结果是：");
     }
 //目标方法完全结束之后执行
     @After(value = "kechongyong()")
     public static void logEnd(JoinPoint joinPoint){
-        System.out.println(joinPoint.getSignature().getName()+"方法彻底执行完毕");
+        System.out.println(joinPoint.getSignature().getName()+"LogUtils:方法彻底执行完毕");
     }
 
 
@@ -111,12 +113,17 @@ public class LogUtils {
      * 环绕通知中有一个参数，PreceddingJoinPont
      * @return
      */
-    @Around("kechongyong()")
+//    @Around("kechongyong()")
     public Object myAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        //就是利用反射调用目标方法即可,就是method.invoke()
+
         Object[] args = proceedingJoinPoint.getArgs();
+        String name = proceedingJoinPoint.getSignature().getName();
+
+        //就是利用反射调用目标方法即可,就是method.invoke()
         Object proceed = proceedingJoinPoint.proceed(args);
-        System.out.println("环绕结束hhhh");
+
+        System.out.println("环绕结束hhhh\n"+"LogUtils:方法名："+name+",返回值："+proceed);
+
         //反射调用后的返回值，要return
         return proceed;
 

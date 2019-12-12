@@ -11,6 +11,7 @@ public class MyMath{
 //        System.out.println("add方法开始了");
 //        System.out.print("add方法完成:i+j=");
 //        System.out.println(i+j);
+        System.out.println("方法内部执行");
 
         return i+j;
     }
