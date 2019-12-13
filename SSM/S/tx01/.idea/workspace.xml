@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6bb1971-3be5-47b2-96ce-f0c3d43e40b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../tx01/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tx01/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tx01/tx01.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4067f2f5-bfdd-4eee-9288-4903d171dc6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guigu/dao/BookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guigu/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tx01.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBC/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,53 +25,46 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/resources/applicationContext.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/dao/BookDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+            <state relative-caret-position="373">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
               <folding>
-                <element signature="e#721#730#0" expanded="true" />
-                <element signature="e#786#802#0" expanded="true" />
-                <element signature="e#854#866#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/service/BookService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="21" selection-start-line="21" selection-end-line="88" />
+            <state relative-caret-position="162">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding>
-                <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" />
-                <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" />
-                <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" />
-                <element signature="n#dependency#3;n#dependencies#0;n#project#0;n#!!top" />
-                <element signature="n#dependency#4;n#dependencies#0;n#project#0;n#!!top" />
-                <element signature="n#dependency#5;n#dependencies#0;n#project#0;n#!!top" />
-                <element signature="n#dependency#6;n#dependencies#0;n#project#0;n#!!top" />
-                <element signature="n#dependency#7;n#dependencies#0;n#project#0;n#!!top" />
-                <element signature="n#dependency#8;n#dependencies#0;n#project#0;n#!!top" />
-                <element signature="n#dependency#9;n#dependencies#0;n#project#0;n#!!top" />
-                <element signature="n#dependency#10;n#dependencies#0;n#project#0;n#!!top" />
-                <element signature="n#dependency#11;n#dependencies#0;n#project#0;n#!!top" />
-                <element signature="n#dependency#12;n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/resources/dbconfig.properties">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/guigu/tx01/AppTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-25">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/guigu/JDBCTemplate/AppTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/resources/applicateionContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+            <state relative-caret-position="416">
+              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+              <folding>
+                <element signature="e#915#927#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,8 +75,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Platform</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -89,8 +94,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/guigu/JDBCTemplate/AppTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/guigu/resources/applicateionContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/resources/dbconfig.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/com/guigu/tx01/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/guigu/dao/BookDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/resources/applicateionContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/guigu/service/BookService.java" />
       </list>
     </option>
   </component>
@@ -101,7 +110,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -118,105 +127,91 @@
         <subPane>
           <expand>
             <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="tx01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tx01" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="tx01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tx01" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="tx01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tx01" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="tx01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tx01" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="tx01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tx01" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="guigu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="tx01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tx01" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="guigu" type="462c0819:PsiDirectoryNode" />
-              <item name="JDBCTemplate" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="tx01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tx01" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="tx01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tx01" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="tx01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tx01" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="tx01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tx01" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="guigu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JDBC" type="462c0819:PsiDirectoryNode" />
+              <item name="tx01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tx01" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="guigu" type="462c0819:PsiDirectoryNode" />
-              <item name="JDBCTemplate" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="JDBC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="tx01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tx01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="guigu" type="462c0819:PsiDirectoryNode" />
+              <item name="tx01" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -229,7 +224,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/guigu/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -238,7 +233,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Sleeve\Documents\train_Java\SSM\S\JDBC\src\main\java\resources" />
+      <recent name="C:\Users\Sleeve\Documents\train_Java\SSM\S\tx01\src\main\java\com\guigu\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,34 +248,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.JDBCTest02">
-    <configuration name="AppTest.JDBCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JDBC" />
+  <component name="RunManager">
+    <configuration name="AppTest.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tx01" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.guigu.JDBCTemplate.*" />
+          <option name="PATTERN" value="com.guigu.tx01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.guigu.JDBCTemplate" />
-      <option name="MAIN_CLASS_NAME" value="com.guigu.JDBCTemplate.AppTest" />
-      <option name="METHOD_NAME" value="JDBCTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.JDBCTest02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JDBC" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.guigu.JDBCTemplate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.guigu.JDBCTemplate" />
-      <option name="MAIN_CLASS_NAME" value="com.guigu.JDBCTemplate.AppTest" />
-      <option name="METHOD_NAME" value="JDBCTest02" />
+      <option name="PACKAGE_NAME" value="com.guigu.tx01" />
+      <option name="MAIN_CLASS_NAME" value="com.guigu.tx01.AppTest" />
+      <option name="METHOD_NAME" value="test01" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -288,8 +267,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest.JDBCTest02" />
-        <item itemvalue="JUnit.AppTest.JDBCTest" />
+        <item itemvalue="JUnit.AppTest.test01" />
       </list>
     </recent_temporary>
   </component>
@@ -298,52 +276,37 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a6bb1971-3be5-47b2-96ce-f0c3d43e40b2" name="Default Changelist" comment="" />
-      <created>1576153044468</created>
+      <changelist id="4067f2f5-bfdd-4eee-9288-4903d171dc6a" name="Default Changelist" comment="" />
+      <created>1576220222160</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1576153044468</updated>
-      <workItem from="1576153046680" duration="6257000" />
+      <updated>1576220222160</updated>
+      <workItem from="1576220224619" duration="5134000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppTest_JDBCTest - 2019.12.12 at 20h 33m 35s.xml">
-      <configuration name="AppTest.JDBCTest" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2019.12.13 at 15h 51m 30s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_JDBCTest - 2019.12.12 at 20h 33m 49s.xml">
-      <configuration name="AppTest.JDBCTest" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2019.12.13 at 15h 54m 02s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_JDBCTest - 2019.12.12 at 20h 33m 54s.xml">
-      <configuration name="AppTest.JDBCTest" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2019.12.13 at 15h 55m 11s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_JDBCTest - 2019.12.12 at 20h 34m 19s.xml">
-      <configuration name="AppTest.JDBCTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_JDBCTest - 2019.12.12 at 20h 34m 33s.xml">
-      <configuration name="AppTest.JDBCTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_JDBCTest02 - 2019.12.13 at 10h 24m 37s.xml">
-      <configuration name="AppTest.JDBCTest02" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_JDBCTest02 - 2019.12.13 at 10h 26m 16s.xml">
-      <configuration name="AppTest.JDBCTest02" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_JDBCTest02 - 2019.12.13 at 10h 27m 51s.xml">
-      <configuration name="AppTest.JDBCTest02" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_JDBCTest02 - 2019.12.13 at 10h 28m 28s.xml">
-      <configuration name="AppTest.JDBCTest02" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2019.12.13 at 16h 03m 15s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6257000" />
+    <option name="totallyTimeSpent" value="5134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.54383117" visible="true" weight="0.18380743" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.54383117" visible="true" weight="0.21334793" />
       <window_info id="Structure" order="1" sideWeight="0.45125958" side_tool="true" weight="0.2713348" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -354,7 +317,7 @@
       <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49903476" weight="0.15553121" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49903476" visible="true" weight="0.3253012" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -366,7 +329,7 @@
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32858709" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.3286334" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -382,32 +345,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/guigu/JDBCTemplate/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/resources/dbconfig.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding>
-            <element signature="e#721#730#0" expanded="true" />
-            <element signature="e#786#802#0" expanded="true" />
-            <element signature="e#854#866#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="21" selection-start-line="21" selection-end-line="88" />
+        <state relative-caret-position="506">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
           <folding>
             <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" />
             <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" />
@@ -422,6 +363,78 @@
             <element signature="n#dependency#10;n#dependencies#0;n#project#0;n#!!top" />
             <element signature="n#dependency#11;n#dependencies#0;n#project#0;n#!!top" />
             <element signature="n#dependency#12;n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#dependency#13;n#dependencies#0;n#project#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/resources/applicateionContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/resources/dbconfig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/resources/dbconfig.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/resources/dbconfig.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjtools/1.9.4/aspectjtools-1.9.4.jar!/org/eclipse/core/runtime/Platform.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/dao/BookDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/guigu/tx01/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/resources/applicateionContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+          <folding>
+            <element signature="e#915#927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/service/BookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -476,7 +489,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>JDBC</last-edited>
+          <last-edited>tx01</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

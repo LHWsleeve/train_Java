@@ -154,3 +154,46 @@ AOP使用步骤;
 
 ---
 ## JDBCTemplate
+操作数据库；
+Spring提供了JDBCTemplate能快捷的操作数据库。
+
+**环境搭建**
+1. 导入sql文件
+2. 写几个类和方法模拟结账操作
+
+### 编程式事务：
+
+    Transaction Filter{
+        try{
+        //获取连接
+        设置非自动提交
+        chain.doFilter()
+        //提交
+        }catch(Exception e){
+            //回 滚
+        }finally{
+            //关闭连接释放资源
+        }
+    }
+
+### 声明式事务：
+以前通过复杂的变成编写一个是事务,现在替换为支付要告诉Spring那个方法是事务即可。
+
+跟AOP极像：环绕通知可以去做：
+
+    //获取连接
+    //设置非自动提交
+    目标代码执行
+    //正常提交
+    //异常回滚
+    //最终关闭
+最终效果：
+    
+    BookService{
+        @this-a-tx(表明是事务)
+        public void checkout(){}
+
+    }
+
+事务管理代码的<font color="red">固定模式</font>作为一种<font color="red">横切关注点</font>，可以通过AOP方法模块化，进而借助 Spring AOP框架实现声式事务管理。
+自己要写这个切面还是很麻烦；这个切面己经有了；（事务切面==事务管理器）
