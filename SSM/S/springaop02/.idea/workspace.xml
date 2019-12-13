@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="831330ce-7692-40a8-8581-8279d617ca27" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Spring.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JDBC/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JDBC/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JDBC/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/guigu/springaop/utils/ValidateAspect.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -61,6 +64,27 @@
               <folding>
                 <element signature="e#995#996#0" expanded="true" />
                 <element signature="e#1076#1077#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="71" selection-end-column="17" />
+              <folding>
+                <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="n#dependency#3;n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="n#dependency#4;n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="n#dependency#5;n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="n#dependency#6;n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="n#dependency#7;n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="n#dependency#8;n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="n#dependency#9;n#dependencies#0;n#project#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -344,7 +368,7 @@
       <option name="presentableId" value="Default" />
       <updated>1576050211667</updated>
       <workItem from="1576050213907" duration="3762000" />
-      <workItem from="1576134993589" duration="10032000" />
+      <workItem from="1576134993589" duration="10262000" />
     </task>
     <servers />
   </component>
@@ -381,13 +405,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13794000" />
+    <option name="totallyTimeSpent" value="14024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="931" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5428994" weight="0.25717565" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5428994" visible="true" weight="0.25717565" />
       <window_info id="Structure" order="1" sideWeight="0.4571006" side_tool="true" weight="0.25820568" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -397,7 +421,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49903476" visible="true" weight="0.33515882" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49903476" weight="0.33515882" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39868566" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -426,25 +450,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
-          <folding>
-            <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" />
-            <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" />
-            <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" />
-            <element signature="n#dependency#3;n#dependencies#0;n#project#0;n#!!top" />
-            <element signature="n#dependency#4;n#dependencies#0;n#project#0;n#!!top" />
-            <element signature="n#dependency#5;n#dependencies#0;n#project#0;n#!!top" />
-            <element signature="n#dependency#6;n#dependencies#0;n#project#0;n#!!top" />
-            <element signature="n#dependency#7;n#dependencies#0;n#project#0;n#!!top" />
-            <element signature="n#dependency#8;n#dependencies#0;n#project#0;n#!!top" />
-            <element signature="n#dependency#9;n#dependencies#0;n#project#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.9.4/aspectjrt-1.9.4.jar!/org/aspectj/lang/annotation/AfterThrowing.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
@@ -496,6 +501,25 @@
           <folding>
             <element signature="e#995#996#0" expanded="true" />
             <element signature="e#1076#1077#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="71" selection-end-column="17" />
+          <folding>
+            <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#dependency#3;n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#dependency#4;n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#dependency#5;n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#dependency#6;n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#dependency#7;n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#dependency#8;n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#dependency#9;n#dependencies#0;n#project#0;n#!!top" />
           </folding>
         </state>
       </provider>
