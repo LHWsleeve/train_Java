@@ -16,6 +16,16 @@ public class BookService {
      *事务的细节：
      * isolation ---Isolation:事物的隔离级别
      * propagation---Propagation：事物的传播行为
+     *          传播行为（事务的传播+事物的行为）：
+     *              如果多个事务进行嵌套运行，子事务是否要和大事务共用一个事务。
+     *          传播行为来控制大事务中的子事务异常要不要都会滚得问题。
+     *如果是REQUIRED：事务的属性都是继承于大事务的
+     * 而 propagation= Propagation.REQUIRES_NEW可以调整
+     * 默认： REQUIRED
+     * 底层：
+     * REQUIRED：将之前事务用的connection传递给这个方法使用；
+     * REQUIRES_NEW这:个方法直接使用新的 connection
+     *
      *
      * noRollbackFor---Class[]：那些异常事务可以不回滚
      * noRollbackForClassName--String[]（String全类名）：

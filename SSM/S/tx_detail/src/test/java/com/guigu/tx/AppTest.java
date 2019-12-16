@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Unit test for simple App.
+ * 有事物的业务逻辑，容器中保存的是这个业务逻辑的代理对象。
  */
 public class AppTest 
 {
