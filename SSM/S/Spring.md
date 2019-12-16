@@ -179,7 +179,7 @@ Spring提供了JDBCTemplate能快捷的操作数据库。
 ### 声明式事务：
 以前通过复杂的变成编写一个是事务,现在替换为支付要告诉Spring那个方法是事务即可。
 
-跟AOP极像：环绕通知可以去做：
+**跟AOP极像**：环绕通知可以去做：
 
     //获取连接
     //设置非自动提交
@@ -195,5 +195,70 @@ Spring提供了JDBCTemplate能快捷的操作数据库。
 
     }
 
-事务管理代码的<font color="red">固定模式</font>作为一种<font color="red">横切关注点</font>，可以通过AOP方法模块化，进而借助 Spring AOP框架实现声式事务管理。
+事务管理代码的<font color="red">固定模式</font>作为一种<font color="red">横切关注点</font>，可以通过AOP方法模块化，进而<font color="red">借助 Spring AOP框架</font>实现声式事务管理。
+
 自己要写这个切面还是很麻烦；这个切面己经有了；（事务切面==事务管理器）
+
+事务管理器可以在目标方法运行前后进行方法控制。
+
+实验中我们使用 *DataSourceTransactionManager;*
+
+快速的为某个方法添加事务：
+
+1. 配置事务管理器让他工作
+2. 开启基于注解的事务控制模式：依赖于tx名称空间
+3. 加注解
+
+---
+# Spring源码
+**Spring-IOC-AOP（动态代理）**
+
+        LogAspectProxy{
+            try{
+            @ Before 
+            method.invoke()//pjp.procced(args){
+                BAaspect{//第二个环绕通知(切面)
+                     @ Before
+                     method.invoke()//--目标方法
+                     @AfterReturning
+                     //xxxxx.....
+                      //若第二个切面修改了返回值，会影响之后的切面
+                }
+            }
+            @AfterReturning
+            }catch(e){
+                @AfterThrowing
+            }finally{
+                @After
+            }
+        }
+
+---
+**IOC**：
+
+1. IOC是一个容器
+2. 荣启动的时候创建所有单实例对象
+3. 我们可以直接从容其中获取到这个对象
+
+SpringIOC：
+1. ioc容器的启动过程？启动期间都做了什么（什么时候创建所有单实例bean）
+2. ioc是如何创建这些单实例bean，并入和管理的；保存在哪里？
+
+**思路**：
+
+    从HellowWorld开始调试每一个方法：
+    1. ClassPathXMLApplicationContext构造器
+
+BeanFactory和 Applicationcontext的区别：
+    
+       Bean Factory:bean工厂接口；负责创建bean实例；容器里面保存的所有单例bean其实是个map。
+     Spring最底层的接口 
+       ApplicationContext；是容器接口；更多的负责容器功能的实现；（可以基于 beanFactory创建好的对象之上完成强大的容器）
+        容器可以从map中获取这个bean，并且aop，di。在ApplicationContext在下的类中
+
+        BeanFactory是最底层的接口，Application contey留给程序员使用的ioc容器接口
+
+**Spring中最大的模式就是工厂模式**：
+
+<bean class=""></bean>
+BeanFactory；bean工厂；工厂模式；帮用户创建bean
