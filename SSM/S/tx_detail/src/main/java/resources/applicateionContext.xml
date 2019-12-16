@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <context:property-placeholder location="classpath:dbconfig.properties"></context:property-placeholder>
+    <context:component-scan base-package="com.guigu"></context:component-scan>
+
+    <bean class="com.mchange.v2.c3p0.ComboPooledDataSource" id="dataSource">
+        <property name="driverClass" value="${driverClass}"></property>
+        <property name="password" value="${password}"></property>
+        <property name="jdbcUrl" value="${jdbcUrl}"></property>
+        <property name="user" value="${user}"></property>
+
+    </bean>
+
+<bean class="org.springframework.jdbc.core.JdbcTemplate" id="template">
+    <property name="dataSource" ref="dataSource"></property>
+</bean>
+
+<!--    事务控制-->
+<!--    1.配置事务管理器-->
+    <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager" id="manager">
+<!--        控制住数据源-->
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+<!--    2.开启基于注解的事务控制模式：依赖于tx名称空间-->
+    <tx:annotation-driven transaction-manager="manager"></tx:annotation-driven>
+<!--    3:给事务方法加注解    @Transactional-->
+
+</beans>

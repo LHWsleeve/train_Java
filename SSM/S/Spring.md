@@ -161,53 +161,6 @@ Spring提供了JDBCTemplate能快捷的操作数据库。
 1. 导入sql文件
 2. 写几个类和方法模拟结账操作
 
-### 编程式事务：
-
-    Transaction Filter{
-        try{
-        //获取连接
-        设置非自动提交
-        chain.doFilter()
-        //提交
-        }catch(Exception e){
-            //回 滚
-        }finally{
-            //关闭连接释放资源
-        }
-    }
-
-### 声明式事务：
-以前通过复杂的变成编写一个是事务,现在替换为支付要告诉Spring那个方法是事务即可。
-
-**跟AOP极像**：环绕通知可以去做：
-
-    //获取连接
-    //设置非自动提交
-    目标代码执行
-    //正常提交
-    //异常回滚
-    //最终关闭
-最终效果：
-    
-    BookService{
-        @this-a-tx(表明是事务)
-        public void checkout(){}
-
-    }
-
-事务管理代码的<font color="red">固定模式</font>作为一种<font color="red">横切关注点</font>，可以通过AOP方法模块化，进而<font color="red">借助 Spring AOP框架</font>实现声式事务管理。
-
-自己要写这个切面还是很麻烦；这个切面己经有了；（事务切面==事务管理器）
-
-事务管理器可以在目标方法运行前后进行方法控制。
-
-实验中我们使用 *DataSourceTransactionManager;*
-
-快速的为某个方法添加事务：
-
-1. 配置事务管理器让他工作
-2. 开启基于注解的事务控制模式：依赖于tx名称空间
-3. 加注解
 
 ---
 # Spring源码
@@ -262,3 +215,67 @@ BeanFactory和 Applicationcontext的区别：
 
 <bean class=""></bean>
 BeanFactory；bean工厂；工厂模式；帮用户创建bean
+
+---
+
+### 编程式事务：
+
+    Transaction Filter{
+        try{
+        //获取连接
+        设置非自动提交
+        chain.doFilter()
+        //提交
+        }catch(Exception e){
+            //回 滚
+        }finally{
+            //关闭连接释放资源
+        }
+    }
+
+# 声明式事务：
+以前通过复杂的变成编写一个是事务,现在替换为支付要告诉Spring那个方法是事务即可。
+
+**跟AOP极像**：环绕通知可以去做：
+
+    //获取连接
+    //设置非自动提交
+    目标代码执行
+    //正常提交
+    //异常回滚
+    //最终关闭
+最终效果：
+    
+    BookService{
+        @this-a-tx(表明是事务)
+        public void checkout(){}
+
+    }
+
+事务管理代码的<font color="red">固定模式</font>作为一种<font color="red">横切关注点</font>，可以通过AOP方法模块化，进而<font color="red">借助 Spring AOP框架</font>实现声式事务管理。
+
+自己要写这个切面还是很麻烦；这个切面己经有了；（事务切面==事务管理器）
+
+事务管理器可以在目标方法运行前后进行方法控制。
+
+实验中我们使用 *DataSourceTransactionManager;*
+
+快速的为某个方法添加事务：
+
+1. 配置事务管理器让他工作
+2. 开启基于注解的事务控制模式：依赖于tx名称空间
+3. 加注解
+
+### 编译时异常和运行时异常
+
+![](pic/7.png)
+
+- 运行时异常：都是**RuntimeException**类及其子类异常，如**NullPointerException**(空指针异常)、**IndexOutOfBoundsException**(下标越界异常)等，这些异常是不检查异常，程序中可以选择捕获处理，也可以不处理。这些异常一般是由程序逻辑错误引起的，程序应该从逻辑角度尽可能避免这类异常的发生。
+运行时异常的特点是Java编译器不会检查它，也就是说，当程序中可能出现这类异常，即使没有用try-catch语句捕获它，也没有用throws子句声明抛出它，也会编译通过。
+- 非运行时异常 （编译异常）：是**RuntimeException**以外的异常，类型上都属于**Exception类及其子类**。从程序语法角度讲是必须进行处理的异常，如果不处理，程序就不能编译通过。如**IOException、SQLException**等以及用户自定义的Exception异常，一般情况下不自定义检查异常。
+
+#### 事务的隔离级别
+JDBC的隔离级别
+![](pic/8.png)
+厂商的支持的隔离级别
+![](pic/9.png)
