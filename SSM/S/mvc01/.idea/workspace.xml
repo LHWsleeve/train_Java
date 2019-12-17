@@ -7,17 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="549f6f75-2f0f-4b0d-adb2-c92cefb93d73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../S_MVC/mvc01/mvc01.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/com/guigu/MyFirst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/resources/springmvc-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/page/success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../S_MVC/mvc01/src/test/com/guigu/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/com/guigu/controller/RequsetMappingTestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tx01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tx01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tx_detail/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tx_detail/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../S_MVC/mvc.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../S_MVC/mvc.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/com/guigu/MyFirst.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/com/guigu/controller/MyFirst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../S_MVC/mvc01/target/classes/springmvc-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../S_MVC/mvc01/target/mvc01/WEB-INF/classes/springmvc-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../S_MVC/mvc01/target/mvc01/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../S_MVC/mvc01/target/mvc01/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/../../S_MVC/mvc01/target/" />
@@ -36,8 +35,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+            <state relative-caret-position="690">
+              <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+              <folding>
+                <element signature="n#servlet#0;n#web-app#0;n#!!top" />
+                <element signature="e#837#892#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,17 +48,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="180">
+              <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/com/guigu/MyFirst.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/com/guigu/controller/RequsetMappingTestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+            <state relative-caret-position="180">
+              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/resources/springmvc-servlet.xml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/springmvc-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+            <state relative-caret-position="270">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -76,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/page/success.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="395">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -103,10 +106,11 @@
         <option value="$PROJECT_DIR$/../../S_MVC/mvc01/pom.xml" />
         <option value="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/page/success.html" />
         <option value="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/page/success.jsp" />
-        <option value="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/resources/springmvc.xml" />
         <option value="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/com/guigu/MyFirst.java" />
         <option value="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/com/guigu/controller/RequsetMappingTestController.java" />
       </list>
     </option>
   </component>
@@ -183,7 +187,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="guigu" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mvc01" type="b2602c69:ProjectViewProjectNode" />
@@ -199,15 +205,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mvc01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mvc01" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -226,6 +223,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.14881517" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -253,12 +251,13 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:10000/" />
       <option name="BROWSER_ID" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="mvc01:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/mvc" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
@@ -336,18 +335,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576552088239</updated>
-      <workItem from="1576552090646" duration="6533000" />
+      <workItem from="1576552090646" duration="8734000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6533000" />
+    <option name="totallyTimeSpent" value="8734000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="924" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.54383117" visible="true" weight="0.11886994" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.54383117" visible="true" weight="0.25810185" />
       <window_info id="Structure" order="1" sideWeight="0.45125958" side_tool="true" weight="0.2713348" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -358,7 +357,7 @@
       <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49903476" weight="0.32212582" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49903476" visible="true" weight="0.32201535" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -425,51 +424,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/springmvc.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/springmvc-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/page/success.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/com/guigu/MyFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/resources/springmvc-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/springmvc-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/com/guigu/controller/MyFirst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+          <folding>
+            <element signature="n#servlet#0;n#web-app#0;n#!!top" />
+            <element signature="e#837#892#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../S_MVC/mvc01/src/main/java/com/guigu/controller/RequsetMappingTestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
