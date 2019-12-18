@@ -285,3 +285,22 @@ Spring中的隔离级别
 ![](pic/10.png)
 ![](pic/11.png)
 
+---
+
+**寒假任务**：
+
+Spring和Web整合使用：
+1. Spring来控制事务(dao-JdbcTemplate)
+2. 所有组件自动装配
+3. 管理数据库组
+
+a.注意，servlet不能直接加入容器，所以 servlet下的所有属性都不能自动装配。需要写一个工具类生成bean，每次tomcat可以从工具类中获取ioc容器的对应组件(泛型)。
+
+b. ioc容器的创建和销毁都要在合适的时机完
+成；
+    
+        项目启动：IOC创建
+        项目销:IOC销毁
+    可以写一个监听器完成这个工作
+    Spring已经实现监听器：ContextConfigLoader（在web.xml中配置）
+这样就不用手写new ioc了

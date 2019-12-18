@@ -1,0 +1,45 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+<!--SpringMVC有一个前端控制器能拦截所有请求，并进行智能派发
+     这个前端控制器是一个Servlet：应该在Web.xml中配置servlet请求
+     -->
+<servlet>
+  <servlet-name>springmvc</servlet-name>
+  <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+<!--  <init-param>-->
+<!--&lt;!&ndash;    contextConfigLocation指定springmvc配置文件位置&ndash;&gt;-->
+<!--    <param-name>contextConfigLocation</param-name>-->
+<!--    <param-value>classpath:springmvc-servlet.xml</param-value>-->
+<!--  </init-param>-->
+<!--  servlet启动加载，servlet原本是第一次访问创建对象：
+load-on-startup：服务器启动的时候创建对象，值越小优先级越高
+-->
+  <load-on-startup>1</load-on-startup>
+</servlet>
+
+
+<!--
+    处理*.jsp是tomcat做的事；所有项目的小web.xm1都是继承于大web.xm1
+    Defaultserylet是Tomcat中处理静态资源的: 除过jsp和serv1et外剩下的都是静态资源
+    index.html：静态资源，tomcat就会在服务器下找到这个资源并返回
+
+    我们前端控制器的/仅用了tomcat服务器中的Defaultservlet
+
+    1）服务器的大web.xml中有一个DefaultServlet是ur1-pattern=/
+    2）我们的配置中前端控制器ur1-pattern=/
+        静态资源会来到 Dispatcherservlet（前端控制器）看那个方法的 RequestMapping是这个
+    3）为什么jsp又能访问：因为没有覆盖服务器中的JspServlet（tomcat中的web.xml）
+    4） /* 直接拦截所有请求，不存在覆盖的问题。写“/”迎合REST风格
+-->
+  <servlet-mapping>
+    <servlet-name>springmvc</servlet-name>
+<!--    /和/*都是拦截所有请求
+        /*：范围更大，会拦截到*.jsp；一旦拦截jsp页面无法显示-->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+</web-app>
