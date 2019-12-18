@@ -13,5 +13,13 @@
 <form action="/haha/handle02" method="post">
     <input type="submit">
 </form>
+<br/>
+<a href="/haha/handle03">handle03测试params的属性</a>
+<br/>
+<a href="/haha/handle04">handle04测试headers的属性</a>
+<br/>
+<hr/>
+<h1>测试ResquestMapping-Ant风格URL</h1>
+<a href="/ant01" >ant01精确请求地址</a>
 </body>
 </html>
