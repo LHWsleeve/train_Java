@@ -21,5 +21,7 @@
 <hr/>
 <h1>测试ResquestMapping-Ant风格URL</h1>
 <a href="/ant01" >ant01精确请求地址</a>
+<br/>
+<a href="/user/admin" >测试PathVairable</a>
 </body>
 </html>

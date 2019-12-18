@@ -1,6 +1,7 @@
 package com.guigu.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -25,6 +26,18 @@ public class RequestMappingTest {
     @RequestMapping("/ant0?")
     public String antTest02(){
         System.out.println("ant02成功");
+        return "success";
+    }
+
+    /**
+     * /user/admin /user/xxx:假设user下的名是动态的
+     * 路径上可以有占位符：在任意路径的地方写一个{变量名}
+     * 我们可以拿到路径上某一处的占位符
+     * @return
+     */
+    @RequestMapping("/user/{id}")
+    public String pathVairable(@PathVariable("id") String id){
+        System.out.println("动态路径测试,路径上的占位符："+id);
         return "success";
     }
 
