@@ -16,7 +16,7 @@
 request:${requestScope.msg}<br/>
 <%--没传入的属性不能获取值，会直接报错--%>
 <%--pageContxt:${pageContext.msg}<br/>--%>
-<%--session:${sessionScope.msg}<br/>--%>
+session:${sessionScope.msg}<br/>
 <%--application:${applicationScope.msg}<br/>--%>
 </body>
 </html>
