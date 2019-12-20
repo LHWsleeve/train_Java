@@ -9,13 +9,13 @@
     <filter-name>characterEncodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
 
-<!--        请求字符编码-->
-        <init-param>
-          <param-name>encoding</param-name>
-          <param-value>UTF-8</param-value>
-        </init-param>
+<!--&lt;!&ndash;        请求字符编码&ndash;&gt;-->
+<!--        <init-param>-->
+<!--          <param-name>encoding</param-name>-->
+<!--          <param-value>UTF-8</param-value>-->
+<!--        </init-param>-->
 
-    <!--   设置响应字符编码-->
+    <!--   设置响应字符编码，并且字符编码过滤器要在所有过滤器之前-->
     <init-param>
       <param-name>forEncoding</param-name>
       <param-value>true</param-value>
@@ -25,7 +25,6 @@
     <filter-name>characterEncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-
 
   <servlet>
     <servlet-name>springmvc</servlet-name>
