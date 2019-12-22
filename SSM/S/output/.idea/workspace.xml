@@ -7,9 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2d51b3b-da43-4d6d-a22e-d5708f08ac5b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/Controller/ModelAttrubuteTestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/book/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tx01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tx01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/Controller/OutPutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/Controller/OutPutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/WEB-INF/page/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/WEB-INF/page/success.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,16 +23,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/WEB-INF/springmvc-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="1" selection-start-column="1" selection-end-column="1" />
+            <state relative-caret-position="180">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -38,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            <state relative-caret-position="480">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -47,19 +48,54 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/WEB-INF/page/success.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-22">
-              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state>
+              <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/Controller/OutPutController.java">
+        <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/Controller/ModelAttrubuteTestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+            <state relative-caret-position="1149">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/book/Book.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="12" column="105" selection-start-line="12" selection-start-column="105" selection-end-line="12" selection-end-column="105" />
+              <folding>
+                <element signature="e#294#295#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#419#420#0" expanded="true" />
+                <element signature="e#450#451#0" expanded="true" />
+                <element signature="e#498#499#0" expanded="true" />
+                <element signature="e#538#539#0" expanded="true" />
+                <element signature="e#571#572#0" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#644#645#0" expanded="true" />
+                <element signature="e#680#681#0" expanded="true" />
+                <element signature="e#713#714#0" expanded="true" />
+                <element signature="e#741#742#0" expanded="true" />
+                <element signature="e#784#785#0" expanded="true" />
+                <element signature="e#818#819#0" expanded="true" />
+                <element signature="e#851#852#0" expanded="true" />
+                <element signature="e#879#880#0" expanded="true" />
+                <element signature="e#922#923#0" expanded="true" />
+                <element signature="e#956#957#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+                <element signature="e#1016#1017#0" expanded="true" />
+                <element signature="e#1058#1059#0" expanded="true" />
+                <element signature="e#1092#1093#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,9 +119,12 @@
         <option value="$PROJECT_DIR$/../../S_MVC/output/pom.xml" />
         <option value="$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/Controller/HelloController.java" />
-        <option value="$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/WEB-INF/page/success.jsp" />
         <option value="$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/Controller/OutPutController.java" />
+        <option value="$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/book/Nook.java" />
+        <option value="$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/book/Book.java" />
+        <option value="$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/Controller/ModelAttrubuteTestController.java" />
       </list>
     </option>
   </component>
@@ -115,7 +154,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -166,6 +204,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="guigu" type="462c0819:PsiDirectoryNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="output" type="b2602c69:ProjectViewProjectNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="guigu" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -196,6 +244,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,18 +363,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576828739123</updated>
-      <workItem from="1576828741509" duration="5470000" />
+      <workItem from="1576828741509" duration="5744000" />
+      <workItem from="1577001565205" duration="6526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5470000" />
+    <option name="totallyTimeSpent" value="12270000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.54383117" visible="true" weight="0.105032824" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.54383117" visible="true" weight="0.25054705" />
       <window_info id="Structure" order="1" sideWeight="0.45125958" side_tool="true" weight="0.2713348" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -333,10 +382,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Web" order="6" sideWeight="0.45616883" side_tool="true" weight="0.21881838" />
       <window_info id="Image Layers" order="7" />
-      <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49903476" weight="0.3253012" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49903476" visible="true" weight="0.3253012" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39868566" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -348,7 +396,8 @@
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Messages" order="14" visible="true" weight="0.17524645" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.17524645" />
+      <window_info anchor="bottom" id="Spring" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -368,7 +417,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/Controller/OutPutController.java</url>
-          <line>39</line>
+          <line>43</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -376,9 +425,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/book/Book.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/book/Book.java" />
     <entry file="file://$PROJECT_DIR$/../../S_MVC/output/output.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -408,13 +455,6 @@
             <element signature="n#dependency#14;n#dependencies#0;n#project#0;n#!!top" />
             <element signature="n#dependency#15;n#dependencies#0;n#project#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/WEB-INF/springmvc-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -469,24 +509,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/Controller/OutPutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/WEB-INF/springmvc-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="480">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/webapp/WEB-INF/page/success.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <state>
+          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/Controller/OutPutController.java">
+    <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/book/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+        <state relative-caret-position="360">
+          <caret line="12" column="105" selection-start-line="12" selection-start-column="105" selection-end-line="12" selection-end-column="105" />
+          <folding>
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#879#880#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../S_MVC/output/src/main/java/com/guigu/Controller/ModelAttrubuteTestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1149">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

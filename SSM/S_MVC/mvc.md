@@ -40,3 +40,10 @@ REST:希望以非常简洁的URL地址来发请求；
 其他的请求方式没法使用。
 
 **使用REST风格构建一个增删改查方法**：
+
+## SpringMVC 数据输出
+如何将数据输出给页面
+ 
+ ![](pic/3.png)
+ BindingAwareModelMap隐含模型
+ 这个Map在mvc中始终存在
