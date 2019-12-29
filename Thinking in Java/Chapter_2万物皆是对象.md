@@ -610,3 +610,29 @@ removeList()意出并返回列表最后一个元素。
 Set不保存重复的元素。Set最常被使用的是测试归属性，可以很容易的查询某个对象是否在Set中。因此**查找是Set中最重要的操作**。-->HashSet
 
 Set具有与Collection完全一样的接口，没有额外的功能，只是行为不同(继承和多态的应用)。Set基于对象的值判断归属性。
+
+## 11.10 Map P233
+搞懂List,List<Object>,List<?>的区别以及<? extends T>与<? super T>的区别:(https://www.cnblogs.com/minghaiJ/p/10685930.html)
+
+
+## 11.11 Queue
+
+队列是一个典型的先进先出的容器。容器的放入顺序和取出顺序是一致的。队列通常被当作一种可靠的对象从程序的某个趋于传输到另一个区域的途径。**队列在并发中特别重要**，它可以安全的传输对象。
+
+LinkedList提供了支持队列的方法，实现了队列的接口。通过将LinkedList向上转型为Queue:
+
+```Queue<Integer> queue = newLinkedList<Integer>(); ```
+
+offer()是Queue相关方法，建一个元素插入到队尾，失败返回false。peek(),element()在不移除的情况下返回队头。poll()，remove()移除并返回队头。
+
+### 11.11.1 PriorityQueue
+
+常规先进先出队列声明的是下一个元素应该是等待时间最长的元素。
+
+而**优先级队列**生命下一个弹出的是最需要的元素(拥有最高优先级)。例如建立一个消息系统，某些消息最重要，因而应该得到更快地处理，那么他们无论何时到达都应该第一个处理。
+
+PriorityQueue队列调用offer()方法来插入一个对象是，这个对象会在队列中排序。默认的排序是*自然顺序(从小到大)*，我们可以提供**Comparator**来修改这个顺序优先级，此后使用peek，remove时可以保证最先操作优先级高的数据。比较器在创建优先级队列对象时传入(反序，去重等等)。
+
+## 11.12 Coliiection和Iterator P239
+
+Collection是描述所有序列容器的共性的根接口。
