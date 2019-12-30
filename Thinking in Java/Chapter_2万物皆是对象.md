@@ -472,7 +472,7 @@ interface允许类似多重继承的实现(Java中没有多继承)，同一个�
 
 <font color="blue">当生成一个内部类对象时，此时对象与制造他的外围对象之间有了联系，</font>
 他能访问外围对象的所有成员，而不需要任何特殊条件。内部类拥有外围类所有元素的访问权限。
-<font color="blue">内部类能访问其外围类的放啊和字段，不论权限。 </font>
+<font color="blue">内部类能访问其外围类的方法和字段，不论权限。 </font>
 
 ## 10.2 使用.this和.new
 
@@ -614,14 +614,13 @@ Set具有与Collection完全一样的接口，没有额外的功能，只是行�
 ## 11.10 Map P233
 搞懂List,List<Object>,List<?>的区别以及<? extends T>与<? super T>的区别:(https://www.cnblogs.com/minghaiJ/p/10685930.html)
 
-
 ## 11.11 Queue
 
 队列是一个典型的先进先出的容器。容器的放入顺序和取出顺序是一致的。队列通常被当作一种可靠的对象从程序的某个趋于传输到另一个区域的途径。**队列在并发中特别重要**，它可以安全的传输对象。
 
 LinkedList提供了支持队列的方法，实现了队列的接口。通过将LinkedList向上转型为Queue:
 
-```Queue<Integer> queue = newLinkedList<Integer>(); ```
+```Queue<Integer> queue = newLinkedList<Integer>();```
 
 offer()是Queue相关方法，建一个元素插入到队尾，失败返回false。peek(),element()在不移除的情况下返回队头。poll()，remove()移除并返回队头。
 
@@ -633,6 +632,33 @@ offer()是Queue相关方法，建一个元素插入到队尾，失败返回false
 
 PriorityQueue队列调用offer()方法来插入一个对象是，这个对象会在队列中排序。默认的排序是*自然顺序(从小到大)*，我们可以提供**Comparator**来修改这个顺序优先级，此后使用peek，remove时可以保证最先操作优先级高的数据。比较器在创建优先级队列对象时传入(反序，去重等等)。
 
-## 11.12 Coliiection和Iterator P239
+## 11.12 Coliiection和Iterator，foreach P239
 
-Collection是描述所有序列容器的共性的根接口。
+Collection是描述所有序列容器的共性的根接口。foreach可以用于任何Collection对象。
+
+Iterable接口包含一个能够产生迭代器的iteraor()方法，并且Iterable接口被foreach用来在序列中移动，只要创建该接口的实现类，就可以任意使用foreach。
+
+**Foreach语句可以用于数组和其他任何Iterable，但并不意味着数组也是一个Iterable，数组必须手工执行转换**(基本上是不支持可迭代的通用方法)
+
+```
+public void bar(Iterable<Foo> foos) { .. }
+```
+
+    数组应该支持Iterable，但不应该支持。出于同样的原因，.NET数组不支持允许按位置进行只读随机访问的接口（没有这样的接口定义为标准接口）。从根本上说，框架之间经常存在令人讨厌的小差距，这不值得任何人修复。我们能否以某种最佳方式自己修复它们并不重要，但通常我们做不到。
+
+    更新：为了公平起见，我提到了.NET数组不支持按位置支持随机访问的接口（另请参见我的评论）。但是在.NET 4.5中，已经定义了确切的接口，并由数组和List<T>类支持：
+
+    IReadOnlyList<int> a = new[] {1, 2, 3, 4};
+    IReadOnlyList<int> b = new List<int> { 1, 2, 3, 4 };
+
+    由于可变列表接口IList<T>不继承，因此一切还不是很完美IReadOnlyList<T>：
+
+    IList<int> c = new List<int> { 1, 2, 3, 4 };
+    IReadOnlyList<int> d = c; // error
+    也许通过这种更改可能会向后兼容。
+
+### 11.12.1 适配器方法惯用方法 P243
+
+现有一个Iterable类，如果想要添加一种或多种昂在foreach语句中使用这个类的方法。若是直接继承，重写iterator()只会替换现有方法，不完美。
+
+我们使用**适配器**方法。当我们有一个接口并需要另一个接口时候，我们需要适配器。
