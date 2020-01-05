@@ -61,3 +61,6 @@ REST:希望以非常简洁的URL地址来发请求；
 # 视图解析 springmvc03 
 需要看源码
  ![](pic/6.png)
+## CRUD
+
+做一个符合REST风格的CRUD
