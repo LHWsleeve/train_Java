@@ -92,7 +92,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/guigu" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -233,30 +233,66 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578225479550" />
-    <state width="917" height="264" key="GridCell.Tab.0.bottom" timestamp="1578226025133">
+    <state width="917" height="264" key="GridCell.Tab.0.bottom" timestamp="1578226401022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="917" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226025133" />
-    <state width="917" height="264" key="GridCell.Tab.0.center" timestamp="1578226025133">
+    <state width="917" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226401022" />
+    <state width="917" height="264" key="GridCell.Tab.0.center" timestamp="1578226401022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="917" height="264" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226025133" />
-    <state width="917" height="264" key="GridCell.Tab.0.left" timestamp="1578226025133">
+    <state width="917" height="264" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226401022" />
+    <state width="917" height="264" key="GridCell.Tab.0.left" timestamp="1578226401022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="917" height="264" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226025133" />
-    <state width="917" height="264" key="GridCell.Tab.0.right" timestamp="1578226025133">
+    <state width="917" height="264" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226401022" />
+    <state width="917" height="264" key="GridCell.Tab.0.right" timestamp="1578226401022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="917" height="264" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226025133" />
+    <state width="917" height="264" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226401022" />
+    <state width="917" height="264" key="GridCell.Tab.1.bottom" timestamp="1578226401022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="917" height="264" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226401022" />
+    <state width="917" height="264" key="GridCell.Tab.1.center" timestamp="1578226401022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="917" height="264" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226401022" />
+    <state width="917" height="264" key="GridCell.Tab.1.left" timestamp="1578226401022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="917" height="264" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226401022" />
+    <state width="917" height="264" key="GridCell.Tab.1.right" timestamp="1578226401022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="917" height="264" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226401022" />
+    <state width="917" height="264" key="GridCell.Tab.2.bottom" timestamp="1578226401023">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="917" height="264" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226401023" />
+    <state width="917" height="264" key="GridCell.Tab.2.center" timestamp="1578226401022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="917" height="264" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226401022" />
+    <state width="917" height="264" key="GridCell.Tab.2.left" timestamp="1578226401022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="917" height="264" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226401022" />
+    <state width="917" height="264" key="GridCell.Tab.2.right" timestamp="1578226401023">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="917" height="264" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226401023" />
+    <state x="467" y="205" key="Maven.ArtifactSearchDialog" timestamp="1578226423226">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="467" y="205" key="Maven.ArtifactSearchDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226423226" />
     <state x="880" y="98" key="SettingsEditor" timestamp="1578225726022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="880" y="98" key="SettingsEditor/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578225726022" />
-    <state x="618" y="256" key="run.anything.popup" timestamp="1578225104298">
+    <state x="618" y="256" key="run.anything.popup" timestamp="1578226369642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="618" y="256" key="run.anything.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578225104298" />
+    <state x="618" y="256" key="run.anything.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578226369642" />
     <state x="1076" y="206" key="spring file set editor" timestamp="1578225393478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
