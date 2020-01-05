@@ -47,3 +47,47 @@ REST:希望以非常简洁的URL地址来发请求；
  ![](pic/3.png)
  BindingAwareModelMap隐含模型
  这个Map在mvc中始终存在
+
+ ---
+
+ # SpringMVC源码
+
+ 1. 前端控制器的架构。DispatcherServlet；
+   ![](pic/4.png)
+   发送请求
+2.    ![](pic/5.png)
+
+
+# 视图解析 springmvc03 
+需要看源码
+ ![](pic/6.png)
+## CRUD
+
+做一个符合REST风格的CRUD 
+
+我们使用map模拟数据库
+
+员工列表展示页面： ![](pic/7.png)
+员工修改![](pic/9.png)
+
+员工添加：![](pic/8.png)
+
+员工删除-点击完成删除回到列表页面
+
+**REST风格**
+
+增删改查url ：/资源名/资源标识符
+    
+    /emp/1   ：GET--查询1号员工
+    /emp/1   ：PUT--更新1号员工
+    /emp/1   ：DELETE-删除1号员工
+    /emp     ：POST---添加员工
+    /emps    ：查询所有员工
+
+**员工列表展示**：查询所有员工
+
+访问index.jsp--》直接发送/emps---》控制器查询所有员工--》放在请求域model--》转发到list页面展示
+
+**干他娘的，记住使用jstl的时候不要用maven直接下载两个jar包放进去**
+
+**员工添加:**在list页面点击“员工添加”--来到添加页面(add.jsp)---输入员工数据---点击保存---处理器收到员工保存请求（保存员工）----保存完成以后还是来到列表页面

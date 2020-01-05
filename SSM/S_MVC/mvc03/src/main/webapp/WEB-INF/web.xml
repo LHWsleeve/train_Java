@@ -11,11 +11,12 @@
 <!--  加了过滤器jsp任然乱码，注意jsp头有没有改utf-8-->
 <init-param>
   <param-name>encoding</param-name>
-  <param-value>utf-8</param-value>
+  <param-value>UTF-8</param-value>
 </init-param>
-<!--   设置响应字符编码，并且字符编码过滤器要在所有过滤器之前-->
+<!--   设置响应字符编码，并且字符编码过滤器要在所有过滤器之前.并且forceEncoding源码中只设置编码类型，
+但是显示的文本内容格式没有设置，比如（text/html），所以在响应前先设置-->
 <init-param>
-  <param-name>forEncoding</param-name>
+  <param-name>forceEncoding</param-name>
   <param-value>true</param-value>
 </init-param>
 </filter>
