@@ -34,5 +34,6 @@
         <td>DELETE</td>
     </c:forEach>
 </table>
+<a href="toaddpage">添加员工</a>
 </body>
 </html>
