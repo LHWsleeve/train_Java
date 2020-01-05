@@ -9,5 +9,7 @@
 <a href="/handle02">forward多派发测试</a></br>
 <a href="/handle03">redirect重定向测试</a></br>
 <a href="/handle04">redirect多次重定向测试</a></br>
+<a href="/tosuccess">mvc名称空间映射，不需要绑定方法</a></br>
+<a href="/handleplus">下载资源</a>
 
 </html>

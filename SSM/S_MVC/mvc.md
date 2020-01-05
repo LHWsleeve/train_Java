@@ -47,3 +47,17 @@ REST:希望以非常简洁的URL地址来发请求；
  ![](pic/3.png)
  BindingAwareModelMap隐含模型
  这个Map在mvc中始终存在
+
+ ---
+
+ # SpringMVC源码
+
+ 1. 前端控制器的架构。DispatcherServlet；
+   ![](pic/4.png)
+   发送请求
+2.    ![](pic/5.png)
+
+
+# 视图解析 springmvc03 
+需要看源码
+ ![](pic/6.png)

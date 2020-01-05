@@ -2,11 +2,31 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 <context:component-scan base-package="com.guigu"></context:component-scan>
+<!--    可以导入JSTL包：fmt:message-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/page/"></property>
         <property name="suffix" value=".jsp"></property>
+<!--        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>-->
     </bean>
+
+<!--    发送一个请求：可以直接来到web-inf下的success页面，在mvc名称空间下有一个请求映射标签-->
+<!--    path指定那个请求-->
+<!--    view-name:指定映射给那个页面-->
+<!--    这种方式走了springmvc的流程，可以提供国际化
+但是，一旦用了这种方式，其他映射方式都不可使用
+-->
+    <mvc:view-controller path="/tosuccess" view-name="success"></mvc:view-controller>
+<!--    为了解决上述视图控制器的问题，我们使用下面的注解驱动模式名称空间。这东西是高级模式-->
+    <mvc:annotation-driven></mvc:annotation-driven>
+
+
+<!--    自定义的视图解析器,每一个视图解析器都有执行优先级。我们需要设置优先级，order-->
+    <bean class="com.guigu.view.MyXiazaiResolver">
+        <property name="order" value="1"></property>
+    </bean>
+
 </beans>
