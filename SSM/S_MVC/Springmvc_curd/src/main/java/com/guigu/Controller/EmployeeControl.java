@@ -32,6 +32,7 @@ public class EmployeeControl {
     public String toAddpage(Model model){
         Collection<Department> departments = departmentDao.getDepartments();
         model.addAttribute("depts",departments);
+        model.addAttribute("employee",new Employee());
         return "add";
     }
 
