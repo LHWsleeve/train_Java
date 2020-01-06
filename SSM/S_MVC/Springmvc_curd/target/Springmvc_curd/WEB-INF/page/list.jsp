@@ -36,7 +36,7 @@
         <td>
             <a href="${ctp}/emp/${emp.id}">Edit</a>
         </td>
-        <td>DELETE</td>
+        <td><a href="${ctp}/emp/${emp.id}">DELETE</a> </td>
     </c:forEach>
 </table>
 <a href="toaddpage">添加员工</a>

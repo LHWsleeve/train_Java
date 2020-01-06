@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96c213ec-cc61-4bea-8412-7130e17d9b57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/guigu/Controller/EmployeeControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guigu/Controller/EmployeeControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Springmvc_curd/WEB-INF/page/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Springmvc_curd/WEB-INF/page/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +176,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -201,7 +198,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578224936588</updated>
-      <workItem from="1578224938878" duration="19088000" />
+      <workItem from="1578224938878" duration="19851000" />
     </task>
     <servers />
   </component>

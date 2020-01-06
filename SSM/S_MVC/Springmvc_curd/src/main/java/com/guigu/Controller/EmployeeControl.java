@@ -77,4 +77,10 @@ public class EmployeeControl {
         }
     }
 
+    @RequestMapping(value = "/emp/{id}",method = RequestMethod.DELETE)
+    public String deleteEmp(@RequestParam("id")Integer id){
+        employeeDao.delete(id);
+        return "redirct:/emps";
+    }
+
 }

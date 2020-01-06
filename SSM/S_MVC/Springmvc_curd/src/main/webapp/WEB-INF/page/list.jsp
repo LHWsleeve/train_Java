@@ -36,7 +36,12 @@
         <td>
             <a href="${ctp}/emp/${emp.id}">Edit</a>
         </td>
-        <td>DELETE</td>
+        <td>
+            <form action="${ctp}/emp/${emp.id}" method="post">
+                <input type="hidden" name="_method" value="DELETE"/>
+                <input type="submit" value="删除">
+            </form>
+        </td>
     </c:forEach>
 </table>
 <a href="toaddpage">添加员工</a>
