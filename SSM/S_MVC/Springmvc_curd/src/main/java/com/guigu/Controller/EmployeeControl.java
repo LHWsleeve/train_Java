@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Collection;
 
@@ -34,6 +35,14 @@ public class EmployeeControl {
         model.addAttribute("depts",departments);
         model.addAttribute("employee",new Employee());
         return "add";
+    }
+
+    @RequestMapping(value = "/emp", method = RequestMethod.POST)
+    public String addEmp(Employee employee){
+        System.out.println("要添加的员工："+employee.toString());
+        employeeDao.save(employee);
+        //返回列表页面,直接重定向到”查询所有员工“
+        return "redirect:/emps";
     }
 
 }

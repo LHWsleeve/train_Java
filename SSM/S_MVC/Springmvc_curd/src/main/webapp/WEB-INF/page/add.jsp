@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.net.http.HttpRequest" %>
+<%@ page import="org.springframework.web.context.request.ServletRequestAttributes" %><%--
   Created by IntelliJ IDEA.
   User: Sleeve
   Date: 2020/1/5
@@ -23,7 +24,12 @@ SpringMVC认为，表单数据中的每一项最终都是要回显的
             modelAttribute:1.以前表单标签会从请求域中获取一个command对象，把这个对象中的每一个属性对应的显示出来
                             2.可以告诉Springmvc不要去取command的值，我放了一个modelAttribute指定的值
                                 取对象时用的key用指定的--%>
-<form:form action="" modelAttribute="employee">
+<%--项目路径,request.getContextPath()是为了获得根目录，本项目中根目录为"",空--%>
+<%
+    pageContext.setAttribute("ctp",request.getContextPath());
+%>
+<%--${cpt}/emp拼接成一个提交路径，本项目中提交到/emp，然后执行保存员工，重定向到emps页面--%>
+<form:form action="${cpt}/emp" modelAttribute="employee" method="post">
 <%--    path就是原来html-input的name
          1.当作原生的name项
          2. 自动回显隐含模型中某个对象对应的这个属性的值--%>
