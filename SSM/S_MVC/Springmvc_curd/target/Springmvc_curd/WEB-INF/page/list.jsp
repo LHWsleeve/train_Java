@@ -7,6 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"  isErrorPage="true" isELIgnored="false"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+    pageContext.setAttribute("ctp",request.getContextPath());
+%>
 <html>
 <head>
     <title>员工列表页面</title>
@@ -30,7 +33,9 @@
         <td>${emp.email}</td>
         <td>${emp.gender==0?"女":"男"}</td>
         <td>${emp.department.departmentName}</td>
-        <td>Edit</td>
+        <td>
+            <a href="${ctp}/emp/${emp.id}">Edit</a>
+        </td>
         <td>DELETE</td>
     </c:forEach>
 </table>

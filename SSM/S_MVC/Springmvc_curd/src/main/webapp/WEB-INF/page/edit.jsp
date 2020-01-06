@@ -11,11 +11,11 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-    <title>添加员工</title>
+    <title>员工修改</title>
 </head>
 
 <body>
-<h1>员工添加</h1>
+<h1>员工修改</h1>
 <%--    表单标签,通过springMVC的表单标签可以实现将模型数据中的属性和HTML 表单元素相绑定，以实现表单数据更便编辑和表单值回显
 SpringMVC认为，表单数据中的每一项最终都是要回显的
             path指定的是一个属性；属性是从隐含模型(请求域取出的对象中的属性)
@@ -29,11 +29,13 @@ SpringMVC认为，表单数据中的每一项最终都是要回显的
     pageContext.setAttribute("ctp",request.getContextPath());
 %>
 <%--${cpt}/emp拼接成一个提交路径，本项目中提交到/emp，然后执行保存员工，重定向到emps页面--%>
-<form:form action="${cpt}/emp" modelAttribute="employee" method="post">
+<form:form action="${ctp}/emp/${employee.id}" modelAttribute="employee" method="post">
+    <input type="hidden" name="_method" value="put"/>
 <%--    path就是原来html-input的name
          1.当作原生的name项
          2. 自动回显隐含模型中某个对象对应的这个属性的值--%>
-    lastName:<form:input path="lastName"/><br/>
+
+    <input type="hidden" name="id" value="${employee.id}">
     email:<form:input path="email"/><br/>
     gender:
         男：<form:radiobutton path="gender" value="1"/><br/>
@@ -44,7 +46,7 @@ SpringMVC认为，表单数据中的每一项最终都是要回显的
     dept:<form:select path="department.id"
                       items="${depts}" itemLabel="departmentName"
                       itemValue="id"></form:select>
-    <input type="submit" value="保存"/>
+    <input type="submit" value="修改"/>
 </form:form>
 
 
