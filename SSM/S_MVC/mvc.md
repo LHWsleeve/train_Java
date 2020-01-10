@@ -97,3 +97,38 @@ REST:希望以非常简洁的URL地址来发请求；
 
 ***<font color="red">Spring MVC 静态资源不显示 css js png 无法访问 配置了mvc:default-servlet-handler 依然不生效</font>***:
 静态资源不显示，整了半天发现可能是资源需要重新加载。删除target目录。然后重启server就好了。不删的情况下重启是没用的。
+
+# 数据转换&数据格式化&数据校验
+![](pic/122.png)数据绑定流程
+- 默认会自动转换类型
+- 自定义类型转化
+- 
+Spring定义了3种类型的转换器接口，实现任意一个转换器接口都可以作为自定义转换器注册到
+
+ConversionServiceFactroyBean中：**一般只用第一种**
+-  Converter<S，T>：将S类型对象转为T类型对象
+-  ConverterFactory：将相同系列多个“同质"Converter封装在一起如果希望将一种类型的对象转换为另一种类型及其子类的对象
+（例如籽 String转换为 Number及 Number子类（Integer、Long、Double等）对象）可使用该转换器工厂类
+- GenericConverter：会根据源类对象及目标类对象所在的宿主类中的上下文信息进行类型转换
+
+1.：实现Converter接口，写一个自定义类型转换器。
+ 
+2.：Converter是Conversionservice中的组件；
+
+    (1) 、你的 Converte得放进 Conversionservice中；
+    (2)、将 WebDatabinder中的 Conversionservice设置成我们这个加了自定义类型转换器的 Conversionservice；
+
+执行需要写的步骤：
+
+    1） 实现 Converter接口，写一个自定义的类型转换器；
+        
+    2） 配置出 Conversion Service
+  
+  3.![](pic/13.png)让SpringMVC使用自定义
+
+
+**总结**三步：
+  
+    1）、实现 Converter接口，做—个自定义类型的转换器
+    2）、将这个 Converter配置在 ConversionService中
+    3）、告诉Springmvc使用这个ConversionService中
