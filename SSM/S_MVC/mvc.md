@@ -131,4 +131,59 @@ ConversionServiceFactroyBean中：**一般只用第一种**
   
     1）、实现 Converter接口，做—个自定义类型的转换器
     2）、将这个 Converter配置在 ConversionService中
-    3）、告诉Springmvc使用这个ConversionService中
+    3）、告诉Springmvc使用这个ConversionService中  
+
+
+**<mvc：annotation-driven/>注解**：
+
+1、只要请求不好使就召唤mvc：annotation-driven：
+
+    1），<mvc：default-servlet-handler/><mvc：annotation-driven/>
+    现象：
+      a）、都没配.动态资源（@RequestMapping映射的资源能访间，静态资源（html，js，.img）拒绝）
+      b）、加上<mvc：defau1t-serv1et-hand1er/>，不加<mvc：annotation-driven/>。静态资源ok，动态资源完蛋
+      c）、加<mvc：defau1t-serv1et-handler/>，也加上<mvc：annotation driven/>：动态资源和静态资源都可以.
+      d):只加<mvc：annotation driven/>。静态资源不能访问
+
+## 格式化
+使用自定义类型转换器的时候，日期提交格式不正确会报错400。
+
+使用默认类型转换器的时候支持各种日期格式输入。
+
+**如果既要使用自定义类型转换器，又要支持指定的日期格式。** 我们使用FormattingConversionServiceFactoryBean(带有格式化功能)，配置SpringMVC.xml时候，写入上面那个。**（指定格式再日期属性上加DateTimeFormat注解）** 
+
+**数字格式化**：（指定格式，再对应数字属性上加NubmerFormat(pattern="")注解)
+
+## 数据校验
+
+只做前端校验是不安全的
+在重要数据一定要加上后端验证
+
+1）、可以写程序将我们每一个数据取出进行校验，如果失败直接来到添加页面，提示其重新填写：x
+
+2）、SpringMVC；可以JSR303来做数据校验.（JavaBean的元素标注注解）
+![](pic/14.png)
+  303是一个规范，所以必须有实现：JSR303的实现是hibernate Validator（第三方校验框架）
+  
+3）、如何进行快速的后端校验
+    1.导入校验jar包 ,带el的jar包不导入，tomcat中本身含有。导入会冲突
+
+    核心包：
+    hibernate-validator.0.0. CR2. jar
+    hibernate-validator-annotation-processor-5.0.0. CR2.jar
+    依赖包：
+    classmate-8.8.jar
+    jboss-logging-3.1.1.GA.jar
+    validation-api -11.0.CR1.jar
+  2.只需要给javabean的属性添加上校验注解。
+
+  3.告诉SpringMVC这个javabean需要校验。(添加注解@Valid)
+
+  ```public String addEmp(@valid Employee employee，BindingResult result){}``` 
+
+  4.如何知道校验结果？给需要校验的javabean后面**紧跟**一个BindingResult。这个BingResult就是封装前面一个bean的校验结果（布尔值）。 
+
+  5）、根据不同的校验结果决定怎么办？
+
+  6）、来到风面使用form：errors取出错误信息即可；
+  ![](pic/15.png)
