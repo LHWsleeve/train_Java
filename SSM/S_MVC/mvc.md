@@ -187,3 +187,23 @@ ConversionServiceFactroyBean中：**一般只用第一种**
 
   6）、来到风面使用form：errors取出错误信息即可；
   ![](pic/15.png)
+
+  ## Ajax
+  1. SpringMVC快速完成ajax功能？
+     
+          1）。返回json就ok;
+          2）。页面，&.ajax();
+  2. 原生javaweb：
+     
+          1）.导入GSON包
+          2）.返回的数据用GSON转成json
+          3).写出去
+  1. 对于SpringMVC-ajax来说：
+  2. 
+          1).导包
+            jackson-annotations-2.1.5.jar
+            jackson-core-2.1.5.jar
+            jackson-databind-2.1.5.jar
+
+          2).写配置
+          3).测试
