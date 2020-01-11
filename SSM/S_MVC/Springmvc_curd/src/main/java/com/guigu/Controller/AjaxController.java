@@ -3,6 +3,7 @@ package com.guigu.Controller;
 import com.guigu.dao.EmployeeDao;
 import com.guigu.entities.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,21 @@ import java.util.Collection;
 public class AjaxController {
     @Autowired
     EmployeeDao employeeDao;
+
+
+    /**
+     * HttpEntity<String>：比ResquestBody更强大，可以拿到所有的请求头。
+     * @param str
+     * @return
+     */
+    @RequestMapping("/test02")
+    public String test01(HttpEntity<String> str){
+        System.out.format("请求体："+str);
+        return "success";
+
+    }
+
+
 
     /**
      * 将返回的数据放在响应体中
