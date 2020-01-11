@@ -13,6 +13,18 @@
 <!--    告诉SpringMVC，自己映射的请求就自己处理。不能处理的请求直接交给tomcat
            副作用：静态资源能访问，但是动态映射的请求失败-->
     <mvc:default-servlet-handler/>
-<!--    解决上面这个带来的问题，springmvc可以保证动态请求和静态请求都能访问。-->
+<!--    解决上面这个带来的问题，springmvc可以保证动态请求和静态请求都能访问。
+conversion-service="conversionService：可以使用自己配置的类型转换组件-->
+<!--    <mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>-->
     <mvc:annotation-driven></mvc:annotation-driven>
+
+<!--&lt;!&ndash;    告诉Springmvc不用默认的ConverService，使用自定义的类型转换器&ndash;&gt;-->
+<!--    <bean class="org.springframework.context.support.ConversionServiceFactoryBean">-->
+<!--&lt;!&ndash;            再converters中添加自定义类型转换器&ndash;&gt;-->
+<!--        <property name="converters">-->
+<!--            <set>-->
+<!--                <bean class="com.guigu.componet.MyStringToEmployeeConverter"></bean>-->
+<!--            </set>-->
+<!--        </property>-->
+<!--    </bean>-->
 </beans>

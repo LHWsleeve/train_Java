@@ -41,7 +41,7 @@ public class EmployeeControl {
         System.out.println("要添加的员工："+employee.toString());
         employeeDao.save(employee);
         //返回列表页面,直接重定向到”查询所有员工“
-        return "redirect:/emps";
+        return "/WEB-INF/emps.jsp";
     }
 
     /**
@@ -66,7 +66,7 @@ public class EmployeeControl {
     public String updateEmp(Employee employee){
         System.out.println("要修改的员工："+employee.toString());
         employeeDao.save(employee);
-        return "redirect:/emps";
+        return "/WEB-INF/emps.jsp";
     }
 
 @ModelAttribute
@@ -80,7 +80,7 @@ public class EmployeeControl {
     @RequestMapping(value = "/emp/{id}",method = RequestMethod.DELETE)
     public String deleteEmp(@PathVariable("id")Integer id){
         employeeDao.delete(id);
-        return "redirect:/emps";
+        return "/WEB-INF/emps.jsp";
     }
 
 }

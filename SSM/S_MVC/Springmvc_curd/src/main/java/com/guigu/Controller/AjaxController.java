@@ -4,9 +4,11 @@ import com.guigu.dao.EmployeeDao;
 import com.guigu.entities.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.print.DocFlavor;
 import java.util.Collection;
 
 @Controller
@@ -25,5 +27,15 @@ public class AjaxController {
     public Collection<Employee> ajaxGetAll(){
         Collection<Employee> all = employeeDao.getAll();
         return all;
+    }
+
+    /**
+     * RequestBody：请求体，获取请求的请求体。
+     * @return
+     */
+    @RequestMapping("/testRequestBody")
+    public String testRequestBody(@RequestBody String body){
+        System.out.format("请求体"+body);
+        return "success";
     }
 }
