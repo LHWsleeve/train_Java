@@ -6,20 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96c213ec-cc61-4bea-8412-7130e17d9b57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/emps.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/testOther.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guigu/Controller/AjaxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guigu/Controller/AjaxController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guigu/Controller/EmployeeControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guigu/Controller/EmployeeControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jackson-annotations-2.1.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jackson-core-2.1.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jackson-databind-2.1.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Springmvc_curd/WEB-INF/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Springmvc_curd/WEB-INF/classes/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springmvc.xml" afterDir="false" />
-    </list>
+    <list default="true" id="96c213ec-cc61-4bea-8412-7130e17d9b57" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -216,7 +203,7 @@
       <option name="presentableId" value="Default" />
       <updated>1578224936588</updated>
       <workItem from="1578224938878" duration="32553000" />
-      <workItem from="1578362620659" duration="23011000" />
+      <workItem from="1578362620659" duration="23381000" />
     </task>
     <servers />
   </component>

@@ -20,5 +20,12 @@
 <input name="file" type="file"/>
 <input type="submit"/>
 </form>
+<br/>
+<form action="${cpt}/testRequestBody2" method="post" enctype="multipart/form-data">
+    <input name="username2" value="tomcat"/>
+    <input name="password2" value="123456"/>
+    <input name="file" type="file"/>
+    <input type="submit"/>
+</form>
 </body>
 </html>
