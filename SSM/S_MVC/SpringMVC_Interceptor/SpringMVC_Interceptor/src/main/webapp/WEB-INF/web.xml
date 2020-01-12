@@ -4,6 +4,13 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+  <context-param>
+    <param-name>namespace</param-name>
+    <param-value>classpath:spring.xml</param-value>
+  </context-param>
+
+  
   <filter>
     <filter-name>characterEncodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -33,6 +40,10 @@
     <filter-name>characterEncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
 
   <servlet>
     <servlet-name>springmvc</servlet-name>
