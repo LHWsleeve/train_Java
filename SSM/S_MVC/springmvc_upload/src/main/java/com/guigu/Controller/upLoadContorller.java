@@ -12,18 +12,18 @@ import java.io.IOException;
 
 
 @Controller
-
 public class upLoadContorller {
+
 
     @RequestMapping("/upload")
     public String upload(Model model, String username,
-                         @RequestParam("headering") MultipartFile file){
+                         @RequestParam("headerimg")MultipartFile file){
         System.out.format("文件上传的信息");
         System.out.format("文件项名："+file.getName());
         System.out.format("文件的真实名字："+ file.getOriginalFilename());
         //文件保存
         try {
-            file.transferTo(new File("D:\\",file.getOriginalFilename()));
+            file.transferTo(new File("D:\\"+file.getOriginalFilename()));
             model.addAttribute("msg","文件上传成功");
 
         } catch (Exception e) {

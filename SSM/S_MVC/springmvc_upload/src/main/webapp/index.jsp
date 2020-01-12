@@ -16,10 +16,10 @@
             在处理器方法上写一个：
               @RequestParam("headering") MultipartFile file，这东西封装了当前文件的信息，可以直接保存--%>
 ${msg}
-<form action="${ctp}}" enctype="multipart/form-data" method="post">
-    用户头像：<input name="headering" type="file">
-    用户名：<input name="username" type="text">
-    <input type="submit">
+<form action="${ctp}/upload" enctype="multipart/form-data" method="post" >
+    用户头像：<input name="headerimg" type="file"><br/>
+    用户名：<input name="username" type="text"><br/>
+    <input type="submit"/>
 </form>
 </body>
 </html>
