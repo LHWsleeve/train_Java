@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="com.guigu"></context:component-scan>
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="suffix" value=".jsp"></property>
+        <property name="prefix" value="/WEB-INF/page/"></property>
+    </bean>
+
+    <mvc:default-servlet-handler/>
+    <mvc:annotation-driven></mvc:annotation-driven>
+
+<!--    测试拦截器-->
+    <mvc:interceptors>
+<!--        配置某个拦截器：
+                bean：默认拦截所有请求
+                interceptor:配置拦截器更详细的标签-->
+        <bean class="com.guigu.controller.MyfirstInterceptor"></bean>
+
+        <mvc:interceptor>
+            <mvc:mapping path="/test01"/>
+            <bean class="com.guigu.controller.MutiInterceptor">
+            </bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+</beans>

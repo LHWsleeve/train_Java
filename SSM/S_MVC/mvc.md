@@ -207,3 +207,87 @@ ConversionServiceFactroyBean中：**一般只用第一种**
 
           2).写配置
           3).测试
+
+
+# 拦截器
+SpringMVC提供了拦截器机制；允许运行目标方法之前，进行一些拦截工作。或者目标方法运行之后进行一些其他处理。
+
+跟Filter差不多，不过过滤器是JavaWeb定义的
+
+拦截器是SpringMVC定义的===》是一个**HandlerInterceptor**接口。
+![](pic/16.png)
+1. preHandle:在目标方法调用之前调用。返回布尔值(true,chain.doFilter()放行，如果是false，不放行)
+2. postHandle：在目标方法运行之后调用：目标方法调用之后，放行
+3. afterCompletion：在请求整个完成之后；来到目标页面之后；chain.doFilter()放行。**资源型用之后**
+![](pic/17.png)
+
+
+1）拦截器是一个接口
+
+2）实现HandlerInterceptor接口 
+
+3） springmvc配置拦截器
+
+4） 拦截器的正常流程 ---pre--目标方法--post---页面--after
+
+**其他流程**：
+1. 只要pre不放行，就没有以后的流程
+2. 实际上，正常流程中任意一个环节失败，后续环节都不执行(除了after)。即，只要放行了after都会执行
+
+**多拦截器**
+正常流程![](pic/18.png)
+异常流程：
+1. 不放行。某一个不放行，从此以后都没有。**但是**如果第二个不放行，假设他前面的拦截器已放行。此时，<font color="red">已放行的拦截起的after都会执行。</font>
+
+**流程： filter的流程；**
+
+    拦截器的 rehAndle：是按照顺序执行
+    拦截器的 postHandle：是按照逆序执行
+    拦截器的 after Completion：是按照逆序执行
+    已放行的拦截起的after都会执行。
+
+**什么时候用拦截器？什么时候用Filter**：
+复杂情况，如果某些功能需要求他组件配合完成，我们使用拦截器。可以自动装配
+filter：简单情况
+
+# SpringMVC运行流程
+<font color="red">
+
+1. 所有请求，前端控制器DispactherServlet收到请求，调用doDispacther进行处理。
+2. 根据HandlerMapping中保存的请求映射信息找到，处理当前请求的，处理器执行链（包拦截器)
+3. 根据处理器，找到适配器。HandlerAdapater
+4. 拦截器preHandle先执行
+5. 适配器执行目标表方法，并返回ModelAndView
+  
+</font>
+          
+        1）、 Modelattribute注解标注的方法提前运行
+        2）、执行目标方法的时候（确定目标方法用的参数）
+          1）、有注解
+          2）、没注解：
+            1）、看是否 Model、Map以及其他的
+            2）、如果是自定义类型：
+              1）、从隐含模型中看有没有，如果有就从隐含模型中拿
+              2）、如果没有，再看是否 Session Attributes标注的属性，如果是从 Session中拿，如果拿不到会抛异常
+              3）、都不是，就利用反射创建对象
+<font color="red">
+
+1. 拦截器post执行
+2. 处理结果(页面渲染)
+
+</font>
+
+          1）、如果有异常使用异常解析器处理异常；处理完后还会返回ModelandView
+          2）、调用 render进行页面渲染:
+              1）、视图解析根据视图名得到视图对象
+              2）、视图对象调用 render方法；
+          3）、执行拦截器的afterCompletion;
+
+![](pic/19.png)
+
+# SpringMVC与Spring整合
+整合的目的：分工明确
+
+SpringMVC的配置文件就来配置和网站转发逻辑以及网站功能有关的(视图解析器，文件上传解析器，支持ajax....)
+
+Spring的配置文件来配置和业务有关的(事务控制，数据源....)
