@@ -8,6 +8,15 @@
             url：磁盘或网络路径
             -->
     <properties resource="dbconfig.properties"></properties>
+    <settings>
+<!--       name：配置相的key；Va1ue：配置项的值
+数据库字段名本身不区分大小写，Mybatis将数据库字段和bean属性名不区分大小写比较，匹配。但是对于存在下划线就无法匹配
+            loginAccount====Login_Account。用驼峰解决
+            mapUnderscoreToCamelCase:驼峰命名
+            -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
     <environments default="mysql">
         <environment id="mysql">
             <transactionManager type="JDBC"></transactionManager>

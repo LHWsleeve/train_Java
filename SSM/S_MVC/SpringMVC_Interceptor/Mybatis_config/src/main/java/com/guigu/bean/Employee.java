@@ -7,6 +7,15 @@ public class Employee {
     private String empname;
     private String email;
     private Integer gender;
+    private String loginAccount;
+
+    public String getLoginAccount() {
+        return loginAccount;
+    }
+
+    public void setLoginAccount(String loginAccount) {
+        this.loginAccount = loginAccount;
+    }
 
     public Employee() {
     }
@@ -57,6 +66,7 @@ public class Employee {
                 ", empname='" + empname + '\'' +
                 ", email='" + email + '\'' +
                 ", gender=" + gender +
+                ", loginAccount='" + loginAccount + '\'' +
                 '}';
     }
 }
