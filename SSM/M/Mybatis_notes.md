@@ -242,3 +242,15 @@
 1）、只要IDE找到了文件的dtd(约束文件)的位置，联网会自动下
 
 2）、若没有联网，从jar包中解压出dtd，绑定约束文件。
+
+---
+两个文件：
+1. 全局配置文件：mybatis-config.xml；指导 mybatis正确运行的一些全局设置；
+2. SQL映射文件：Employee Dao.xm；相当于是对bao接口的一个实现描述
+
+细节：
+1. 获取到的是接口的代理对象：mybatis自动创建的
+2. SqlFactory和Sqlsession：
+        
+        SqlSessionFactory创建SqlSession对象，Factory只new一次就行
+        SqlSession：相当于connection和数据库进行交互的，和数据库的一次会话，就应该创建一个新的SqlSession

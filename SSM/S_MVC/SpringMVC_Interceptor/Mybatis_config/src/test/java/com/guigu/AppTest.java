@@ -47,7 +47,7 @@ public class AppTest
             //class com.sun.proxy.$Proxy5,代理对象
             System.out.println(employeeDao.getClass());
             //4.调用之前的方法
-            Employee employee = employeeDao.getEmployeeByid(1);
+            Employee employee = employeeDao.getEmployeeByid(4);
             System.out.println(employee);
         }catch (Exception e){
             e.printStackTrace();
