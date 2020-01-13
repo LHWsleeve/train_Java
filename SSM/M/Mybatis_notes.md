@@ -254,3 +254,37 @@
         
         SqlSessionFactory创建SqlSession对象，Factory只new一次就行
         SqlSession：相当于connection和数据库进行交互的，和数据库的一次会话，就应该创建一个新的SqlSession
+
+---
+全局配置文件：
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0/EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--Mybatis的主配置环境-->
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"/>
+<!--            配置连接池-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/tx?serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+<!-- 指定映射配置文件的位置，映射配置文件指的是每个dao独立的配置文件-->
+<!--    mappers中注册我们所有写的dao接囗的实现文件-->
+    <mappers>
+        <mapper resource="EmployeeDao.xml"/>
+    </mappers>
+</configuration>
+```
+原生JDBC写sql会预留占位符，之后需要认为确定占位符数值的类型，使用对应类型转换器注入占位符。
+
+**typeHandlers：**
+
+无论是 MyBatis在预处理语句（Preparedstatement）中设置一个参数时，还是从结果集中取出一个值时，都会用类型处理贔将获取的值以台适的方式转换成Java类型。

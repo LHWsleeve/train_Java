@@ -31,6 +31,9 @@
     <package name="com.guigu.bean"/>
     </typeAliases>
 
+<!--    类型处理器：一般情况不需要改。自定义才在这里改-->
+
+
     <environments default="mysql">
         <environment id="mysql">
             <transactionManager type="JDBC"></transactionManager>
