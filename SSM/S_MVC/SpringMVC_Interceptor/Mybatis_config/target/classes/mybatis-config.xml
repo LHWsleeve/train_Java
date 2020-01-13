@@ -10,10 +10,23 @@
     <properties resource="dbconfig.properties"></properties>
     <settings>
 <!--       name：配置相的key；Va1ue：配置项的值
+数据库字段名本身不区分大小写，Mybatis将数据库字段和bean属性名不区分大小写比较，匹配。但是对于存在下划线就无法匹配
+            loginAccount====Login_Account。用驼峰解决
             mapUnderscoreToCamelCase:驼峰命名
             -->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
+<!--为常用的类型起别名-->
+    <typeAliases>
+<!--        一个alias就是一个bean的别名：默认是类名（不区分大小写），
+            alias="emp",可以指定别名
+            此后配置文件在可以使用别名-->
+<!--        <typeAlias type="com.guigu.bean.Employee" alias="emp"/>-->
+
+
+<!--    批量起别名:为指定包内的所有类起别名，默认是类名,不区分大小写-->
+    <package name="com.guigu.bean"/>
+    </typeAliases>
 
     <environments default="mysql">
         <environment id="mysql">

@@ -1,5 +1,7 @@
 package com.guigu.bean;
 
+import org.apache.ibatis.type.Alias;
+
 import java.beans.IntrospectionException;
 
 public class Employee {
