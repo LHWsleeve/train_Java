@@ -62,7 +62,20 @@
         <property name="" value=""/>
     </databaseIdProvider>
 
+<!--    mappers标签：写好的sql映射文件需要使用mappers注册
+        class:引用接口的全类名.
+                使用这种方式,必须将xml文件和接口文件在同目录下,并且命名一模一样
+        另一种用法:不使用配置文件,写注解.此时只能使用class映射
+        默认resources:类路径下
+        url:磁盘或网络路径
+        -->
     <mappers>
-        <mapper resource="EmployeeDao.xml"></mapper>
+<!--        <mapper resource="EmployeeDao.xml"></mapper>-->
+        <mapper class="com.guigu.dao.EmployeeDao"></mapper>
+<!--        批量注册:name:dao所在接口的包名.
+            此时,要么接口上有注解,要么配置文件和接口同目录和名字
+            或者resources已经指定未注解的接口
+            -->
+        <package name="com.guigu.dao"/>
     </mappers>
 </configuration>
