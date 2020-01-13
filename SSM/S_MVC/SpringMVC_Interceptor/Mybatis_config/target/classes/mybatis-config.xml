@@ -17,6 +17,7 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
 <!--为常用的类型起别名-->
+<!--    推荐写全类名-->
     <typeAliases>
 <!--        一个alias就是一个bean的别名：默认是类名（不区分大小写），
             alias="emp",可以指定别名
@@ -24,11 +25,25 @@
 <!--        <typeAlias type="com.guigu.bean.Employee" alias="emp"/>-->
 
 
-<!--    批量起别名:为指定包内的所有类起别名，默认是类名,不区分大小写-->
+<!--    批量起别名:为指定包内的所有类起别名，默认是类名,不区分大小写
+           如果此时还想对某个类起别名，在类文件头部加入注解@Alias("xxx")
+-->
     <package name="com.guigu.bean"/>
     </typeAliases>
 
-    <environments default="mysql">
+<!--    类型处理器：一般情况不需要改。自定义才在这里改-->
+
+<!--    插件：强大功能！-->
+
+<!--environments配置环境们
+        default：默认使用某个环境（id）
+        -->
+    <environments default="development">
+<!--        每一个environment配置具体环境，为二标签
+             transactionManager：事务管理器
+             dataSource：数据源
+             id:当前环境的唯一标识
+             -->
         <environment id="mysql">
             <transactionManager type="JDBC"></transactionManager>
             <dataSource type="POOLED">

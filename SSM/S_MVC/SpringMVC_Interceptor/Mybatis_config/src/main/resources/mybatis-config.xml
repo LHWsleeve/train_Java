@@ -33,8 +33,18 @@
 
 <!--    类型处理器：一般情况不需要改。自定义才在这里改-->
 
+<!--    插件：强大功能！-->
 
+<!--environments配置环境们
+        default：默认使用某个环境（id）
+        -->
     <environments default="mysql">
+<!--        每一个environment配置具体环境，为二标签
+             transactionManager：事务管理器.
+             dataSource：数据源
+             以上两个以后都是spring来做
+             id:当前环境的唯一标识
+             -->
         <environment id="mysql">
             <transactionManager type="JDBC"></transactionManager>
             <dataSource type="POOLED">
@@ -45,6 +55,12 @@
             </dataSource>
         </environment>
     </environments>
+
+<!--    databaseIdProvider:用来考虑数据库移植性。比如mysql切换到oracle-->
+    <databaseIdProvider type="DB_VENDOR">
+<!--name=""：数据库厂商标识 value：给这个标识起一个好用的名字-->
+        <property name="" value=""/>
+    </databaseIdProvider>
 
     <mappers>
         <mapper resource="EmployeeDao.xml"></mapper>
