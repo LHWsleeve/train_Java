@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="77affc81-22d6-4461-aa8b-711232c52ecd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guigu/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guigu/dao/EmployeeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/EmployeeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/guigu/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/guigu/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/guigu/dao/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/guigu/dao/EmployeeDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +111,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578969426889</updated>
-      <workItem from="1578969429280" duration="7187000" />
+      <workItem from="1578969429280" duration="8289000" />
     </task>
     <servers />
   </component>
