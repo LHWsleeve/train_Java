@@ -14,7 +14,7 @@
    <level value="debug" />
  </logger>
  <logger name="org.apache.ibatis">
-   <level value="debug" />
+   <level value="info" />
  </logger>
  <root>
    <level value="debug" />

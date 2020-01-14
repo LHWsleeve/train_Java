@@ -42,10 +42,10 @@ public class Key {
 
     @Override
     public String toString() {
-        return "Key{" +
+        return "Key[" +
                 "id=" + id +
                 ", keyName='" + keyName + '\'' +
                 ", lock=" + lock +
-                '}';
+                ']';
     }
 }

@@ -1,6 +1,8 @@
 package com.guigu;
 
 import com.guigu.bean.Key;
+import com.guigu.bean.Lock;
+import com.guigu.dao.LockDao;
 import com.guigu.dao.keyDao;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -11,6 +13,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 public class KeyTest {
     SqlSessionFactory sqlSessionFactory;
@@ -34,6 +37,25 @@ public class KeyTest {
             keyDao keyDao = openSession.getMapper(keyDao.class);
             Key key = keyDao.getKeyById(1);
             System.out.println("查找成功：" +key );
+        } finally {
+            openSession.commit();
+            openSession.close();
+        }
+    }
+
+    //测试集合属性
+    @Test
+    public void test02() {
+        SqlSession openSession = sqlSessionFactory.openSession();
+        try {
+            LockDao LockDao = openSession.getMapper(LockDao.class);
+            Lock lock = LockDao.getLockById(3);
+            System.out.println("查找成功：" +lock );
+            System.out.println("所有的锁如下：");
+            List<Key> keys = lock.getKeys();
+            for(Key key: keys){
+                System.out.println(key);
+            }
         } finally {
             openSession.commit();
             openSession.close();

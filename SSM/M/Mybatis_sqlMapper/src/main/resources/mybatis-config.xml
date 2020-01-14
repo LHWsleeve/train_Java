@@ -21,8 +21,6 @@
     </environments>
 
  <mappers>
-        <mapper class="com.guigu.dao.EmployeeDao"/>
-     <mapper class="com.guigu.dao.UserDao"/>
-     <mapper class="com.guigu.dao.keyDao"/>
+        <package name="com.guigu.dao"/>
  </mappers>
 </configuration>

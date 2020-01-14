@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77affc81-22d6-4461-aa8b-711232c52ecd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guigu/dao/LockDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/LockDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/KeyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/KeyDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guigu/bean/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guigu/bean/Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guigu/bean/Lock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guigu/bean/Lock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/guigu/KeyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/guigu/KeyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -59,23 +67,7 @@
       <recent name="C:\Users\Sleeve\Documents\train_Java\SSM\M\Mybatis_sqlMapper\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.KeyTest.test01">
-    <configuration name="AppTest.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Mybatis_sqlMapper" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.guigu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.guigu" />
-      <option name="MAIN_CLASS_NAME" value="com.guigu.AppTest" />
-      <option name="METHOD_NAME" value="test01" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.KeyTest.test02">
     <configuration name="AppTest.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mybatis_sqlMapper" />
       <extension name="coverage">
@@ -124,6 +116,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="KeyTest.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mybatis_sqlMapper" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.guigu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.guigu" />
+      <option name="MAIN_CLASS_NAME" value="com.guigu.KeyTest" />
+      <option name="METHOD_NAME" value="test02" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserTest.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mybatis_sqlMapper" />
       <extension name="coverage">
@@ -142,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.KeyTest.test02" />
         <item itemvalue="JUnit.KeyTest.test01" />
         <item itemvalue="JUnit.UserTest.test01" />
         <item itemvalue="JUnit.AppTest.test03" />
         <item itemvalue="JUnit.AppTest.test02" />
-        <item itemvalue="JUnit.AppTest.test01" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +180,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578969426889</updated>
-      <workItem from="1578969429280" duration="18884000" />
+      <workItem from="1578969429280" duration="22011000" />
     </task>
     <servers />
   </component>
@@ -183,46 +191,54 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1578993004306">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1579005145631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578993004306" />
-    <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1579004723464">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579005145631" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1579007858574">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579004723464" />
-    <state width="1877" height="351" key="GridCell.Tab.0.center" timestamp="1579004723464">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579007858574" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1579007858574">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579004723464" />
-    <state width="1877" height="351" key="GridCell.Tab.0.left" timestamp="1579004723463">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579007858574" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1579007858574">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579004723463" />
-    <state width="1877" height="351" key="GridCell.Tab.0.right" timestamp="1579004723464">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579007858574" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1579007858574">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579004723464" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1578992724510">
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579007858574" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1579007859621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578992724510" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1578992724509">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579007859621" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1579007859621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578992724509" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1578992724509">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579007859621" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1579007859621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578992724509" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1578992724510">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579007859621" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1579007859621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578992724510" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579007859621" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1578990343582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578990343582" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1579007871775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579007871775" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1579006820577">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579006820577" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -239,8 +255,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/guigu/KeyTest.java</url>
-          <line>34</line>
+          <line>37</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/guigu/KeyTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

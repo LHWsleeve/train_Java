@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3. 0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guigu.dao.LockDao">
+<select id="getLockById" resultMap="mykey3">
+        SELECT k.id kid, k.keyname,k.lockid,
+        l.id lid,l.lockname
+        FROM `key` k
+        LEFT JOIN `lock` l ON k.lockid=l.id
+        WHERE l.id=#{id}
+</select>
+<!--  private Integer id;
+    private String lockName;
+    //查询锁，同时查出所有钥匙
+    private List<Key> keys;-->
+    <resultMap id="mykey3" type="com.guigu.bean.Lock">
+        <id property="id" column="lid"/>
+        <result property="lockName" column="lockname"/>
+<!--        定义集合元素的封装
+            property：指定那个属性是集合属性
+            javaType：指定对象类型，只用于assocation
+            ofType:指定集合内元素的类型
+            -->
+        <collection property="keys" ofType="com.guigu.bean.Key">
+<!--       有一点：可以不封装全部属性，抛弃
+     在集合标签体中指定封装规则-->
+            <id property="id" column="kid"/>
+            <result property="keyName" column="keyname"/>
+        </collection>
+    </resultMap>
+
+</mapper>
