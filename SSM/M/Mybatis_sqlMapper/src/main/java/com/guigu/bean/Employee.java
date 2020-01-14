@@ -60,13 +60,13 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "Employee[" +
                 "id=" + id +
                 ", empname='" + empname + '\'' +
                 ", email='" + email + '\'' +
                 ", gender=" + gender +
                 ", loginAccount='" + loginAccount + '\'' +
-                '}';
+                ']';
     }
 }
 

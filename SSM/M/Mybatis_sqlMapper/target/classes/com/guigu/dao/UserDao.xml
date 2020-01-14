@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3. 0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guigu.dao.UserDao">
+
+<!--    使用默认规则：属性列明意义对应。使用resultType时无法使用自定义规则。去掉
+                    使用resultMap=""。指明id
+                    -->
+    <select id="getUserById" resultMap="user">
+        select * from t_user where id=#{id}
+    </select>
+<!--    自定义结果集：自己定义每一列数据和 javaBean的映射规则
+        id：唯一标识符，自己指定
+        type:指定为那个javabean自定义封装规则。全类名
+
+-->
+    <resultMap id="user" type="com.guigu.bean.User">
+<!--        指定主键列的对应规则
+            id column="id"
+            property:指定user的哪一个属性封装上面这个id列
+            -->
+        <id column="id" property="id"/>
+<!--        普通列规则：规则一样，标签不同
+            -->
+        <result property="name" column="cname"/>
+        <result property="age" column="cage"/>
+        <result property="gender" column="cgender"/>
+
+    </resultMap>
+
+</mapper>

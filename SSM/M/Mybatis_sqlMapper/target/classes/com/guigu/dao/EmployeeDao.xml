@@ -73,4 +73,6 @@
     <select id="getALLemp" resultType="com.guigu.bean.Employee">
          select * from employee
     </select>
+
+
 </mapper>

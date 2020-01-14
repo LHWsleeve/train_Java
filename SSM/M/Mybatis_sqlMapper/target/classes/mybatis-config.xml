@@ -22,5 +22,6 @@
 
  <mappers>
         <mapper class="com.guigu.dao.EmployeeDao"/>
-    </mappers>
+     <mapper class="com.guigu.dao.UserDao"/>
+ </mappers>
 </configuration>
