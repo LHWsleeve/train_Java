@@ -5,7 +5,7 @@
 <mapper namespace="com.guigu.dao.UserDao">
 
 <!--    使用默认规则：属性列明意义对应。使用resultType时无法使用自定义规则。去掉
-                    使用resultMap=""。指明id
+                    使用resultMap=""。指明id；查出数据，封装结果时使用自定义风格。
                     -->
     <select id="getUserById" resultMap="user">
         select * from t_user where id=#{id}
@@ -26,7 +26,7 @@
         <result property="name" column="cname"/>
         <result property="age" column="cage"/>
         <result property="gender" column="cgender"/>
-
+<!--        联合查询-->
     </resultMap>
 
 </mapper>

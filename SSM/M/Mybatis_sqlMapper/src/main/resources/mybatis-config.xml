@@ -23,5 +23,6 @@
  <mappers>
         <mapper class="com.guigu.dao.EmployeeDao"/>
      <mapper class="com.guigu.dao.UserDao"/>
+     <mapper class="com.guigu.dao.keyDao"/>
  </mappers>
 </configuration>
