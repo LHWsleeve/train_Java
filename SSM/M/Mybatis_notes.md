@@ -288,3 +288,24 @@
 **typeHandlers：**
 
 无论是 MyBatis在预处理语句（Preparedstatement）中设置一个参数时，还是从结果集中取出一个值时，都会用类型处理贔将获取的值以台适的方式转换成Java类型。
+
+---
+SQL映射文件
+
+![](pic/11.png)
+这个文件中能写的所有标签：
+
+    chace:缓存有关
+
+    cache-ref:同上
+
+    delete\uodata\insert\select:增删改查
+
+    parameterMap:参数map，废弃。
+
+    resultMap：结果集映射：自定义结果集的封装规则
+
+    sql：抽取可重用的sql
+
+1、增删改标签：
+![](pic/12.png)
