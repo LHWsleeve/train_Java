@@ -41,4 +41,17 @@ public class AppTest
             openSession.close();
         }
     }
+
+    @Test
+    public void test02(){
+        SqlSession openSession = sqlSessionFactory.openSession();
+        try{
+            EmployeeDao mapper = openSession.getMapper(EmployeeDao.class);
+            Employee employee = mapper.getEmployeeByidAndEmp(4, "123");
+            System.out.println(employee);
+        }finally {
+            openSession.commit();
+            openSession.close();
+        }
+    }
 }

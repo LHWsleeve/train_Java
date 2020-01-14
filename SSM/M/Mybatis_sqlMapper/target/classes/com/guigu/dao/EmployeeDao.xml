@@ -12,9 +12,26 @@
     sql：抽取可重用的sql
                 -->
 <mapper namespace="com.guigu.dao.EmployeeDao">
+
     <select id="getEmployeeByid" resultType="com.guigu.bean.Employee"  >
         select * from employee where id=#{id}
     </select>
+
+<!--    现象：
+            1.单个参数：基本类型：取值，#{随便写}
+                        或者传入pojo：
+            2.多个参数：#{参数名}无效。
+                        可用方式：使用参数索引或者param0....5
+                        只要传入多个参数，mybatis会自动将左右参数封装在map中，封装时是使用的key就是索引或者标识
+                      可以指定mybatis封装map的时候使用我们指定的key
+-->
+<!--      Parameter 'id' not found. Available parameters are [arg1, arg0, param1, param2]。多参数限定时，不能直接写参数名，需要用0，1代替-->
+<!--             select * from employee where id=#{id} and empname=#{empname}-->
+    <select id="getEmployeeByidAndEmp" resultType="com.guigu.bean.Employee"  >
+
+            select * from employee where id=#{arg0} and empname=#{arg1}
+    </select>
+
 
     <update id="updateEmp">
         update employee set empname=#{empname}, gender=#{gender}, email=#{email} where id=#{id}
@@ -25,7 +42,7 @@
     </delete>
 
     <!--    让 My Batis自动的将自增id赋值给传入的emp1oyee对象的id属性
-            useGeneratedKeys="true"
+            useGeneratedKeys="true"原生Jdbc获取自增主键的方法；
             keyProperty=""：将刚才自增的id封装给哪个属性
             -->
     <insert id="insertEmp" useGeneratedKeys="true" keyProperty="id">
