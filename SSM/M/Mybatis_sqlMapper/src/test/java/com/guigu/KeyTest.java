@@ -70,12 +70,18 @@ public class KeyTest {
      *
      */
     @Test
-    public void test03() {
+    public void test03() throws InterruptedException {
         SqlSession openSession = sqlSessionFactory.openSession();
         try {
             keyDao keyDao = openSession.getMapper(keyDao.class);
             Key sim = keyDao.getKeyByIdSim(1);
-            System.out.println(sim);
+            //每次都会全部查询，浪费性能
+            System.out.println(sim.getKeyName());
+            //我们使用按需加载；只需要全局开启按需加载策略==延迟加载
+            Thread.sleep(3000);
+            String lockName = sim.getLock().getLockName();
+            System.out.println(lockName);
+
         } finally {
             openSession.commit();
             openSession.close();
