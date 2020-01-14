@@ -13,6 +13,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Map;
 
 /**
  * Unit test for simple App.
@@ -49,6 +50,25 @@ public class AppTest
             EmployeeDao mapper = openSession.getMapper(EmployeeDao.class);
             Employee employee = mapper.getEmployeeByidAndEmp(4, "123");
             System.out.println(employee);
+        }finally {
+            openSession.commit();
+            openSession.close();
+        }
+    }
+
+    //测试map
+    @Test
+    public void test03(){
+        SqlSession openSession = sqlSessionFactory.openSession();
+        try{
+            EmployeeDao mapper = openSession.getMapper(EmployeeDao.class);
+            //查询单条记录封装map
+            Map<String, Object> map = mapper.getEmployeeByidmap(1);
+            System.out.println(map);
+
+            //查询多条封装map
+//            Map<Integer, Employee> map2 = mapper.getALLemp();
+//            System.out.println(map2);
         }finally {
             openSession.commit();
             openSession.close();

@@ -59,4 +59,18 @@
     <insert id="insertEmp" useGeneratedKeys="true" keyProperty="id">
         insert into employee(empname,gender,email) values(#{empname},#{gender},#{email})
     </insert>
+
+
+<!--     查询返回一个map.这种方式不能使用元素类型-->
+<select id="getEmployeeByidmap" resultType="map">
+            select * from employee where id=#{id}
+
+</select>
+<!--    查询多个返回一个map public Map<Integer,Employee> getALLemp();
+        查询多个情况下，集合里面写元素类型。
+        idea打印看不出来，但是debug可以看出，如果是map类型，map里放的是hashmap，如果是元素类型，map里放的元素
+        -->
+    <select id="getALLemp" resultType="com.guigu.bean.Employee">
+         select * from employee
+    </select>
 </mapper>

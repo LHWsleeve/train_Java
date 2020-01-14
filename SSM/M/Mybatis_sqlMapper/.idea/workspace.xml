@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="77affc81-22d6-4461-aa8b-711232c52ecd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guigu/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guigu/dao/EmployeeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/EmployeeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/guigu/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/guigu/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/guigu/dao/EmployeeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/guigu/dao/EmployeeDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,7 @@
       <recent name="C:\Users\Sleeve\Documents\train_Java\SSM\M\Mybatis_sqlMapper\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.test02">
+  <component name="RunManager" selected="JUnit.AppTest.test03">
     <configuration name="AppTest.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mybatis_sqlMapper" />
       <extension name="coverage">
@@ -82,8 +85,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mybatis_sqlMapper" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.guigu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.guigu" />
+      <option name="MAIN_CLASS_NAME" value="com.guigu.AppTest" />
+      <option name="METHOD_NAME" value="test03" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest.test03" />
         <item itemvalue="JUnit.AppTest.test02" />
         <item itemvalue="JUnit.AppTest.test01" />
       </list>
@@ -111,7 +131,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578969426889</updated>
-      <workItem from="1578969429280" duration="8289000" />
+      <workItem from="1578969429280" duration="11684000" />
     </task>
     <servers />
   </component>
@@ -126,46 +146,51 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578972323270" />
-    <state width="1877" height="374" key="GridCell.Tab.0.bottom" timestamp="1578979244866">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1578987993528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="374" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578979244866" />
-    <state width="1877" height="374" key="GridCell.Tab.0.center" timestamp="1578979244866">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578987993528" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1578987993528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="374" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578979244866" />
-    <state width="1877" height="374" key="GridCell.Tab.0.left" timestamp="1578979244866">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578987993528" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1578987993528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="374" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578979244866" />
-    <state width="1877" height="374" key="GridCell.Tab.0.right" timestamp="1578979244866">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578987993528" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1578987993528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="374" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578979244866" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1578979007486">
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578987993528" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1578987993529">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578979007486" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1578979007485">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578987993529" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1578987993528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578979007485" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1578979007485">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578987993528" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1578987993528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578979007485" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1578979007485">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578987993528" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1578987993528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578979007485" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578987993528" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/guigu/AppTest.java</url>
-          <line>49</line>
+          <line>50</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/guigu/AppTest.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -23,13 +23,24 @@
             2.多个参数：#{参数名}无效。
                         可用方式：使用参数索引或者param0....5
                         只要传入多个参数，mybatis会自动将左右参数封装在map中，封装时是使用的key就是索引或者标识
-                      可以指定mybatis封装map的时候使用我们指定的key
+                       命名参数：可以指定mybatis封装map的时候使用我们指定的key(定义接口时，对参数使用Param()注解)
+
+            3.POJO：取值：#{POJO属性名}
+            4.传入map：将多个要使用的参数封装起来。传入一个map，传入前封装该map
+                取值：#{key}
+
+      实际上Mybatis中有两种取值方式：1.${属性名}：这种不是参数预编译，而是直接和sql语句拼串
+                                   2.#{属性名}：参数预编译，参数位置用?替代，参数时后来预编译设置。安全，不会有sql注入问题
+                                   sql语句只有参数位置是支持预编译的。所以我们使用${}来支持不预编译的位置，进行取值。
+
 -->
-<!--      Parameter 'id' not found. Available parameters are [arg1, arg0, param1, param2]。多参数限定时，不能直接写参数名，需要用0，1代替-->
+
+<!--      Parameter 'id' not found. Available parameters are [arg1, arg0, param1, param2]。
+            多参数限定时，不能直接写参数名，需要用agr0，agr1代替-->
 <!--             select * from employee where id=#{id} and empname=#{empname}-->
     <select id="getEmployeeByidAndEmp" resultType="com.guigu.bean.Employee"  >
 
-            select * from employee where id=#{arg0} and empname=#{arg1}
+            select * from employee where id=#{id} and empname=#{empname}
     </select>
 
 
@@ -48,4 +59,18 @@
     <insert id="insertEmp" useGeneratedKeys="true" keyProperty="id">
         insert into employee(empname,gender,email) values(#{empname},#{gender},#{email})
     </insert>
+
+
+<!--     查询返回一个map.这种方式不能使用元素类型-->
+<select id="getEmployeeByidmap" resultType="map">
+            select * from employee where id=#{id}
+
+</select>
+<!--    查询多个返回一个map public Map<Integer,Employee> getALLemp();
+        查询多个情况下，集合里面写元素类型。
+        idea打印看不出来，但是debug可以看出，如果是map类型，map里放的是hashmap，如果是元素类型，map里放的元素
+        -->
+    <select id="getALLemp" resultType="com.guigu.bean.Employee">
+         select * from employee
+    </select>
 </mapper>
