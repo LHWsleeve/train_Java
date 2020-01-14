@@ -10,7 +10,7 @@
 
  -->
 
-    <select id="getKeyById" resultMap="mykey">
+    <select id="getKeyById" resultMap="mykey2">
         SELECT k.id kid, k.keyname, l.id lid,l.lockname
         FROM `key` k
         LEFT JOIN `lock` l ON k.lockid=l.id
@@ -24,6 +24,21 @@
 <!--        使用级联属性，封装联合查询出的结果-->
         <result property="lock.id" column="lid"/>
         <result property="lock.lockName" column="lockname"/>
+    </resultMap>
 
+<!--    association-个复杂的类型关联；许多结果将包成这种类型嵌入结果映射-结果映射自身的关联，或者参考一个
+        collection-复杂类型的集
+        -->
+    <resultMap id="mykey2" type="com.guigu.bean.Key">
+        <id property="id" column="kid"/>
+        <result property="keyName" column="keyname"/>
+        <!--  接下来的属性是一个对象，使用 association，自定义对象的封装规则。表示联合了一个对象
+                 javaType=""：指定这个属性的类型（全部类名）
+                 在标签体中定义这个对象的属性
+                -->
+     <association property="lock" javaType="com.guigu.bean.Lock">
+         <id property="id" column="lid"/>
+         <result property="lockName" column="lockname"/>
+     </association>
     </resultMap>
 </mapper>

@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77affc81-22d6-4461-aa8b-711232c52ecd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guigu/bean/Key.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guigu/bean/Lock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guigu/dao/keyDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/KeyDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/guigu/KeyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/UserDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/guigu/dao/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/guigu/dao/UserDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/KeyDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/KeyDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +172,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578969426889</updated>
-      <workItem from="1578969429280" duration="18374000" />
+      <workItem from="1578969429280" duration="18884000" />
     </task>
     <servers />
   </component>
@@ -197,22 +187,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1578993004306" />
-    <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1579004215159">
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1579004723464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579004215159" />
-    <state width="1877" height="351" key="GridCell.Tab.0.center" timestamp="1579004215159">
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579004723464" />
+    <state width="1877" height="351" key="GridCell.Tab.0.center" timestamp="1579004723464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579004215159" />
-    <state width="1877" height="351" key="GridCell.Tab.0.left" timestamp="1579004215159">
+    <state width="1877" height="351" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579004723464" />
+    <state width="1877" height="351" key="GridCell.Tab.0.left" timestamp="1579004723463">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579004215159" />
-    <state width="1877" height="351" key="GridCell.Tab.0.right" timestamp="1579004215159">
+    <state width="1877" height="351" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579004723463" />
+    <state width="1877" height="351" key="GridCell.Tab.0.right" timestamp="1579004723464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="351" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579004215159" />
+    <state width="1877" height="351" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579004723464" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1578992724510">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
