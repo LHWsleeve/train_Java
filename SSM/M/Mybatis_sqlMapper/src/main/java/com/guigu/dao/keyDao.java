@@ -8,4 +8,8 @@ public interface keyDao {
      * @return
      */
     public Key getKeyById(Integer id);
+
+    //只根据id查钥匙
+    public Key getKeyByIdSim(Integer id);
+
 }

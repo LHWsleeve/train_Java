@@ -30,4 +30,8 @@
         </collection>
     </resultMap>
 
+<!--    分布查询-->
+    <select id="getLockByIdSim" resultType="com.guigu.bean.Lock">
+        select * from `lock` where id=#{id}
+    </select>
 </mapper>

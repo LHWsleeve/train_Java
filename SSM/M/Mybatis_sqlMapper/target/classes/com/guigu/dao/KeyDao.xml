@@ -41,4 +41,25 @@
          <result property="lockName" column="lockname"/>
      </association>
     </resultMap>
+
+
+    <!--分布查询
+    查key的时候也可以带上锁信息
+    -->
+    <select id="getKeyByIdSim" resultMap="mykey4">
+    select * from `key` WHERE id=#{id}
+</select>
+
+    <resultMap id="mykey4" type="com.guigu.bean.Key">
+        <id property="id" column="id"/>
+        <result property="keyName" column="keyname"/>
+<!--      告诉 mybatis自己去调用一个查询查锁子
+            select:指定一个查询sql的唯一标识；mybatis自动调用指定的sql将查处的loc封装进来
+            com.guigu.dao.LockDao.getLockByIdSim:这个方法需要传入锁id。我们需要告诉mybatis，那一列的值传递进去，作为锁id
+            column=""：指定将那一列的数据传递过去
+            -->
+        <association property="lock"
+                     select="com.guigu.dao.LockDao.getLockByIdSim"
+                     column="lockid"></association>
+    </resultMap>
 </mapper>

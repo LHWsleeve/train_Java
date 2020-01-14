@@ -61,4 +61,24 @@ public class KeyTest {
             openSession.close();
         }
     }
+
+    /**
+     * 分布查询(定义多个简单的sql，完成复杂功能)
+     * 0).查询钥匙的时候顺便查出锁
+     * 1. KEY key=KeyDao.getKeyById(1)
+     * 2）.Lock lock=lockDao.getById(1)
+     *
+     */
+    @Test
+    public void test03() {
+        SqlSession openSession = sqlSessionFactory.openSession();
+        try {
+            keyDao keyDao = openSession.getMapper(keyDao.class);
+            Key sim = keyDao.getKeyByIdSim(1);
+            System.out.println(sim);
+        } finally {
+            openSession.commit();
+            openSession.close();
+        }
+    }
 }
