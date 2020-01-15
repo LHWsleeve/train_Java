@@ -34,8 +34,8 @@ public class AppTest
             TeacherDao mapper = openSession.getMapper(TeacherDao.class);
             Teacher teacher1 = new Teacher();
             teacher1.setId(1);
-            teacher1.setTeacherName("%文%");
-            teacher1.setBirthDate(new Date());
+            teacher1.setTeacherName("%数%");
+//            teacher1.setBirthDate(new Date());
             List<Teacher> list = mapper.getTeacherByCondition(teacher1);
             System.out.println("查询出的teacher："+list);
 

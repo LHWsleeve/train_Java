@@ -21,17 +21,24 @@
             and：&&
             or :||
             if（）：传入非常强大的判断条件；OGNL表达式；
+         <trim:
+            prefix="":前缀；为我们下面的所有sql整体添加一个前缀
+            prefixOverrides="":去除整体字符串，前面多余的字符
+            suffix=""：后缀
+            suffixOverrides=""：去除后缀
             -->
     <select id="getTeacherByCondition" resultMap="map">
-        select * from teacher where
-        <if test="id!=null">
-            id>#{id} and
-        </if>
-        <if test="teacherName!=null &amp;&amp; !teacherName.equals(&quot;&quot;)">
-            teacherName like #{teacherName} and
-        </if>
-        <if test="birthDate!=null">
-            birth_date &lt; #{birthDate}
-        </if>
+        select * from teacher
+        <trim prefix="where" suffixOverrides="and">
+            <if test="id!=null">
+                id>#{id} and
+            </if>
+            <if test="teacherName!=null &amp;&amp; !teacherName.equals(&quot;&quot;)">
+                teacherName like #{teacherName} and
+            </if>
+            <if test="birthDate!=null">
+                birth_date &lt; #{birthDate} a nd
+            </if>
+        </trim>
     </select>
 </mapper>
