@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0/EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <properties resource="dbconfig.properties"/>
+    <settings>
+<!--        开启驼峰命名-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+<!--        延迟加载开关-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+<!--        属性按需加载-->
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
+     <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${jdbcurl}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+ <mappers>
+<!--     记住，接口配置文件和接口文件名一定是一样-->
+        <package name="com.guigu.dao"/>
+ </mappers>
+</configuration>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3. 0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guigu.dao.TeacherDao">
+<!--        public Teacher getTeacherById();-->
+    <select id="getTeacherById" resultMap="map" >
+        select * from teacher where id=#{id}
+    </select>
+    <resultMap id="map" type="com.guigu.bean.Teacher">
+        <id property="id" column="id"/>
+        <result property="teacherName" column="teacherName"/>
+        <result property="className" column="class_name"/>
+        <result property="address" column="address"/>
+        <result property="birthDate" column="birth_Date"/>
+    </resultMap>
+    
+<!--        List<Teacher> getTeacherByCondition(Teacher teacher);-->
+<!--test="id!=null"编写判断条件：去除传入的javaBean属性中的id值，判断其是否为空
+            空串:""
+            and：&&
+            or :||
+            if（）：传入非常强大的判断条件；OGNL表达式；
+            -->
+    <select id="getTeacherByCondition" resultMap="map">
+        select * from teacher where
+        <if test="id!=null">
+            id>#{id} and
+        </if>
+        <if test="teacherName!=null &amp;&amp; !teacherName.equals(&quot;&quot;)">
+            teacherName like #{teacherName} and
+        </if>
+        <if test="birthDate!=null">
+            birth_date &lt; #{birthDate}
+        </if>
+    </select>
+</mapper>

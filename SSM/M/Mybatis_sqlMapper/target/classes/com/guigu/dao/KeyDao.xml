@@ -60,6 +60,6 @@
             -->
         <association property="lock"
                      select="com.guigu.dao.LockDao.getLockByIdSim"
-                     column="lockid"></association>
+                     column="lockid" ></association>
     </resultMap>
 </mapper>
