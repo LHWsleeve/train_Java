@@ -10,5 +10,6 @@ public interface TeacherDao {
     List<Teacher> getTeacherByCondition(Teacher teacher);
     List<Teacher> getTeacherByIdIn(@Param("ids") List<Integer> ids);
     List<Teacher> getTeacherByConditionChoose(Teacher teacher);
+    int updateTeacher(Teacher teacher);
 
 }

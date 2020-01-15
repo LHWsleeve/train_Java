@@ -61,6 +61,7 @@ public class AppTest
             openSession.close();
         }
     }
+
     @Test
     public void test03(){
         SqlSession openSession = sqlSessionFactory.openSession();
@@ -71,7 +72,24 @@ public class AppTest
 //            teacher.setTeacherName("物理");
             List<Teacher> choose = mapper.getTeacherByConditionChoose(teacher);
             System.out.println("查询出的teacher："+choose);
+        }finally {
+            openSession.commit();
+            openSession.close();
+        }
+    }
 
+
+
+    @Test
+    public void test04(){
+        SqlSession openSession = sqlSessionFactory.openSession();
+        try{
+            TeacherDao mapper = openSession.getMapper(TeacherDao.class);
+            Teacher teacher = new Teacher();
+            teacher.setId(1);
+            teacher.setTeacherName("化学");
+            int i = mapper.updateTeacher(teacher);
+            System.out.println("更新结果："+i);
         }finally {
             openSession.commit();
             openSession.close();

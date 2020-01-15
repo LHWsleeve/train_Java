@@ -81,4 +81,22 @@
             </choose>
         </trim>
     </select>
+<!--        int updateTeacher(Teacher teacher); 动态update-->
+<update id="updateTeacher">
+    update teacher
+    <set>
+        <if test="teacherName!=null and !teacherName.equals(&quot;&quot;)">
+            teacherName=#{teacherName},
+        </if>
+        <if test="className!=null and !className.equals(&quot;&quot;)">
+            class_name=#{className},
+        </if>
+        <if test="birthDate!=null and !birthDate.equals(&quot;&quot;)">
+            birth_date=#{birthDate},
+        </if>
+    </set>
+    <where>
+        id=#{id}
+    </where>
+</update>
 </mapper>
