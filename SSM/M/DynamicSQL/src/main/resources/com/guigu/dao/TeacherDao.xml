@@ -37,7 +37,7 @@
                 teacherName like #{teacherName} and
             </if>
             <if test="birthDate!=null">
-                birth_date &lt; #{birthDate} a nd
+                birth_date &lt; #{birthDate} and
             </if>
         </trim>
     </select>
@@ -61,4 +61,24 @@
     </foreach>
 </select>
 
+<!--    List<Teacher> getTeacherByConditionChoose(Teacher teacher);-->
+    <select id="getTeacherByConditionChoose" resultMap="map">
+        select * from teacher
+        <trim prefix="where" suffixOverrides="and">
+            <choose>
+                <when test="id!=null">
+                    id=#{id}
+                </when>
+                <when test="teacherName!=null and !teacherName.equals(&quot;&quot;)">
+                    teacherName=#{teacherName}
+                </when>
+                <when test="birthDate!=null">
+                    birth_Date=#{birthDate}
+                </when>
+                <otherwise>
+                1=1
+                </otherwise>
+            </choose>
+        </trim>
+    </select>
 </mapper>
