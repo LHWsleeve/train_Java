@@ -41,4 +41,24 @@
             </if>
         </trim>
     </select>
+
+<!--    for each:帮我们遍历集合；collection:指定要遍历的集合的key
+            List<Teacher> getTeacherByIdIn(List<Integer> ids);
+            separator=""：每次遍历的元素的分隔符===》 #{id_item}， #{id_item}， #{id_item}
+            open=""：以什么开始
+            close="":以什么结束
+            index="" :索引。如果遍历一个List；index是保存当前list索引
+                            如果便利的一个map，iundex保存当前遍历元素的key
+                            item：都是保存当前元素的值
+            item="变量名":和普通的foreach一样，从集合中取出的每一个元素别名
+
+
+        -->
+<select id="getTeacherByIdIn" resultMap="map">
+    select * from teacher where id IN
+    <foreach collection="ids" item="id_item" separator="," open="(" close=")">
+    #{id_item}
+    </foreach>
+</select>
+
 </mapper>

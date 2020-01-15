@@ -11,6 +11,8 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -45,4 +47,18 @@ public class AppTest
         }
     }
 
+
+    @Test
+    public void test02(){
+        SqlSession openSession = sqlSessionFactory.openSession();
+        try{
+            TeacherDao mapper = openSession.getMapper(TeacherDao.class);
+            List<Teacher> idIn = mapper.getTeacherByIdIn(Arrays.asList(1, 2));
+            System.out.println("查询出的teacher："+idIn);
+
+        }finally {
+            openSession.commit();
+            openSession.close();
+        }
+    }
 }
