@@ -95,4 +95,49 @@ public class AppTest
             openSession.close();
         }
     }
+
+    /**
+     * 测试缓存：
+     * 一级缓存失效的情况:一级缓存是SqlSession级别的缓存；
+     * 1.不同的sqlSession使用不同的一级缓存。
+     *          只有在当前同一个sqlsession期间，查询到的数据会保存在这个sqlsession的缓存中，下次使用才从这个缓存中拿
+     * 2.同一个方法，不同的参数。由于可能之前没查过，所以还会发新的sql
+     * 3.在sqlsession期间，执行任何一次增删改操作。增删改操作会清空缓存
+     * 4.手动清空缓存
+     * 每次查询，先看一级缓存中有没有，如果没有就去发送新的sql；每个sqlsession拥有自己的一级缓存
+     */
+    @Test
+    public void test05(){
+        //1.第一个会话
+        SqlSession openSession = sqlSessionFactory.openSession();
+        TeacherDao mapper = openSession.getMapper(TeacherDao.class);
+        Teacher teacher1 = mapper.getTeacherById(1);
+        System.out.println(teacher1+"\n");
+
+        //在两个查询之间增加一个curd操作
+        Teacher teacher = new Teacher();
+        teacher.setId(3);
+        teacher.setTeacherName("hahahahah");
+        mapper.updateTeacher(teacher);
+        System.out.println(mapper.getTeacherById(1)+"\n");
+
+        //手动清缓存
+//        openSession.clearCache();//这条执行，则下面的一级缓存示例失败
+        //一级缓存示例
+        Teacher teacher4 = mapper.getTeacherById(1);
+        System.out.println(teacher4+"\n");
+
+        //相同sqlsession不同查询条件
+        Teacher teacher3 = mapper.getTeacherById(2);
+        System.out.println(teacher3+"\n");
+
+        //第二个会话
+        SqlSession openSession2 = sqlSessionFactory.openSession();
+        TeacherDao mapper2 = openSession2.getMapper(TeacherDao.class);
+        Teacher teacher2 = mapper2.getTeacherById(1);
+        System.out.println(teacher2+"\n");
+
+        openSession.close();
+        openSession2.close();
+    }
 }

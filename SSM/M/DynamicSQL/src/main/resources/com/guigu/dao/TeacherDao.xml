@@ -3,6 +3,12 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3. 0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.guigu.dao.TeacherDao">
+<!--    使用二级缓存-->
+<!--    <cache></cache>-->
+
+<!--    使用自定义的缓存-->
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"></cache>
+
 <!--        public Teacher getTeacherById();-->
     <select id="getTeacherById" resultMap="map" >
         select * from teacher where id=#{id}
@@ -90,7 +96,7 @@
         </if>
         <if test="className!=null and !className.equals(&quot;&quot;)">
             class_name=#{className},
-        </if>
+        </if> 
         <if test="birthDate!=null and !birthDate.equals(&quot;&quot;)">
             birth_date=#{birthDate},
         </if>

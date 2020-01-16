@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbbcda0e-4938-4b22-a9cf-d91630467aac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ehcache.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guigu/dao/TeacherDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guigu/dao/TeacherDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guigu/bean/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guigu/bean/Teacher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/TeacherDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/guigu/dao/TeacherDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/guigu/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/guigu/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/guigu/dao/TeacherDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/guigu/dao/TeacherDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mybatis_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis_notes.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,23 +61,25 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.guigu" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sleeve\Documents\train_Java\SSM\M\DynamicSQL\src\main\resources" />
       <recent name="C:\Users\Sleeve\Documents\train_Java\SSM\M\DynamicSQL\src\main" />
       <recent name="C:\Users\Sleeve\Documents\train_Java\SSM\M\DynamicSQL\src\main\java\com" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.test04">
+  <component name="RunManager" selected="JUnit.AppTest.test05">
     <configuration name="AppTest.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DynamicSQL" />
       <extension name="coverage">
@@ -135,8 +144,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest.test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DynamicSQL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.guigu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.guigu" />
+      <option name="MAIN_CLASS_NAME" value="com.guigu.AppTest" />
+      <option name="METHOD_NAME" value="test05" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest.test05" />
         <item itemvalue="JUnit.AppTest.test04" />
         <item itemvalue="JUnit.AppTest.test03" />
         <item itemvalue="JUnit.AppTest.test02" />
@@ -166,7 +192,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579057547342</updated>
-      <workItem from="1579057549766" duration="10281000" />
+      <workItem from="1579057549766" duration="11621000" />
+      <workItem from="1579088069411" duration="9133000" />
     </task>
     <servers />
   </component>
@@ -174,6 +201,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#SQL_Dialects" timestamp="1579077341835">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#SQL_Dialects/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579077341835" />
+    <state x="552" y="179" key="#Updates" timestamp="1579142378511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Updates/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579142378511" />
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579077348435">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579077348435" />
     <state x="713" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1579067036509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -186,22 +225,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="209" y="102" width="1521" height="843" key="#toString()_Generation_Settings/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579066941248" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1579077013875">
+    <state width="1877" height="238" key="GridCell.Tab.0.bottom" timestamp="1579148798478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579077013875" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1579077013874">
+    <state width="1877" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579148798478" />
+    <state width="1877" height="238" key="GridCell.Tab.0.center" timestamp="1579148798478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579077013874" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1579077013874">
+    <state width="1877" height="238" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579148798478" />
+    <state width="1877" height="238" key="GridCell.Tab.0.left" timestamp="1579148798478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579077013874" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1579077013874">
+    <state width="1877" height="238" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579148798478" />
+    <state width="1877" height="238" key="GridCell.Tab.0.right" timestamp="1579148798478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579077013874" />
+    <state width="1877" height="238" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579148798478" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1579074632293">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -218,9 +257,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579074632292" />
-    <state x="2320" y="9" key="SettingsEditor" timestamp="1579057639631">
-      <screen x="1920" y="0" width="1440" height="860" />
+    <state x="533" y="11" key="SettingsEditor" timestamp="1579077527622">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="533" y="11" key="SettingsEditor/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579077527622" />
     <state x="2320" y="9" key="SettingsEditor/0.0.1920.1040/1920.0.1440.860@1920.0.1440.860" timestamp="1579057639631" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1579088069799">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579088069799" />
+    <state x="334" y="215" key="new project wizard" timestamp="1579088087093">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="215" key="new project wizard/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579088087093" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1579148418736">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1440.860@0.0.1920.1040" timestamp="1579148418736" />
   </component>
 </project>

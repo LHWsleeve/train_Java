@@ -90,7 +90,7 @@
         </if>
         <if test="className!=null and !className.equals(&quot;&quot;)">
             class_name=#{className},
-        </if>
+        </if> 
         <if test="birthDate!=null and !birthDate.equals(&quot;&quot;)">
             birth_date=#{birthDate},
         </if>

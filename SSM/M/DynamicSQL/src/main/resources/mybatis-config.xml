@@ -12,6 +12,8 @@
         <setting name="lazyLoadingEnabled" value="true"/>
 <!--        属性按需加载-->
         <setting name="aggressiveLazyLoading" value="false"/>
+<!--        二级缓存:配置需要二级缓存的dao-->
+        <setting name="cachEnable" value="true"/>
     </settings>
      <environments default="mysql">
         <environment id="mysql">
