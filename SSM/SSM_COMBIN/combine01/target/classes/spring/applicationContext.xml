@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xmlns:tx="http://www.springframework.org/schema/tx"
+        xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<!--    扫描除控制器之外所有东西-->
+    <context:component-scan base-package="com.guigu">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+<!--    1.配数据源-->
+<!--    导入外部配置文件-->
+    <context:property-placeholder location="classpath:mybatis/dbconfig.properties"/>
+    <bean class="com.mchange.v2.c3p0.ComboPooledDataSource" id="dataSource">
+        <property name="user" value="${user}"/>
+        <property name="driverClass" value="${driverClass}"/>
+        <property name="password" value="${password}"/>
+        <property name="jdbcUrl" value="${jdbcUrl}"/>
+    </bean>
+<!--    2.配置jdbcTemlet，pass。使用mybatis-spring包：可以根据配置文件得到sqlSessionFactory-->
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
+<!--        指定xml映射文件的位置-->
+        <property name="mapperLocations" value="classpath:mybatis/mapper/*.xml"/>
+    </bean>
+<!--    需要把每一个dao接口的实现，加入ioc容器中-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+<!--        dao包名-->
+        <property name="basePackage" value="com.guigu.dao"/>
+    </bean>
+
+<!--    3.配置事务控制:配置事务管理器（控制数据源内的链接的关闭和提交）-->
+    <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager" id="manager">
+        <property name="dataSource" value="manager"/>
+    </bean>
+<!--    4.基于xml配置，配置事务：哪些方法控制事物需要些切入表达式-->
+<aop:config>
+<!--    切入点表达式-->
+    <aop:pointcut id="txpoint" expression="execution(* com.guigu.service.*.*(..))"/>
+    <aop:advisor advice-ref="mytx" pointcut-ref="txpoint"/>
+</aop:config>
+
+<!--    5. 配置事务增强
+transaction-manager="tm"：指定要配置的事务管理器的id-->
+    <tx:advice id="mytx" transaction-manager="manager">
+        <tx:attributes>
+            <tx:method name="*" no-rollback-for="Execption"/>
+            <tx:method name="get*" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+</beans>
